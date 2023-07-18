@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Alarms</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
+
+    <!-- simple line icon -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/simple-line-icons/css/simple-line-icons.css">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!-- Responsive.css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js'></script>
+    <!-- /*-------edit delete-------------*/ -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Alkatra:wght@500;700&family=Braah+One&family=Kaushan+Script&family=Lilita+One&display=swap"
+        rel="stylesheet">
+
+
+
+
+
+
+
+
+
+    <style>
+        .midbox {
+            height: 350px !important;
+        }
+
+        .navbar {
+
+            background-color: white;
+
+
+        }
+
+        .col-lg-1 {
+            padding-top: 0px;
+
+        }
+
+
+
+        .nav-link.active {
+
+            background-color: #51E2F5;
+
+        }
+
+        .nav-link:hover {
+
+            background-color: #51E2F5;
+
+
+        }
+
+        body {
+            background-color: #f9f9fa
+        }
+        .tog {
+            /* overflow: hidden; */
+            height: inherit;
+            margin: 10px 877px 15px -890px;
+        }
+
+
+        @media (max-width:991.98px) {
+            .padding {
+                padding: 1.5rem
+            }
+
+
+        }
+
+        @media (max-width:767.98px) {
+            .padding {
+                padding: 1rem
+            }
+        }
+
+        @media (min-width: 992px) {}
+
+        @media only screen and (max-width: 1300px) {
+            .btnlist {
+                margin-left: 40px !important;
+            }
+
+            .col-lg-1 {
+
+                display: none !important;
+            }
+
+            .btn2 {
+                /* margin: 10px 364px 15px -890px; */
+                visibility: visible !important;
+            }
+
+            .col-10 {
+                width: 130px !important;
+            }
+
+            .tog {
+                display: none;
+            }
+
+        }
+
+        @media only screen and (max-width: 1600px) {
+            .nav-link.active {
+                width: 120px;
+            }
+
+            .nav-link:hover {
+                width: 120px;
+            }
+
+
+
+        }
+
+        .btn2 {
+            visibility: hidden;
+        }
+
+        .padding {
+            padding: 5rem
+        }
+
+        .cardd {
+            border: 1px solid rgba(19, 24, 44, .125);
+            background: #fff;
+
+            border-radius: .25rem;
+            box-shadow: 0 4px 3px rgba(0, 0, 0, .05);
+            margin-bottom: 1.5rem
+        }
+
+        .card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(19, 24, 44, .125);
+            border-radius: .25rem
+        }
+
+        .card-header {
+            padding: .75rem 1.25rem;
+            margin-bottom: 0;
+            background-color: rgba(19, 24, 44, .03);
+            border-bottom: 1px solid rgba(19, 24, 44, .125)
+        }
+
+        .card-header:first-child {
+            border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0
+        }
+
+        card-footer,
+        .card-header {
+            background-color: transparent;
+            border-color: rgba(160, 175, 185, .15);
+            background-clip: padding-box
+        }
+
+        .log {
+            font-size: 25px;
+            font-weight: 800;
+
+        }
+
+        .logo {
+            text-decoration: none;
+
+        }
+
+
+        .a3 {
+            color: rgb(11, 131, 230);
+        }
+
+        .a1 {
+            color: black;
+
+        }
+
+        .a1:hover {
+            color: rgb(11, 131, 230);
+        }
+
+
+        .a2 {
+            height: 500px;
+        }
+
+        .menu {
+            background-color: #51E2F5;
+
+        }
+
+
+
+
+        .bb {
+            width: 100px;
+        }
+
+        .ix {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .option {
+            text-decoration: none;
+        }
+
+        .mid {
+            height: 300px;
+        }
+
+        .task {
+            text-decoration: none;
+        }
+
+        .dash {
+
+            text-align: center;
+            margin-bottom: -10px;
+
+        }
+
+        .dash h4 {
+            font-family: 'Alfa Slab One', cursive;
+            font-family: 'Alkatra', cursive;
+            padding-top: 10px;
+            font-size: 40px;
+        }
+
+        @media screen and (max-width: 767px) {
+            #chart-line {
+                width: 100%;
+                height: 300px;
+            }
+
+            .btn1 {
+                margin-left: 120px !important;
+            }
+
+
+            .fixed .content-wrapper {
+                margin-left: -8px;
+            }
+
+            ul {
+
+                margin-left: 56px;
+            }
+        }
+
+        @media screen and (max-width: 1300px) {
+
+            .fixed .content-wrapper {
+                margin-left: -8px;
+                width: 100vw !important;
+            }
+
+            .btn1 {
+                margin-left: 30px;
+            }
+        }
+
+        /* ------------MARKET LIST-----------*/
+        .btn1 {
+            background-color: rgb(101, 175, 101);
+            color: #fff;
+            height: 40px;
+            border-radius: 10px;
+            width: 160px !important;
+
+        }
+
+        .btn1:hover {
+            background-color: green;
+        }
+
+        .head {
+            background-color: #51E2F5;
+            margin-left: 2px;
+
+
+
+        }
+
+
+        .col-lg-11 {
+            padding: 0px 0px 0px 0px !important;
+        }
+
+        /*  ----------------------------------alarm-----------------*/
+        #id {
+            width: 100vw !important;
+        }
+
+        .sub {
+            height: 40px;
+            width: 100px;
+
+
+
+        }
+
+        #table {
+            font-size: 11px !important;
+        }
+
+        .table {
+            border-color: black !important;
+        }
+
+        .blank {
+            padding: 10px 5px 10px 10px !important;
+        }
+
+
+
+
+        #butt {
+            padding: 1px 8px 1px 8px !important;
+
+            margin-right: 0px !important;
+        }
+
+        #buttr {
+            padding: 0px 5px 0px 5px !important;
+
+            margin-right: 0px !important;
+        }
+
+        .btnlist {
+            margin-left: 910px;
+        }
+
+        /*  ---------------new---------------------*/
+        .tab3 {
+            width: 100px;
+            border-radius: 10px;
+            border: 2 red;
+        }
+
+        .tab3:hover {
+            background-color: red;
+            color: white;
+
+        }
+
+        .bb1 {
+            background-color: rgb(11, 165, 226);
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            width: 100px;
+            padding: 1px 15px 2px 15px !important;
+            font-size: 13px;
+
+
+        }
+
+        .bb2 {
+            background-color: rgb(8, 206, 156);
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            width: 100px;
+            padding: 1px 15px 2px 15px !important;
+            font-size: 13px;
+
+        }
+
+        .bb3 {
+            background-color: orangered;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            width: 100px;
+            padding: 1px 15px 2px 15px !important;
+            font-size: 13px;
+        }
+
+        .bb4 {
+            background-color: rgb(10, 208, 235);
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            width: 100px;
+            padding: 1px 15px 2px 15px !important;
+            font-size: 13px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .progress-chart {
+            margin-top: 10px;
+        }
+
+        .progress-item {
+            margin-bottom: 10px;
+        }
+
+        .progress-label {
+            margin-bottom: 5px;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background-color: #f5f5f5;
+            position: relative;
+            overflow: visible !important;
+        }
+
+        .progress-line {
+            height: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+        .in-progress {
+            background-color: rgb(10, 208, 235);
+            /* Blue */
+        }
+
+        .completed {
+            background-color: rgb(8, 206, 156);
+            /* Green */
+        }
+
+        .pending {
+            background-color: orangered;
+            /* Yellow */
+        }
+
+        .progress-line:hover::before {
+            content: attr(data-info);
+            position: absolute;
+            top: -30px;
+            background-color: #343a40;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+
+        /* .in-progress {
+    background-color: rgb(10, 208, 235) !important;
+  }
+
+  .completed {
+    background-color: rgb(8, 206, 156) !important;
+  }
+
+  .pending {
+    background-color: orangered !important;
+  }*/
+
+        .cardd-body {
+            border: 1px solid rgba(19, 24, 44, .125);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .modal-content {
+            background-color: #f1f1f1;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .modal-body {
+            background-color: #f1f1f1;
+            padding: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+            text-align: left;
+            padding: 8px;
+        }
+
+        td {
+            padding: 8px;
+        }
+
+        .highlight {
+            background-color: #f1f1f1;
+            color: #333;
+            padding: 5px;
+            border-radius: 3px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .floating-label {
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            background-color: #f1f1f1;
+            padding: 2px 5px;
+            font-size: 12px;
+            color: #888;
+        }
+
+        .fields {
+            width: fit-content !important;
+            margin-left: -10px;
+            margin-top: 5px;
+        }
+    </style>
+
+</head>
+
+<body class="sidebar-mini fixed">
+    {% load static %}
+
+    <div class="wrapper">
+        <!-- Navbar-->
+        <header class="main-header-top hidden-print ">
+            <div class="container-fluid border border rounded" style="padding: 0px 0px 0px 0px;">
+
+                <nav class="navbar navbar-static-top">
+                    <img src='{% static "images/int.png" %}' class="img ps-2 " width="130" height="50"
+                    alt="integer logo">
+
+                    <button class="btn2 float-start bg-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+                        role="button">
+                        <i class="text-light " data-bs-toggle="offcanvas" data-bs-target="#offcanvas"><i
+                                class="fa fa-bars"></i></i>
+
+                        <button onclick="showOrHide()" class="tog float-end bg-" role="button" style="height: 30px;">
+                            <i class="text-dark "><i class="fa fa-bars"></i></i>
+                        </button>
+
+
+                        <ul class="top-nav">
+                            <!--Notification Menu-->
+
+
+                            <div class="btn-group">
+                                <button type="button" class="btn btn dropdown-toggle dropdown-toggle-split"
+                                    data-bs-toggle="dropdown" aria-expanded="false"><span><img class="img-circle "
+                                        src='{% static "images/B.png" %}'
+                                        style="width:40px; border: 1px solid black; border-radius: 80px;"
+                                        alt="User Image"></span>
+                                </button>
+
+                                <ul class="dropdown-menu px-2 ">
+
+                                    <li><a href="#!"><i class="icon-settings px-2"></i> Settings</a></li>
+                                    <li> <a href="account_settings.html"><i class="icon-user px-2"></i> Profile</a></li>
+                                    <li><a href="#"><i class="icon-envelope-open px-2 "></i> My Messages</a></li>
+                                    <li><a href="login.html"><i class="icon-logout px-2"></i> Logout</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Lock Screen</a></li>
+
+                                </ul>
+                            </div>
+
+                            <div class="btn-group">
+
+                                <button type="button" class="btn btn-light dropdown-toggle " data-bs-toggle="dropdown"
+                                    aria-expanded="false">Pushpendra
+
+
+
+
+
+
+
+
+                                </button>
+                                <ul class="dropdown-menu pe-5 ps-1 ">
+                                    <li class="not-head pt-2">You have <b class="text-secondary ">9</b> new
+                                        notifications.
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Email recieved</a></li>
+                                    <li><a class="dropdown-item" href="#">Profile Updated</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">See all notifications</a></li>
+
+                                </ul>
+                            </div>
+
+
+
+
+                        </ul>
+            </div>
+            </nav>
+
+        </header>
+
+        <!-- Side-Nav-->
+        <div class="col-10 offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvas" data-bs-keyboard="false"
+            data-bs-backdrop="false">
+            <div class="menu offcanvas-header">
+                <h6 class="offcanvas-title d-none d-sm-block text-dark" id="offcanvas">Menu</h6>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body px-0 " style="background-color:white">
+                <ul class="nav nav-pills flex-column  align-items-start  ps-3 " id="menu"
+                    style="text-decoration: black ;  ">
+
+
+                    <li class="text-dark">
+                        <a class="option waves-effect waves-dark link-light pb-5 " href="table.html">
+                            <i class="a1 icon-home"></i><span class="a1">&nbsp&nbsp Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="option waves-effect waves-dark link-light pb-5" href="login.html">
+                            <i class="a1 icon-user"></i><span class="a1">&nbsp&nbsp Login</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="option waves-effect waves-dark link-light" href="login.html "><i
+                                class="a1 icon-logout"></i>
+                            <span class="a1">&nbsp Logout</span>
+                        </a>
+                    </li>
+
+
+
+
+                    <li>
+                        <a class="option waves-effect waves-dark link-light" href="dashboard.html">
+                            <i class="a1 icon-menu"></i><span class="a1">&nbsp&nbsp Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="option waves-effect waves-dark link-light" href="adduser.html">
+                            <i class="a1 icon-plus"></i><span class="a1">&nbsp&nbsp Add User</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="option waves-effect waves-dark link-light" href="account_settings.html">
+                            <i class="a1 icon-user"></i><span class="a1">&nbsp&nbsp Account</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="option waves-effect waves-dark link-light" href="#">
+                            <i class="a1 icon-bell"></i><span class="a1">&nbsp&nbsp Setting</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-1" id="div1">
+                <nav class="navbar navbar-expand navbar-light bg-light">
+                    <div class="container" style="padding: 0px 0px 0px 0px ;">
+                        <!-- <div class="container-fluid"> -->
+
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                            <!-- <div class="container-fluid"> -->
+                            <div class="col">
+                                <div id="sidebar" class="col col-2 ">
+                                    <ul class="navbar-nav float-start flex-column ms-0" id="sidemenu">
+                                        <li class="nav-item ms-2">
+
+										</li>
+										<li class="nav-item">
+
+											<a class="nav-link" href="/dashboard"><i
+													class="fa fa-bars me-1 pe-2"></i>Dashboard</a>
+
+										</li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link active" href="/activitylist"><i
+                                                    class="fa fa-list me-1 pe-2"></i>Activity List</a>
+                                        </li>
+                                        <li class="nav-item " style="width:140px ;">
+											<a class="nav-link  " href="/userlist"><i
+													class="fa fa-table me-1 pe-1"></i>&nbspUserlist</a>
+										</li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link" href="/createactivity"><i
+                                                    class="fa fa-rocket me-1 pe-2"></i>Activity</a>
+                                        </li>
+										
+									
+
+									
+										<li class="nav-item">
+											<a class="nav-link " href="/adduser"><i
+													class="fa fa-plus  "></i>&nbsp&nbsp&nbspAdd
+												User</a>
+										</li>
+
+										<li class="nav-item">
+
+											<a class="nav-link " href="/alarm"><i
+													class="fa fa-bell me-1 pe-1 "></i>&nbsp&nbspAlarm</a>
+										</li>
+										<li class="nav-item">
+
+											<a class="nav-link " href="/market2"><i
+													class="fa fa-laptop me-1 pe-1"></i>Market List</a>
+										</li>
+										<li class="nav-item">
+
+											<a class="nav-link " href="/add_market"><i
+													class="fa fa-file me-1 pe-2"></i>Add
+												Market</a>
+										</li>
+                                        <li class="nav-item">
+
+											<a class="nav-link " href="/rolelist"><i
+													class="fa fa-rocket me-1 pe-2"></i>Rolelist</a>
+										</li>
+										<li class="nav-item">
+
+											<a class="nav-link  " href="/companylist"><i
+													class="fa fa-rocket me-1 pe-2"></i>Companylist</a>
+										</li>
+										<li class="nav-item">
+
+											<a class="nav-link " href="/account_settings"><i
+													class="fa fa-road me-1 pe-1"></i>Account</a>
+										</li>
+										<li class="nav-item">
+
+											<a class="nav-link " href="#"><i
+													class="fa fa-tools me-1 pe-2"></i>Setting</a>
+										</li>
+										
+                                        <li class="nav-item" style="width:140px ;">
+											<a class="nav-link " href="/login_page"><i
+													class="fa fa-user me-1 pe-1"></i>&nbspLogin</a>
+										</li>
+
+										
+										<li class="nav-item">
+
+											<a class="nav-link " href="/login_page"><i
+													class="fa fa-rocket me-1 pe-2"></i>Logout</a>
+										</li>
+                                    </ul>
+
+
+
+
+
+                </nav>
+            </div>
+            <div class="col-lg-11 " id="myDiv">
+
+
+                <div class="content-wrapper">
+                    <div class="head row mb-2">
+                        <div class="dash main-header">
+
+                            <h4>ACTIVITY LIST</h4>
+                        </div>
+                    </div>
+
+                    <div class="row dashboard-header ">
+
+                        <div class="col-lg-4 col-md-6 ">
+                            <div class="card dashboard-product p-3">
+                                <h2 class="dashboard-total-products">INTEGRATION SUPPORT</h2>
+                                <div class="row dashboard-header pt-4">
+                                    <div class="col-lg-3 col-md-6"> Total Sites <br><span
+                                            class="bb1 label label-primary mt-2">40 Sites</span></div>
+                                    <div class="col-lg-3 col-md-6"> Completed <br><span
+                                            class="bb2 label label-success mt-2">24 Sites</span></div>
+                                    <div class="col-lg-3 col-md-6"> Pending <br><span
+                                            class="bb3 label label-warning mt-2">16 Sites</span></div>
+                                    <div class="col-lg-3 col-md-6"> In Progress <br><span
+                                            class="bb4 label label-info mt-2">16 Sites</span></div>
+                                </div>
+
+                                <div class="side-box">
+                                    <i class="ti-signal text-warning-color"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card dashboard-product p-3">
+                                <h2 class="dashboard-total-products">ALARM</h2>
+                                <div class="row dashboard-header pt-4">
+                                    <div class="col-lg-3 col-md-6"> Total Sites <br><span
+                                            class="bb1 label label-primary mt-2">40 Sites</span></div>
+                                    <div class="col-lg-3 col-md-6"> Completed <br><span
+                                            class="bb2 label label-success mt-2">26 Sites</span></div>
+                                    <div class="col-lg-3 col-md-6"> Pending <br><span
+                                            class="bb3 label label-warning mt-2">14 Sites</span></div>
+                                    <div class="col-lg-3 col-md-6"> In Progress <br><span
+                                            class="bb4 label label-info mt-2">16 Sites</span></div>
+                                </div>
+                                <div class="side-box ">
+                                    <i class="ti-gift text-primary-color"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="card dashboard-product p-3">
+                                <h2 class="dashboard-total-products">FIELD INTEGRATION</h2>
+                                <div class="row dashboard-header pt-4">
+                                    <div class="col-lg-3 col-md-6"> Total Sites <br><span
+                                            class="bb1 label label-primary mt-2">40 Sites</span></div>
+                                    <div class="col-lg-3 col-md-6"> Completed <br><span
+                                            class="bb2 label label-success mt-2">29 Sites</span></div>
+                                    <div class="col-lg-3 col-md-6"> Pending <br><span
+                                            class="bb3 label label-warning mt-2">11 Sites</span></div>
+                                    <div class="col-lg-3 col-md-6"> In Progress <br><span
+                                            class="bb4 label label-info mt-2">16 Sites</span></div>
+                                </div>
+                                <div class="side-box">
+                                    <i class="ti-direction-alt text-success-color"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="col-lg-12 col-md-6">
+                                <div class="card dashboard-product p-3">
+                                    <h2 class="dashboard-total-products">REMOTE INTEGRATION</h2>
+                                    <div class="row dashboard-header pt-4">
+                                        <div class="col-lg-3 col-md-6"> Total Sites <br><span
+                                                class="bb1 label label-primary mt-2">40 Sites</span></div>
+                                        <div class="col-lg-3 col-md-6"> Completed <br><span
+                                                class="bb2 label label-success mt-2">20 Sites</span></div>
+                                        <div class="col-lg-3 col-md-6"> Pending <br><span
+                                                class="bb3 label label-warning mt-2">20 Sites</span></div>
+                                        <div class="col-lg-3 col-md-6"> In Progress <br><span
+                                                class="bb4 label label-info mt-2">16 Sites</span></div>
+                                    </div>
+
+                                    <div class="side-box ">
+                                        <i class="ti-gift text-primary-color"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-6">
+                                <div class="card dashboard-product p-3">
+                                    <h2 class="dashboard-total-products pt-4">FIELD INTALLATION</h2>
+                                    <div class="row dashboard-header">
+                                        <div class="col-lg-3 col-md-6"> Total Sites <br><span
+                                                class="bb1 label label-primary mt-2">40 Sites</span></div>
+                                        <div class="col-lg-3 col-md-6"> Completed <br><span
+                                                class="bb2 label label-success mt-2">22 Sites</span></div>
+                                        <div class="col-lg-3 col-md-6"> Pending <br><span
+                                                class="bb3 label label-warning mt-2">18 Sites</span></div>
+                                        <div class="col-lg-3 col-md-6"> In Progress <br><span
+                                                class="bb4 label label-info mt-2">16 Sites</span></div>
+                                    </div>
+
+                                    <div class="side-box ">
+                                        <i class="ti-gift text-primary-color"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardd col-lg-8">
+                            <div class="cardd-body ps-3 pt-1" style="border: none;">
+                                <h5 class="cardd-title">Progress Chart</h5>
+                                <div class="progress-chart">
+                                    <div class="progress-item">
+                                        <div class="progress-label">Integration</div>
+                                        <div class="progress-bar">
+                                            <div class="progress-line completed" style="width: 70%;"
+                                                data-info="COMPLETED: 70%"></div>
+                                            <div class="progress-line pending" style="width: 30%;"
+                                                data-info="PENDING: 30%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div class="progress-label">Support</div>
+                                        <div class="progress-bar">
+
+                                            <div class="progress-line completed" style="width: 50%;"
+                                                data-info="COMPLETED: 50%"></div>
+                                            <div class="progress-line pending" style="width: 30%;"
+                                                data-info="PENDING: 30%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div class="progress-label">Alarm</div>
+                                        <div class="progress-bar">
+
+                                            <div class="progress-line completed" style="width: 90%;"
+                                                data-info="COMPLETED: 90%"></div>
+                                            <div class="progress-line pending" style="width: 40%;"
+                                                data-info="PENDING: 40%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div class="progress-label">Field Integration</div>
+                                        <div class="progress-bar">
+
+                                            <div class="progress-line completed" style="width: 45%;"
+                                                data-info="COMPLETED: 45%"></div>
+                                            <div class="progress-line pending" style="width: 35%;"
+                                                data-info="PENDING: 35%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div class="progress-label">Remote Integration</div>
+                                        <div class="progress-bar">
+
+                                            <div class="progress-line completed" style="width: 55%;"
+                                                data-info="COMPLETED: 55%"></div>
+                                            <div class="progress-line pending" style="width: 35%;"
+                                                data-info="PENDING: 35%"></div>
+                                        </div>
+                                    </div>
+                                    <div class="progress-item">
+                                        <div class="progress-label">Field Installation</div>
+                                        <div class="progress-bar">
+
+                                            <div class="progress-line completed" style="width: 40%;"
+                                                data-info="COMPLETED: 40%"></div>
+                                            <div class="progress-line pending" style="width: 30%;"
+                                                data-info="PENDING: 30%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="">
+                            <button type="button" class="btn1 btn-success ms-2 mt-3"
+                                style="text-decoration: none; color:#fff"
+                                onclick="ExportToExcel('xlsx')">Export</button>
+                        </div>
+                        <div class="btnlist mt-4 col-lg-8">
+                            <button type="button" class="btn btn-success " id="butt">IX</button>
+                            -Integration Support
+                            <button type="button" class="btn btn-danger ms-3 " id="butt">A</button>
+                            -Alarm
+                            <button type="button" class="btn btn-primary ms-3 " id="butt">F</button>
+                            -Field Integration
+                            <button type="button" class="btn btn-info ms-3 " id="butt">R</button>
+                            -Remote Integration
+                            <button type="button" class="btn btn-warning ms-3 " id="butt">FI</button>
+                            -Field Installation
+                        </div>
+
+
+
+
+
+                        <div class="row mb-3" style="padding: 0px 15px 0px 15px; overflow-x:auto;">
+                            <table id="table"
+                                class="table table-responsive table-striped table-bordered table-bordered table-hover cell-border dataTable no-footer"
+                                aria-describedby="table_info">
+                                <thead class="container ">
+                                    <tr class="table  table-hover" style="background-color: rgba(115, 199, 233, 0.842);">
+                                        <th class="col1 pb-0 ps-2 pt-2 pe-2" scope="col">Sn.No</th>
+                                        <th scope="col">Ticket Number</th>
+                                        <th scope="col">Client</th>
+                                        <th scope="col " >Operators</th>
+                                        <th scope="col ">OEM</th>
+                                        <th scope="col">Added Date</th>
+                                        <th scope="col">FA Location</th>
+                                        <th scope="col">Market</th>
+                                        <th scope="col">County</th>
+                                        <th scope="col">Site Ids</th>
+                                        <th class="col10 pb-0 " scope="col">Activity</th>
+                                        <th scope="col"> </th>
+                                        <th scope="col"> </th>
+                                        <th scope="col"> </th>
+                                        <th scope="col"> </th>
+                                        <th class="blank ps-1 pe-1 pt-2" scope="col">Ix Date</th>
+                                        <th class="blank ps-5" scope="col ">5G IX Date </th>
+                                        <th class="blank ps-5" scope="col">Ticket Status</th>
+                                        <th class="blank ps-5" scope="col">IX Status</th>
+                                        <th class="blank p-0 ps-1 pt-2" scope="col">CX Status</th>
+                                        <th class="blank p-0 ps-1 pt-2" scope="col">Added By</th> 
+                                        <th class="blank p-0 ps-1 pt-2" scope="col">Upload</th>       
+                                        <th class="blank p-0 ps-1 pt-2" scope="col">Action</th>
+                                        <th class="blank p-0 ps-1 pt-2" scope="col">Profile</th>
+                                        
+    
+    
+    
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+
+                                    <tr>
+                                        {% for info in activitylist %}
+
+                                        <tr>
+                                            <td class="col1  pb-0 ps-2 pt-2 pe-2" scope="row">{{ info.id }}</td>
+                                            <td>{{ info.Ticket_Number }} </td>
+                                            <td>{% if info.client %}
+                                                {{ info.client.cname }}
+                                                {% else %}
+                                                N/A
+                                                {% endif %}</td>
+                                            <td>{% if info.operator %}
+                                                {{ info.operator.operatorname }}
+                                                {% else %}
+                                                N/A
+                                                {% endif %}</td>
+                                            <td>{{ info.oem }}</td>
+                                            <td>{{ info.Added_Date }}</td>
+                                            <td>{{ info.fa_location }}</td>
+                                            <td>{{ info.market }}</td>
+                                            <td>{{ info.County }}</td>
+                                            <td class="col10 p-1 pe-1">	{{ info.site_ids }}</td>
+                                            <td class="blank p-0">  <button type="button" class="btn btn-success " id="buttr">{{ info.Activity }}</button></td>
+                                            <td class="blank p-0"><button type="button" class="btn btn-danger "id="buttr" >{{ info.Alarm }}</button></td>
+                                            <td class="blank p-0">  <button type="button" class="btn btn-primary "id="buttr">{{ info.Field_Integration }}</button></td>
+                                            <td class="blank p-0">    <button type="button" class="btn btn-info "id="buttr">{{ info.remote_Integration }}</button></td>
+                                            <td class="blank p-0"> <button type="button" class="btn btn-warning  "id="buttr">{{ info.Field_Installation }}</button></td>
+                                            <td>{{ info.Ix_Date }}</td>
+                                            <td>{{ info.G_IX_DATE }}</td>
+                                            <td>{{ info.CX_Status }}</td>
+                                            <td class="blank p-0 ps-1">Pending</td>
+                                            <td class="blank p-0 ps-1">{{ info.CX_Status }}</td>
+                                            <td class="blank p-0 ps-1">{{ info.Added_By }}</td>
+                                            <td>   <a class="update me-1" title="update_status" style="font-size: 14px;" data-toggle="tooltip" style="cursor: pointer;"><i
+                                                class="fa fa-rocket"></i></a>
+                                                <a class="files" title="upload_files" style="font-size: 14px;" data-toggle="tooltip" style="cursor: pointer;"><i
+                                                    class="fa fa-file"></i></a>
+                                            </td>
+                                            <td>  <a type="submit" class="edit" title="Edit" data-toggle="tooltip">
+                                                <i class="material-icons" style="cursor: pointer; font-size: 18px;">&#xE254;</i>
+                                            </a>
+                                            <a class="mail" title="Cop_mail" style="font-size: 14px;" data-toggle="tooltip" style="cursor: pointer;"><i
+                                                class="fa fa-envelope"></i></a>
+                                           </td> 
+                                                  
+        
+        
+                                      
+                                        <td>
+                                            <a href="#" class="link-icon" onclick="openModal()">Open Modal</a>
+
+                                            <div id="myModal" class="modal">
+                                                <div class="modal-content">
+                                                    <div class="row col-lg-12">
+                                                        <div class="col-lg-6">
+                                                            <h2>Activity Info</h2>
+                                                           
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <span class="close" Onclick="closeModal()">&times;</span>
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row mb-5">
+                                                            <div class="col-md-3 m">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">Client:</label>
+                                                                    <span id="cn" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">Operator:</label>
+                                                                    <span id="op" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">OEM:</label>
+                                                                    <span id="oem" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">FA
+                                                                        Location:</label>
+                                                                    <span id="faL" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3 mb-5">
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">Site ID:</label>
+                                                                    <span id="siteid" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">Site
+                                                                        Name:</label>
+                                                                    <span id="sitename" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">Market:</label>
+                                                                    <span id="market" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">Address:</label>
+                                                                    <span id="Addres" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row  mt-3 mb-5">
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields"
+                                                                        for="fields">Latitude/Longitude:</label>
+                                                                    <span id="Latitude" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">Key
+                                                                        Comments:</label>
+                                                                    <span id="keycmt" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="field3">Notice
+                                                                        Needed:</label>
+                                                                    <span id="noticeneed" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">Notice
+                                                                        Comments:</label>
+                                                                    <span id="noticecmt" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3  mb-5">
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">PTN:</label>
+                                                                    <span id="ptn" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">No. of
+                                                                        Carrier:</label>
+                                                                    <span id="noofcarrier" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">SOW Type:</label>
+                                                                    <span id="sowtyp" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">SOW:</label>
+                                                                    <span id="sow" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3  mb-5">
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">Ix Schedule
+                                                                        Date:</label>
+                                                                    <span id="ixdate" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">Assigned
+                                                                        FE:</label>
+                                                                    <span id="assignfe" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">Assigned 5G
+                                                                        FE:</label>
+                                                                    <span id="assign5gfe" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">Ix Date
+                                                                        Comment:</label>
+                                                                    <span id="ixcmt" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3  mb-5">
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">5G Ix Schedule
+                                                                        Date:</label>
+                                                                    <span id="5gdate" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">Construction
+                                                                        Manager:</label>
+                                                                    <span id="ConstructionManager"
+                                                                        class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">Market
+                                                                        State:</label>
+                                                                    <span id="marketstate" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">Assign
+                                                                        GC:</label>
+                                                                    <span id="assigngc" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3  mb-5">
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">Crew Dispatch
+                                                                        Date:</label>
+                                                                    <span id="crewdispatchdate"
+                                                                        class="highlight"></span>
+                                                                </span>
+                                                            </div>
+
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">MOP End
+                                                                        Time:</label>
+                                                                    <span id="mopEtime" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">MOP Start
+                                                                        Time:</label>
+                                                                    <span id="mopStime" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3  mb-5">
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">NEST:</label>
+                                                                    <span id="nest" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">5G Site
+                                                                        ID:</label>
+                                                                    <span id="5gid" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">Tue Hrs:</label>
+                                                                    <span id="tuehrs" class="highlight">/span>
+                                                                    </span>
+                                                            </div>
+
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">Wed Hrs:</label>
+                                                                    <span id="tuehrs" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row mt-3  mb-5">
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">Thu Hrs:</label>
+                                                                    <span id="tuehrs" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">Fri Hrs:</label>
+                                                                    <span id="tuehrs" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">Sat Hrs:</label>
+                                                                    <span id="tuehrs" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <span class="form-floating">
+                                                                    <label class="fields" for="fields">Sun Hrs:</label>
+                                                                    <span id="tuehrs" class="highlight"></span>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                        </td>
+
+                                    </tr>
+
+                                 
+
+                                </tr>
+                                {% endfor %}
+
+
+
+
+                                </tbody>
+                            </table>
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+            <div class="col-lg-2">
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+
+
+
+        $(document).ready(function () {
+            $('tr').click(function () {
+                var cells = $(this).find('td');
+                var nameCell = $(this).find('td').eq(0);
+                var client = cells.eq(2).text();
+                var Operator = cells.eq(3).text();
+                var OEM = cells.eq(4).text();
+                var FA_Location = cells.eq(6).text();
+                var Site_ID = cells.eq(9).text();
+                var Site_Name = cells.eq(4).text();
+                var Market = cells.eq(7).text();
+
+                var Address = cells.eq(8).text();
+                var Latitude = cells.eq(7).text();
+                var Key_Comments = cells.eq(8).text();
+                var Notice_Needed = cells.eq(9).text();
+                var Notice_Comments = cells.eq(10).text();
+                var PTN = cells.eq(11).text();
+                var No_ofCarrier = cells.eq(12).text();
+                var SOW = cells.eq(16).text();
+                var SOW_type = cells.eq(14).text();
+                var Ix_ScheduleDate = cells.eq(15).text();
+                var Assign_FE = cells.eq(16).text();
+                var Assigned_5GFE = cells.eq(16).text();
+
+
+                var Ix_DateComment = cells.eq(17).text();
+                var fiveG_IxScheduleDate = cells.eq(18).text();
+
+                var Construction_Manager = cells.eq(19).text();
+
+                var Market_State = cells.eq(20).text();
+
+                var Assign_GC = cells.eq(21).text();
+
+                var Crew_DispatchDate = cells.eq(22).text();
+
+                var Crew_DispatchDate = cells.eq(23).text();
+                var MOP_EndTime = cells.eq(13).text();
+
+                var MOP_StartTime = cells.eq(13).text();
+
+                var NEST = cells.eq(13).text();
+
+                var fiveG_SiteID = cells.eq(13).text();
+
+                var TueHrs = cells.eq(13).text();
+
+
+
+
+
+
+
+                $('#cn').html(client);
+                $('#op').html(Operator);
+                $('#oem').html(OEM);
+                $('#faL').html(FA_Location);
+                $('#siteid').html(Site_ID);
+                $('#sitename').html(Site_Name);
+                $('#market').html(Market);
+                $('#Addres').html(Address);
+
+                $('#Latitude').html(Latitude);
+
+                $('#keycmt').html(Key_Comments);
+                $('#noticeneed').html(Notice_Needed);
+                $('#noticecmt').html(Notice_Comments);
+                $('#ptn').html(PTN);
+                $('#noofcarrier').html(No_ofCarrier);
+                $('#sowtyp').html(SOW);
+                $('#sow').html(SOW_type);
+                $('#ixdate').html(Ix_ScheduleDate);
+                $('#assignfe').html(Assign_FE);
+                $('#assign5gfe').html(Assigned_5GFE);
+                $('#ixcmt').html(Ix_DateComment);
+                $('#5gdate').html(fiveG_IxScheduleDate);
+                $('#ConstructionManager').html(Construction_Manager);
+                $('#marketstate').html(Market_State);
+                $('#assigngc').html(Assign_GC);
+                $('#crewdispatchdate').html(Crew_DispatchDate);
+                $('#mopEtime').html(Crew_DispatchDate);
+                $('#mopStime').html(MOP_EndTime);
+                $('#nest').html(MOP_StartTime);
+                $('#5gid').html(NEST);
+                $('#tuehrs').html(fiveG_SiteID);
+
+
+
+                // Display images
+                var imageCell = $(this).find('td').eq(6); // Assuming the image cell is the 7th column (index 6)
+                var imageSrc = imageCell.find('img').attr('src');
+                var imageHtml = '<img src="' + imageSrc + '" alt="User Image" style="border-radius:120px; border:1px solid black; width: 100px; height: 100px;">';
+                $('#initials').html(imageHtml);
+            });
+        });
+
+
+
+
+
+        // ------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+        /*-------------------pop-end-----------------*/
+        function ExportToExcel(type, fn, dl) {
+            var elt = document.getElementById('table');
+            var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
+            return dl ?
+                XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) :
+                XLSX.writeFile(wb, fn || ('MySheetName.' + (type || 'xlsx')));
+        }
+
+
+        $(document).ready(function () {
+            // Add click event listener to table rows
+            $('tr').click(function () {
+                // Get the data cells of the clicked row
+                var cells = $(this).find('td');
+
+                // Extract the data from the cells and store in variables
+
+
+
+                // Populate the input fields in the pop-up with the retrieved data
+
+
+                // Show the pop-up
+                $('#popup').show();
+            });
+        });
+
+
+        function openModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "block";
+
+            // Close the modal if clicked outside of it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    closeModal();
+                }
+            };
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+    </script>
+    <script>
+        function showOrHide() {
+            var x = document.getElementById("div1");
+            var myDiv = document.getElementById("myDiv");
+            if (x.style.display === "inline" || myDiv.style.width === "91%") {
+                x.style.display = "none";
+                myDiv.style.width = "100%";
+            }
+            else {
+                x.style.display = "inline";
+                myDiv.style.width = "91%";
+            }
+        }
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+            var actions = $("table td:last-child").html();
+            // Append table with add row form on add new button click
+
+            // Delete row on delete button click
+            $(document).on("click", ".delete", function () {
+                $(this).parents("tr").remove();
+                $(".add-new").removeAttr("disabled");
+            });
+        });
+        $(document).ready(function () {
+            $('#table').DataTable({
+                dom: '<"top"iflp<"clear">>rt<"bottom"iflp<"clear">>',
+            });
+            /*     { // Initialize the DataTable  
+                     var table = $('#table').DataTable(); // Add a custom search field 
+                     $('<input type="text" id="search-input" placeholder="Search...">').appendTo('body');
+                      // Handle search functionality
+                       $('#search-input').on('keyup', function() 
+                       { table.search(this.value).draw(); }); }*/
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dashboard</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
+
+
+    <!-- simple line icon -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/simple-line-icons/css/simple-line-icons.css">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!-- Responsive.css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js'></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Alkatra:wght@500;700&family=Braah+One&family=Kaushan+Script&family=Lilita+One&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/exceljs/dist/exceljs.min.js"></script>
+
+
+
+    <style>
+        .row {
+            color: rgb(20, 20, 20);
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Alfa Slab One', cursive;
+            font-family: 'Alkatra', cursive;
+        }
+
+        .midbox {
+            height: 350px !important;
+        }
+
+        .navbar {
+
+            background-color: white;
+
+
+        }
+
+        .col-lg-1 {
+            padding-top: 0px;
+
+        }
+
+
+        .nav-link.active {
+
+            background-color: #51E2F5;
+
+        }
+
+        .nav-link:hover {
+
+            background-color: #51E2F5;
+
+
+        }
+
+        body {
+            background-color: #f9f9fa
+        }
+
+        .tog {
+            /* overflow: hidden; */
+            height: inherit;
+            margin: 10px 877px 15px -890px;
+        }
+
+
+        @media (max-width:991.98px) {
+            .padding {
+                padding: 1.5rem
+            }
+
+
+        }
+
+        @media (max-width:767.98px) {
+            .padding {
+                padding: 1rem
+            }
+        }
+
+        @media (min-width: 992px) {
+            .col-lg-11 {
+                flex: 0 0 auto;
+                width: 90%;
+            }
+        }
+
+        @media only screen and (max-width: 1300px) {
+
+            .col-lg-1 {
+                padding-top: 82px;
+                display: none !important;
+            }
+
+            .btn2 {
+                /* margin: 10px 364px 15px -890px; */
+                visibility: visible !important;
+            }
+
+            .col-10 {
+                width: 130px !important;
+            }
+
+            .tog {
+                display: none;
+            }
+
+        }
+
+        @media only screen and (max-width: 1600px) {
+            .nav-link.active {
+                width: 120px;
+            }
+
+            .nav-link:hover {
+                width: 120px;
+            }
+
+
+
+        }
+
+        .btn2 {
+            visibility: hidden;
+        }
+
+        .padding {
+            padding: 5rem
+        }
+
+        .card {
+            background: #fff;
+            border-width: 0;
+            border-radius: .25rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+            margin-bottom: 1.5rem
+        }
+
+        .card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(19, 24, 44, .125);
+            border-radius: .25rem
+        }
+
+        .card-header {
+            padding: .75rem 1.25rem;
+            margin-bottom: 0;
+            background-color: rgba(19, 24, 44, .03);
+            border-bottom: 1px solid rgba(19, 24, 44, .125)
+        }
+
+        .card-header:first-child {
+            border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0
+        }
+
+        card-footer,
+        .card-header {
+            background-color: transparent;
+            border-color: rgba(160, 175, 185, .15);
+            background-clip: padding-box
+        }
+
+        .log {
+            font-size: 25px;
+            font-weight: 800;
+
+        }
+
+        .logo {
+            text-decoration: none;
+
+        }
+
+
+        .a3 {
+            color: rgb(11, 131, 230);
+        }
+
+        .a1 {
+            color: black;
+
+        }
+
+        .a1:hover {
+            color: rgb(11, 131, 230);
+        }
+
+
+        .a2 {
+            height: 500px;
+        }
+
+        .menu {
+            background-color: #51E2F5;
+
+        }
+
+
+
+
+        .bb {
+            width: 100px;
+        }
+
+        .ix {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .option {
+            text-decoration: none;
+        }
+
+        .mid {
+            height: 300px;
+        }
+
+        .task {
+            text-decoration: none;
+        }
+
+        .dash {
+
+            text-align: center;
+        }
+
+        .dash h4 {
+            font-family: 'Alfa Slab One', cursive;
+            font-family: 'Alkatra', cursive;
+            padding-top: 10px;
+            font-size: 40px;
+        }
+
+        /* -------col 11------------------------------*/
+
+        .exception {
+            color: red;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            flex: 1;
+            border: 1px solid #ccc;
+            padding: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .card p {
+            display: none;
+            font-style: italic;
+        }
+
+        .card:hover p {
+            display: block;
+        }
+
+        .upload-card {
+            display: flex;
+        }
+
+        .upload-card .left-half {
+            flex: 1;
+        }
+
+        .upload-card .right-half {
+            flex: 1;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .upload-card .right-half:hover {
+            background-color: #f5f5f5;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .drag-drop-area {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .drag-drop-area p {
+            margin: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group input[type="file"] {
+            display: block;
+            margin-top: 5px;
+        }
+
+        .form-group button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body class="sidebar-mini fixed">
+    {% load static %}
+
+
+    <div class="wrapper">
+        <!-- Navbar-->
+        <header class="main-header-top hidden-print ">
+            <div class="container-fluid border border rounded" style="padding: 0px 0px 0px 0px;">
+
+                <nav class="navbar navbar-static-top">
+                    <img src='{% static "images/int.png" %}' class="img ps-2" width="140" height="50"
+                        alt="integer logo">
+
+                    <button class="btn2 float-start bg-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+                        role="button">
+                        <i class="text-light " data-bs-toggle="offcanvas" data-bs-target="#offcanvas"><i
+                                class="fa fa-bars"></i></i>
+
+                        <button onclick="showOrHide()" class="tog float-end bg-" role="button" style="height: 30px;">
+                            <i class="text-dark "><i class="fa fa-bars"></i></i>
+                        </button>
+
+
+                        <ul class="top-nav">
+                            <!--Notification Menu-->
+
+
+                            <div class="btn-group">
+                                <button type="button" class="btn btn dropdown-toggle dropdown-toggle-split"
+                                    data-bs-toggle="dropdown" aria-expanded="false"><span><img class="img-circle "
+                                            src='{% static "images/B.png" %}'
+                                            style="width:40px; border: 1px solid black; border-radius: 80px;"
+                                            alt="User Image"></span>
+                                </button>
+
+                                <ul class="dropdown-menu px-2 ">
+
+                                    <li><a href="#!"><i class="icon-settings px-2"></i> Settings</a></li>
+                                    <li> <a href="account_settings.html"><i class="icon-user px-2"></i> Profile</a></li>
+                                    <li><a href="#"><i class="icon-envelope-open px-2 "></i> My Messages</a></li>
+                                    <li><a href="login.html"><i class="icon-logout px-2"></i> Logout</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Lock Screen</a></li>
+
+                                </ul>
+                            </div>
+
+                            <div class="btn-group">
+
+                                <button type="button" class="btn btn-light dropdown-toggle " data-bs-toggle="dropdown"
+                                    aria-expanded="false">Pushpendra
+
+                                </button>
+                                <ul class="dropdown-menu pe-5 ps-1 ">
+                                    <li class="not-head pt-2">You have <b class="text-secondary ">9</b> new
+                                        notifications.
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Email recieved</a></li>
+                                    <li><a class="dropdown-item" href="#">Profile Updated</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">See all notifications</a></li>
+
+                                </ul>
+                            </div>
+
+
+
+
+                        </ul>
+            </div>
+            </nav>
+
+        </header>
+
+        <!-- Side-Nav-->
+        <div class="col-10 offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvas" data-bs-keyboard="false"
+            data-bs-backdrop="false">
+            <div class="menu offcanvas-header">
+                <h6 class="offcanvas-title d-none d-sm-block text-dark" id="offcanvas">Menu</h6>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body px-0 " style="background-color:white">
+                <ul class="nav nav-pills flex-column  align-items-start  ps-3 " id="menu"
+                    style="text-decoration: black ;  ">
+
+
+                    <li class="text-dark">
+                        <a class="option waves-effect waves-dark link-light pb-5 " href="table.html">
+                            <i class="a1 icon-home"></i><span class="a1">&nbsp&nbsp Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="option waves-effect waves-dark link-light pb-5" href="login.html">
+                            <i class="a1 icon-user"></i><span class="a1">&nbsp&nbsp Login</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="option waves-effect waves-dark link-light" href="login.html "><i
+                                class="a1 icon-logout"></i>
+                            <span class="a1">&nbsp Logout</span>
+                        </a>
+                    </li>
+
+
+
+
+                    <li>
+                        <a class="option waves-effect waves-dark link-light" href="dashboard.html">
+                            <i class="a1 icon-menu"></i><span class="a1">&nbsp&nbsp Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="option waves-effect waves-dark link-light active" href="adduser.html">
+                            <i class="a1 icon-plus"></i><span class="a1">&nbsp&nbsp Add User</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="option waves-effect waves-dark link-light" href="account_settings.html">
+                            <i class="a1 icon-user"></i><span class="a1">&nbsp&nbsp Account</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="option waves-effect waves-dark link-light" href="#">
+                            <i class="a1 icon-bell"></i><span class="a1">&nbsp&nbsp Setting</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-1" id="div1">
+                <nav class="navbar navbar-expand navbar-light bg-light">
+                    <div class="container" style="padding: 0px 0px 0px 0px ;">
+                        <!-- <div class="container-fluid"> -->
+
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                            <!-- <div class="container-fluid"> -->
+                            <div class="col">
+                                <div id="sidebar" class="col col-2 ">
+                                    <ul class="navbar-nav float-start flex-column ms-0" id="sidemenu">
+                                        <li class="nav-item ms-2">
+
+                                        </li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link" href="/dashboard"><i
+                                                    class="fa fa-bars me-1 pe-2"></i>Dashboard</a>
+
+                                        </li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link " href="/activitylist"><i
+                                                    class="fa fa-list me-1 pe-2"></i>Activity List</a>
+                                        </li>
+                                        <li class="nav-item " style="width:140px ;">
+                                            <a class="nav-link  " href="/userlist"><i
+                                                    class="fa fa-table me-1 pe-1"></i>&nbspUserlist</a>
+                                        </li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link" href="/createactivity"><i
+                                                    class="fa fa-rocket me-1 pe-2"></i>Activity</a>
+                                        </li>
+
+
+
+
+
+                                        <li class="nav-item">
+                                            <a class="nav-link active " href="/adduser"><i
+                                                    class="fa fa-plus  "></i>&nbsp&nbsp&nbspAdd
+                                                User</a>
+                                        </li>
+
+                                        <li class="nav-item">
+
+                                            <a class="nav-link " href="/alarm"><i
+                                                    class="fa fa-bell me-1 pe-1 "></i>&nbsp&nbspAlarm</a>
+                                        </li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link " href="/market2"><i
+                                                    class="fa fa-laptop me-1 pe-1"></i>Market List</a>
+                                        </li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link " href="/add_market"><i
+                                                    class="fa fa-file me-1 pe-2"></i>Add
+                                                Market</a>
+                                        </li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link " href="/rolelist"><i
+                                                    class="fa fa-rocket me-1 pe-2"></i>Rolelist</a>
+                                        </li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link  " href="/companylist"><i
+                                                    class="fa fa-rocket me-1 pe-2"></i>Companylist</a>
+                                        </li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link " href="/account_settings"><i
+                                                    class="fa fa-road me-1 pe-1"></i>Account</a>
+                                        </li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link " href="#"><i
+                                                    class="fa fa-tools me-1 pe-2"></i>Setting</a>
+                                        </li>
+
+                                        <li class="nav-item" style="width:140px ;">
+                                            <a class="nav-link " href="/login_page"><i
+                                                    class="fa fa-user me-1 pe-1"></i>&nbspLogin</a>
+                                        </li>
+
+                                        <li class="nav-item">
+
+                                            <a class="nav-link " href="/login_page"><i
+                                                    class="fa fa-rocket me-1 pe-2"></i>Logout</a>
+                                        </li>
+
+
+                                    </ul>
+
+
+
+
+
+                </nav>
+            </div>
+            <div class="col-lg-11 " id="myDiv">
+
+
+                <div class="container mt-5" style="box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);">
+                    <div class="row ms-5">
+                        <div class="col-lg-12 ms-5">
+                            <form method="post" enctype="multipart/form-data" action="{% url 'upload_file' %}">
+                                {% csrf_token %}
+                                <input type="file" name="file">
+                                <button type="submit">Submit</button>
+                            </form>
+                            
+                            {% if download_link %}
+                                <a href="{{ download_link }}">Download Processed File</a>
+                            {% endif %}
+                        </div>
+
+                    </div>
+                </div>
+            
+
+            </div>
+
+
+
+
+
+        </div>
+
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+    <!-- Required Jqurey -->
+    <script src="assets/plugins/Jquery/dist/jquery.min.js"></script>
+    <script src="assets/plugins/tether/dist/js/tether.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+
+    <script>
+ 
+        function showOrHide() {
+            var x = document.getElementById("div1");
+            var myDiv = document.getElementById("myDiv");
+            if (x.style.display === "inline" || myDiv.style.width === "90%") {
+                x.style.display = "none";
+                myDiv.style.width = "100%";
+            }
+            else {
+                x.style.display = "inline";
+                myDiv.style.width = "90%";
+            }
+        }
+        // Function to increment the count for a specific cell
+        function incrementCount(row, col) {
+            var cell = document.getElementById(row + '-' + col);
+            var count = parseInt(cell.innerHTML);
+            cell.innerHTML = count + 1;
+        }
+    </script>
+
+</body>
+
+</html>

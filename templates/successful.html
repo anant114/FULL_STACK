@@ -1,0 +1,103 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>welcome to my Page</title>
+  </head>
+  <style>
+    body{
+        background-color: black;
+
+    }
+    h1{
+
+      margin-left: 620px;
+      margin-top: 343px;
+        display: flex;
+        color: white;
+    
+        font-size: 70px;
+    }
+    .a1{
+       
+        display: flex;
+        color: white;
+    
+        font-size: 50px;
+
+    }
+    
+    
+    .btn1{
+      position: relative;
+      top: 53%;
+      left: 44%;
+      margin-top: -501px;
+      margin-left: 34px;
+    }
+
+  
+    .btn1 a{
+      color: white !important;
+      text-decoration: none !important ;
+    
+    }
+    .btn1{
+      margin-right: 15px;
+    }
+    .close2{
+      font-size: 26px !important;
+      padding-bottom: 20px !important;
+     
+    }
+    .me-5 {
+      margin-right: 1rem !important;}
+      .close{
+        position: relative;
+        left: 32px;
+        bottom: 10px;
+      }
+
+
+  
+  
+  </style>
+  <body> 
+    {% load static %}
+    
+    <div class="message me-5">
+      {% for message in messages %}
+      <div class="container-fluid p-0" id="gg">
+        <div class="alert {{ message.tags }} alert-dismissible me-5 " role="alert">
+          <button type="button" class="close float-end" style="background-color: #d1e7dd; border:none; "  id="close" data-dismiss="alert" aria-label="Close">
+            <span class="close2" style="font-size: larger;" aria-hidden="false">&times;</span>
+          </button>
+          {{ message }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <h1>Login Successfully </h1>
+ 
+    <button type="button" class="btn1 btn btn-outline-danger"><a href="/login_page">Logout</a></button>
+   
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script>
+  document.getElementById('close').addEventListener('click', function() {
+    document.getElementById('gg').style.display = 'none';
+    });
+</script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Reset Password</title>
+  <link href="forgot.css" type="text/css" rel="stylesheet">
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+</head>
+<style>
+  .row{
+    color: rgb(20, 20, 20);
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Alfa Slab One', cursive;
+        font-family: 'Alkatra', cursive;
+}
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    background-size: cover;
+    background-image: url(https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg);
+  }
+
+  .logo {
+    margin-left: 105px;
+    margin-bottom: 0px;
+  }
+
+  .img {
+    margin-top: -50px;
+    width: 130px;
+    height: 130px;
+  }
+
+  .heat {
+
+    margin-left: 80px;
+  }
+
+  .modal-body {
+    font-size: 20px;
+  }
+
+  .head {
+    color: rgb(81, 114, 158);
+
+    font-size: 30px;
+  }
+
+  .container {
+    background: white;
+    width: auto;
+    height: auto;
+    padding-bottom: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    padding: 70px 50px 20px 50px;
+    border-radius: 20px;
+    border: 0.5px solid rgba(8, 8, 8, 0.103);
+  }
+
+  .fl {
+    float: left;
+    width: 110px;
+    line-height: 35px;
+    font-size: 15px;
+  }
+
+  .clr {
+    clear: both;
+  }
+
+  .box1 {
+    width: 360px;
+    height: 35px;
+    font-family: verdana;
+    font-size: 12px;
+    margin-top: 25px;
+    margin-bottom: -15px;
+    border: 2x solid black;
+  }
+
+  .box2 {
+    width: 360px;
+    height: 35px;
+    margin-top: 30px;
+    font-family: verdana;
+    font-size: -13px;
+  }
+
+  #email {
+    height: 40px;
+    width: 364px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(112, 107, 107);
+  }
+
+  #textBox2 {
+    height: 35px;
+    width: 350px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 2px solid rgb(112, 107, 107);
+  }
+
+  .remember-box {
+    display: flex;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 4px;
+  }
+
+  #Remember_checkbox {
+    margin-right: 5px;
+    background-color: rgb(9, 141, 218);
+    cursor: pointer;
+  }
+
+  .remember-box label {
+    cursor: pointer;
+    font-size: 13px;
+  }
+
+  .submit {
+    margin-top: 50px;
+    border: 0.2px solid black;
+    border-radius: 5px;
+    color: white;
+    background: rgb(81, 114, 158);
+
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 7px 35px 30px 35px;
+    text-decoration: none;
+    height: 35px;
+    width: 364px;
+  }
+
+  .submit:hover {
+    background: rgb(9, 141, 218);
+  }
+
+  .box4 {
+    display: flex;
+    flex-direction: wrap;
+    flex-direction: row;
+  }
+
+  .fz {
+    margin-left: 210px;
+    margin-bottom: -22px;
+  }
+
+  .rr {
+    margin-top: 20px;
+
+  }
+
+  .link {
+    margin: auto;
+
+  }
+
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(238, 229, 229);
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    margin-top: 50%;
+    font-weight: bold;
+    justify-content: center;
+    align-content: center;
+    color: rgb(9, 141, 218);
+  }
+
+  .login-methods {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .fab {
+    font-size: 20px;
+    transition: 0.3s;
+    color: rgb(58, 168, 211);
+    padding: 0PX 10PX 0PX 10PX;
+  }
+
+  .fab:hover {
+    color: rgb(9, 157, 243);
+  }
+
+  .fa {
+    color: rgb(8, 161, 221);
+    padding: 0PX 10PX 0PX 10PX;
+    text-decoration: none;
+  }
+
+  #contact {
+    color: rgb(8, 161, 221);
+    padding: 0PX 10PX 0PX 10PX;
+    text-decoration: none;
+  }
+
+  .box1 span {
+    font-size: 12px;
+    color: red;
+    position: absolute;
+    left: 54px;
+    margin-top: 3px;
+  }
+
+  .box2 span {
+    font-size: 12px;
+    color: red;
+    position: absolute;
+    left: 54px;
+    margin-top: 3px;
+  }
+
+  input.invalid:focus {
+    outline: none;
+    border-color: red !important;
+    box-shadow: none;
+  }
+
+  input:valid {
+    border: 2px solid green;
+  }
+
+  input:invalid:not(:placeholder-shown):focus {
+    border: 2px solid red !important;
+  }
+
+  input:valid {
+    border: 2px solid green;
+  }
+
+  @media only screen and (max-width: 1100px) {
+    body {
+      background-image: url(https://images.unsplash.com/photo-1628029799784-50d803e64ea0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=659&q=80);
+      background-position: center top;
+      background-size: 100% auto;
+
+    }
+  }
+
+  .error-message {
+    color: red;
+    display: none;
+    margin-right: 20px;
+  }
+
+  .error-message.active {
+    display: block;
+  }
+
+  input.invalid:focus {
+    outline: none;
+    border-color: red;
+    box-shadow: none;
+  }
+
+  input:valid {
+    border: 2px solid green;
+  }
+
+  input:invalid:not(:placeholder-shown):focus {
+    border: 2px solid red;
+  }
+
+  .submit a {
+    color: white;
+    text-decoration: none;
+  }
+  .me-5 {
+    margin-right: 1rem !important;}
+    .close{
+     
+      position: relative;
+      left: 32px;
+      bottom: 12px;
+    }
+    .close2{
+   
+      font-size: 26px !important;
+      padding-bottom: 20px !important;
+     
+    }
+    .rr{
+      font-size: 25px;
+      border: none;
+    }
+    .rr a{
+      text-decoration: none;
+      color: rgb(81, 114, 158);
+      font-weight: 600;
+    }
+</style>
+
+<body>
+  {% load static %}
+  <form name="form" class="requires-validation" action="/forgot" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+  <div class="message me-5">
+    {% for message in messages %}
+    <div class="container-fluid p-0" id="gg">
+      <div class="alert {{ message.tags }} alert-dismissible me-5 " role="alert">
+        <button type="button" class="close float-end" style="background-color: #f9d5da; border:none; "  id="close" data-dismiss="alert" aria-label="Close">
+          <span class="close2" style="font-size: larger;" aria-hidden="false">&times;</span>
+        </button>
+        {{ message }}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+
+
+  <!-- Body of Form starts -->
+  <div class="container">
+    <a href="" title="logo" target="_blank">
+      <div class="logo"><img class="img"
+          src="https://media.glassdoor.com/sql/2211456/integer-telecom-services-squarelogo-1585815129868.png"> </div>
+    </a>
+    <div class="heat">
+      <h2 class="head">Reset Password</h2>
+      
+    </div>
+
+      <p class="py-2"><br>
+        &nbsp Enter your email address and we will send you an <br>&nbsp &nbsp  email with instructions reset your password.
+      </p>
+
+        <div class="box1">
+          <div class="fr">
+            <input type="email" required name="email" required minlength="4" placeholder="Email" class="textBox"
+              id="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+            <div id="email-error" class="error-message">
+            </div>
+          </div>
+          <div class="clr">
+
+          </div>
+        </div>
+
+
+        <!--Email ID----- onkeyup="validateEmail()" Submit Button------>
+        <div class="box">
+          <button class="submit"> Reset Password</button>
+          <span id="submit-error"></span>
+        </div>
+        <!---Submit Button End----->
+        <!-- -----customer signup-------------- -->
+        <div class="box4">
+          <div class="link">
+
+       
+         <button type="button" class="rr btn  mb-4 mt-3 "><a href="/login_page">Login</a></button>
+          </div>
+             
+        </div>
+    
+  </div>
+</form>
+  <!-- -customer signup-End -->
+  <!--Body of Form ends-->
+
+  <script>
+
+    const emailInput = document.getElementById('email');
+    const emailError = document.getElementById('email-error');
+
+    emailInput.addEventListener('input', function (event) {
+      if (emailInput.validity.valid) {
+        // If the email is valid, hide the error message
+        emailError.textContent = '';
+        emailError.className = 'error-message';
+        emailInput.classList.remove('invalid');
+      } else {
+        // If the email is invalid, display the error message
+        emailError.textContent = 'Please enter a valid email address';
+        emailError.className = 'error-message active';
+        emailInput.classList.add('invalid');
+      }
+    });
+
+    emailInput.addEventListener('invalid', function (event) {
+
+      event.preventDefault();
+    });
+          
+    
+document.getElementById('close').addEventListener('click', function() {
+	document.getElementById('gg').style.display = 'none';
+  });
+
+  </script>
+</body>
+<!--Body ends--->
+
+</html>

@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dashboard</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
+
+    <!-- simple line icon -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/simple-line-icons/css/simple-line-icons.css">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!-- Responsive.css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js'></script>
+    <!-- /*-------edit delete-------------*/ -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
+
+
+
+    <style>
+        .navbar {
+
+            background-color: white;
+
+
+        }
+
+
+
+
+
+        .nav-link.active {
+
+            background-color: #8AAAE5;
+
+        }
+
+        .nav-link:hover {
+
+            background-color: #8AAAE5;
+
+
+        }
+
+        #myDiv {
+            width: 66.5%;
+            padding: 0px 0px 0px 10px !important;
+        }
+
+
+
+
+        body {
+            background-color: #f9f9fa
+        }
+
+        .tog {
+            /* overflow: hidden; */
+            height: inherit;
+            margin: 10px 1035px 15px -890px;
+        }
+
+
+        @media (max-width:991.98px) {
+            .padding {
+                padding: 1.5rem
+            }
+
+
+        }
+
+        @media (max-width:900.98px) {
+            .padding {
+                padding: 1rem
+            }
+        }
+
+
+
+        @media only screen and (max-width: 1300px) {
+
+            .col-lg-1 {
+                padding-top: 82px;
+                display: none !important;
+            }
+
+            .btn2 {
+                /* margin: 10px 364px 15px -890px; */
+                visibility: visible !important;
+            }
+
+            .col-10 {
+                width: 130px !important;
+            }
+
+            .tog {
+                display: none;
+            }
+
+        }
+
+        @media only screen and (max-width: 1600px) {
+            .nav-link.active {
+                width: 120px;
+            }
+
+            .nav-link:hover {
+                width: 120px;
+            }
+
+
+
+        }
+
+        .btn2 {
+            visibility: hidden;
+        }
+
+        .padding {
+            padding: 5rem
+        }
+
+        .card {
+            background: #fff;
+            border-width: 0;
+            border-radius: .25rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+            margin-bottom: 1.5rem
+        }
+
+        .card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(19, 24, 44, .125);
+            border-radius: .25rem
+        }
+
+        .card-header {
+            padding: .75rem 1.25rem;
+            margin-bottom: 0;
+            background-color: rgba(19, 24, 44, .03);
+            border-bottom: 1px solid rgba(19, 24, 44, .125)
+        }
+
+        .card-header:first-child {
+            border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0
+        }
+
+        card-footer,
+        .card-header {
+            background-color: transparent;
+            border-color: rgba(160, 175, 185, .15);
+            background-clip: padding-box
+        }
+
+        .log {
+            font-size: 25px;
+            font-weight: 800;
+
+        }
+
+        .logo {
+            text-decoration: none;
+
+        }
+
+
+        .a3 {
+            color: rgb(11, 131, 230);
+        }
+
+        .a1 {
+            color: black;
+
+        }
+
+        .a1:hover {
+            color: rgb(11, 131, 230);
+        }
+
+
+        .a2 {
+            height: 500px;
+        }
+
+        .menu {
+            background-color: #8AAAE5;
+
+        }
+
+
+
+
+        .bb {
+            width: 100px;
+        }
+
+        .ix {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .option {
+            text-decoration: none;
+        }
+
+        .mid {
+            height: 300px;
+        }
+
+        .task {
+            text-decoration: none;
+        }
+
+        .dash {
+            text-align: center;
+            margin-bottom: -10px;
+
+        }
+
+        .dash h4 {
+            padding-top: 10px;
+            font-size: 40px;
+        }
+
+        @media screen and (max-width: 900px) {
+            #chart-line {
+                width: 100%;
+                height: 300px;
+            }
+
+            .fixed .content-wrapper {
+                margin-left: -8px;
+            }
+        }
+
+        @media screen and (max-width: 1300px) {
+
+            .fixed .content-wrapper {
+                margin-left: -8px;
+                width: 100vw !important;
+            }
+        }
+
+        /* ------------MARKET LIST-----------*/
+        .btn1 {
+            background-color: rgb(101, 175, 101);
+            color: #fff;
+            height: 40px;
+            border-radius: 10px;
+            width: 160px !important;
+            margin-top: 15px !important;
+        }
+
+        .btn1:hover {
+            background-color: green;
+        }
+
+        .head {
+            background-color: #8AAAE5;
+            margin-left: 2px;
+
+
+
+        }
+
+
+
+        .col-lg-8 {
+            padding: 0px 0px 0px 20px !important;
+
+        }
+
+        /*-----------------------pop up--------------------------*/
+        .row {
+            margin-right: 0px !important;
+        }
+
+        #rdata1:hover {
+            color: blue !important;
+        }
+
+        .popup {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcSRePYvdYJmn2xI8xLrRKNViQltZ17O5-L49ph2syiPoq7-UxoiZutiI80WoXh6vfWqD2g16lAdo&usqp=CAU&ec=48665699);
+
+            display: none;
+            position: fixed;
+            top: 55.2%;
+            right: 0;
+            transform: translate(0, -50%);
+            padding: 20px;
+            /* background-color: #d2ebe7;*/
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            animation-name: bounce;
+            width: 480px;
+        }
+
+        .market {
+            border: none !important;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcSRePYvdYJmn2xI8xLrRKNViQltZ17O5-L49ph2syiPoq7-UxoiZutiI80WoXh6vfWqD2g16lAdo&usqp=CAU&ec=48665699);
+            /* background-color: #d2ebe7;*/
+        }
+
+        #poplabel {
+
+
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .block {
+            display: inline-block !important;
+        }
+
+        .editmk {
+            margin-top: 32px;
+            width: 140px;
+            height: 42px;
+            text-align: center;
+
+            cursor: pointer;
+        }
+
+        .popup-close {
+            margin-top: 15px;
+            width: 140px;
+            height: 42px;
+            text-align: center;
+            background-color: rgb(185, 16, 16) !important;
+            cursor: pointer;
+        }
+
+        .popup-close:hover {
+            background-color: rgb(228, 12, 12) !important;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .popup {
+                width: 400px;
+                overflow-y: scroll !important;
+            }
+
+        }
+
+        @media only screen and (max-width: 700px) {
+            .popup {
+                width: 300px;
+                overflow-y: scroll !important;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            .popup {
+                width: 300px;
+                overflow-y: scroll !important;
+                top: 62%;
+            }
+        }
+
+
+
+
+
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        #contactEmailLabel,
+        #contactpersonLabel {
+            display: inline-block;
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: center;
+
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcSRePYvdYJmn2xI8xLrRKNViQltZ17O5-L49ph2syiPoq7-UxoiZutiI80WoXh6vfWqD2g16lAdo&usqp=CAU&ec=48665699);
+            background-size: cover;
+            background-position: center center;
+            color: black;
+        }
+
+        .line {
+            height: 4px;
+            background: linear-gradient(to right, transparent, #732a81, transparent);
+        }
+
+        .conp {
+            margin-left: 10px !important;
+        }
+
+        .profile-picture {
+            width: 80px;
+            height: 80px;
+            background-color: maroon;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            color: white;
+        }
+
+
+        #poplabel1 {
+            font-weight: 700;
+            color: black;
+            font-size: 20px;
+        }
+
+        .market1 {
+            border: none !important;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcSRePYvdYJmn2xI8xLrRKNViQltZ17O5-L49ph2syiPoq7-UxoiZutiI80WoXh6vfWqD2g16lAdo&usqp=CAU&ec=48665699);
+            font-size: 25px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .down {
+            color: black !important;
+            margin-top: 13px !important;
+        }
+
+        .down:hover {
+            color: rgb(0, 162, 255) !important;
+          
+        }
+    </style>
+
+</head>
+
+<body class="sidebar-mini fixed">
+    {% load static %}
+
+    <div class="wrapper">
+        <!-- Navbar-->
+        <header class="main-header-top hidden-print ">
+            <div class="container-fluid border border rounded" style="padding: 0px 0px 0px 0px;">
+
+                <nav class="navbar navbar-static-top">
+                    <img src='{% static "images/int.png" %}' class="img ps-2 " width="130" height="50"
+                        alt="integer logo">
+
+                    <button class="btn2 float-start bg-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+                        role="button">
+                        <i class="text-light " data-bs-toggle="offcanvas" data-bs-target="#offcanvas"><i
+                                class="fa fa-bars"></i></i>
+
+                        <button onclick="showOrHide()" class="tog float-end bg-" role="button" style="height: 30px;">
+                            <i class="text-dark "><i class="fa fa-bars"></i></i>
+                        </button>
+
+
+                        <ul class="top-nav">
+                            <!--Notification Menu-->
+
+
+                            <div class="btn-group">
+                                <button type="button" class="btn btn dropdown-toggle dropdown-toggle-split"
+                                    data-bs-toggle="dropdown" aria-expanded="false"><span><img class="img-circle "
+                                            src='{% static "images/B.png" %}'
+                                            style="width:40px; border: 1px solid black; border-radius: 80px;"
+                                            alt="User Image"></span>
+                                </button>
+
+                                <ul class="dropdown-menu px-2 ">
+
+                                    <li><a href="#!"><i class="icon-settings px-2"></i> Settings</a></li>
+                                    <li> <a href="account_settings.html"><i class="icon-user px-2"></i> Profile</a></li>
+                                    <li><a href="#"><i class="icon-envelope-open px-2 "></i> My Messages</a></li>
+                                    <li><a href="login.html"><i class="icon-logout px-2"></i> Logout</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Lock Screen</a></li>
+
+                                </ul>
+                            </div>
+
+                            <div class="btn-group">
+
+                                <button type="button" class="btn btn-light dropdown-toggle " data-bs-toggle="dropdown"
+                                    aria-expanded="false">Pushpendra
+
+
+
+
+
+
+
+
+                                </button>
+                                <ul class="dropdown-menu pe-5 ps-1 ">
+                                    <li class="not-head pt-2">You have <b class="text-secondary ">9</b> new
+                                        notifications.
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Email recieved</a></li>
+                                    <li><a class="dropdown-item" href="#">Profile Updated</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">See all notifications</a></li>
+
+                                </ul>
+                            </div>
+
+
+
+
+                        </ul>
+            </div>
+            </nav>
+
+        </header>
+
+        <!-- Side-Nav-->
+        <div class="col-10 offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvas" data-bs-keyboard="false"
+            data-bs-backdrop="false">
+            <div class="menu offcanvas-header">
+                <h6 class="offcanvas-title d-none d-sm-block text-dark" id="offcanvas">Menu</h6>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body px-0 " style="background-color:white">
+                <ul class="nav nav-pills flex-column  align-items-start  ps-3 " id="menu"
+                    style="text-decoration: black ;  ">
+
+
+                    <li class="text-dark">
+                        <a class="option waves-effect waves-dark link-light pb-5 " href="table.html">
+                            <i class="a1 icon-home"></i><span class="a1">&nbsp&nbsp Home</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="option waves-effect waves-dark link-light pb-5" href="login.html">
+                            <i class="a1 icon-user"></i><span class="a1">&nbsp&nbsp Login</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="option waves-effect waves-dark link-light" href="login.html "><i
+                                class="a1 icon-logout"></i>
+                            <span class="a1">&nbsp Logout</span>
+                        </a>
+                    </li>
+
+
+
+
+                    <li>
+                        <a class="option waves-effect waves-dark link-light" href="dashboard.html">
+                            <i class="a1 icon-menu"></i><span class="a1">&nbsp&nbsp Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="option waves-effect waves-dark link-light" href="adduser.html">
+                            <i class="a1 icon-plus"></i><span class="a1">&nbsp&nbsp Add User</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="option waves-effect waves-dark link-light" href="account_settings.html">
+                            <i class="a1 icon-user"></i><span class="a1">&nbsp&nbsp Account</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="option waves-effect waves-dark link-light" href="#">
+                            <i class="a1 icon-bell"></i><span class="a1">&nbsp&nbsp Setting</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-1" id="div1">
+                <nav class="navbar navbar-expand navbar-light bg-light">
+                    <div class="container" style="padding: 0px 0px 0px 0px ;">
+                        <!-- <div class="container-fluid"> -->
+
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                            <!-- <div class="container-fluid"> -->
+                            <div class="col">
+                                <div id="sidebar" class="col col-2 ">
+                                    <ul class="navbar-nav float-start flex-column ms-0" id="sidemenu">
+                                        <li class="nav-item ms-2">
+
+                                        </li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link" href="/dashboard"><i
+                                                    class="fa fa-bars me-1 pe-2"></i>Dashboard</a>
+
+                                        </li>
+                                        {% comment %} <li class="nav-item text-dark">
+                                            <a class="nav-link  " aria-current="page" href="/datatable"><i
+                                                    class="fa fa-home me-1 pe-1"></i>Home</a>
+                                        </li> {% endcomment %}
+                                        <li class="nav-item" style="width:140px ;">
+                                            <a class="nav-link " href="/userlist"><i
+                                                    class="fa fa-table me-1 pe-1"></i>&nbspUserlist</a>
+                                        </li>
+
+                                        <li class="nav-item" style="width:140px ;">
+                                            <a class="nav-link " href="/login_page"><i
+                                                    class="fa fa-user me-1 pe-1"></i>&nbspLogin</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link " href="/adduser"><i
+                                                    class="fa fa-plus  "></i>&nbsp&nbsp&nbspAdd
+                                                User</a>
+                                        </li>
+
+                                        <li class="nav-item">
+
+                                            <a class="nav-link" href="/alarm"><i
+                                                    class="fa fa-bell me-1 pe-1 "></i>&nbsp&nbspAlarm</a>
+                                        </li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link active" href="/market2"><i
+                                                    class="fa fa-laptop me-1 pe-1"></i>Market List</a>
+                                        </li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link " href="/add_market"><i
+                                                    class="fa fa-file me-1 pe-2"></i>Add
+                                                Market</a>
+                                        </li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link " href="/account_settings"><i
+                                                    class="fa fa-road me-1 pe-1"></i>Account</a>
+                                        </li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link " href="#"><i
+                                                    class="fa fa-tools me-1 pe-2"></i>Setting</a>
+                                        </li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link " href="/login_page"><i
+                                                    class="fa fa-rocket me-1 pe-2"></i>Logout</a>
+                                        </li>
+
+                                    </ul>
+
+
+
+
+
+                </nav>
+            </div>
+            <div class="col-lg-8 " id="myDiv">
+
+
+                <div class="content-wrapper">
+                    <div class="head row">
+                        <div class="dash main-header">
+
+                            <h4>MARKET LIST</h4>
+                        </div>
+                    </div>
+                    <div class="row mb-3" style="padding: 0px 15px 0px 15px; overflow-x:auto;">
+                        <table id="table" style="width: 100%;"
+                            class="table table-responsive table-striped table-hover dataTable no-footer"
+                            aria-describedby="table_info">
+                            <thead class="container ">
+                                <tr class="table table-warning table-hover">
+                                    {% comment %} <th scope="col">Sn.No</th> {% endcomment %}
+                                    <th scope="col">Client Name</th>
+                                    <th scope="col ">Operator</th>
+                                    <th scope="col">OEM </th>
+                                    <th scope="col">Market Name</th>
+                                    <th scope="col">Market Time</th>
+                                    <th scope="col">Specific_Market_Guidline</th>
+                                    <th scope="col" >Ciq</th>
+                                    <th scope="col" >Call_test_info</th>
+                                    <th scope="col" >Call_test_files</th>
+                                    <th scope="col" >Site_access</th>
+                                    <th scope="col" >Guidelines</th>
+                                    <th scope="col" >additional_Guidelines</th>
+                                    <th scope="col">Action</th>
+                                    <th scope="col">Profile</th>
+
+
+
+
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                {% for info in market2 %}
+                                <tr>
+                                    <td>
+                                        {% if info.clientid %}
+                                        {{ info.clientid.cname }}
+                                        {% else %}
+                                        N/A
+                                        {% endif %}
+                                    </td>
+                                    <td> {% if info.operatorid %}
+                                        {{ info.operatorid.operatorname }}
+                                        {% else %}
+                                        N/A
+                                        {% endif %}</td>
+                                    <td>
+                                        {{ info.oem }}
+                                    </td>
+                                    <td>{{ info.marketname }}</td>
+                                    <td> {% if info.timeid %}
+                                        {{ info.timeid.mtime }}
+                                        {% else %}
+                                        N/A
+                                        {% endif %} </td>
+                                    <td>{{ info.Specific_Market_Guidline }}</td>
+                                    <td >
+
+                                        {% if info.Ciq %}
+                                        <a href="{{ info.Ciq.url }}" class="btn btn-sm"><i
+                                                class="fa fa-download "></i></a>
+                                        {% endif %}
+
+                                    <td >{% if info.Call_test_info %}
+                                        <a href="{{ info.Call_test_info.url }}" class="btn btn-sm"><i
+                                                class="fa fa-download "></i></a>
+                                        {% endif %}
+                                    </td>
+
+                                    <td >{% if info.Ciq %}
+                                        <a href="{{ info.Call_test_files.url }}" class="btn btn-sm"><i
+                                                class="fa fa-download "></i></a>
+                                        {% endif %}
+                                    </td>
+
+                                    <td >{% if info.Ciq %}
+                                        <a href="{{ info.Site_access.url }}" class="btn btn-sm"><i
+                                                class="fa fa-download "></i></a>
+                                        {% endif %}
+                                    </td>
+
+                                    <td >{% if info.Guidelines %}
+                                        <a href="{{ info.Guidelines.url }}" class="btn btn-sm"><i
+                                                class="fa fa-download "></i></a>
+                                        {% endif %}
+                                    </td>
+
+                                    <td >{% if info.Guidelines %}
+                                        <a href="{{ info.Guidelines.url }}" class="btn btn-sm"><i
+                                                class="fa fa-download "></i></a>
+                                        {% endif %}
+                                    </td>
+
+
+
+
+
+                                    <td>
+
+
+                                        <a href="/edit_market" class="edit" title="Edit" data-toggle="tooltip"><i
+                                                class="material-icons">&#xE254;</i></a>
+                                        <a class="delete" title="Delete" data-toggle="tooltip"><i
+                                                class="material-icons">&#xE872;</i></a>
+
+                                    </td>
+
+
+                                    <td class="popup-trigger" onclick="generate(this)" id="rd"><i
+                                            class="fa fa-link ms-3 " id="rdata"></i></td>
+                                </tr>
+                                {% endfor %}
+
+
+
+
+
+
+
+
+
+                                <button type="button" class=" btn1  add-new ms-5 mt-5"><a href="/add_market"
+                                        style="text-decoration: none; color:#fff"><i class="fa fa-plus"></i> Add
+                                        New</a></button>
+
+
+                            </tbody>
+                        </table>
+
+
+                        <div class="d-flex justify-content-end">
+                            <div class="popup col-md-2" style="height: 91.5%;">
+                                <div class="row" style="margin-top: 10px;" style="width: 110%;">
+                                    <div class="col-md-12 " id="popup_head">
+
+                                        <h2
+                                            style="text-align: center; background-color:#8AAAE5; width: 100%; box-shadow: grey 2px 2px 0px 0px;">
+                                            Market Info</h2>
+                                    </div>
+
+                                    <div class="row mb-12 row-with-shadow  mb-1 mt-2" style="margin-top: 10px;   ">
+
+
+
+
+                                        {% comment %} <div class="row col-md-12" id="profile-Picture">
+                                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                                <span id="initials" class="profile-picture"></span>
+                                            </div> {% endcomment %}
+                                            <div class="col-lg-9 col-md-6 col-sm-6">
+
+                                                <span type="text" class="market1 form-control "
+                                                    id="client-name1"></span>
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+                                    </div>
+
+
+                                    <div class="line mt-2"></div>
+                                    <div class="row mb-2 row-with-shadow" style="margin-top: 0px;">
+                                        <label for="client-name" class="col-lg-4 col-form-label" id="poplabel1">About
+                                        </label>
+
+                                        <div class="row mb-1 row-with-shadow" style="margin-top: 0px;">
+                                            <label for="client-name" class="col-lg-4  col-sm-12 col-form-label"
+                                                id="poplabel">Client
+                                                Name :</label>
+                                            <div class="col-lg-8  col-sm-12  width-50">
+                                                <span type="text" class="market form-control " id="client-name"></span>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-1 row-with-shadow" style="margin-top: 0px;">
+                                            <label for="inputPassword" class="col-lg-4 col-form-label"
+                                                id="poplabel">Operator :</label>
+                                            <div class="col-lg-8">
+                                                <span type="text" class="market form-control " id="operator"></span>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-1 row-with-shadow" style="margin-top: 0px;">
+                                            <label for="inputPassword" class="col-lg-4 col-form-label" id="poplabel">OEM
+                                                :</label>
+                                            <div class="col-lg-8">
+                                                <span type="text" class="market form-control " id="oem"></span>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-1 row-with-shadow" style="margin-top: 0px;">
+                                            <label for="inputPassword" class="col-lg-4 col-form-label"
+                                                id="poplabel">Market
+                                                Name :</label>
+                                            <div class="col-lg-8">
+                                                <span type="text" class="market form-control " id="market-name"></span>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row mb-1 row-with-shadow" style="margin-top: 0px; ">
+                                            <label for="inputPassword" class="col-lg-4 col-form-label"
+                                                id="poplabel">Market
+                                                time :</label>
+                                            <div class="col-lg-8">
+                                                <span type="text" class="market form-control " id="market-time"></span>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="row mb-1 row-with-shadow" style="margin-top: 0px; ">
+                                            <label for="inputPassword" class="col-lg-4 col-form-label"
+                                                id="poplabel">Specific Market Guidline :</label>
+                                            <div class="col-lg-8">
+                                                <span type="text" class="market form-control "
+                                                    id="Specific_Market_Guidline"></span>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2 row-with-shadow" style="margin-top: 0px;">
+                                            <label for="inputPassword" class="col-lg-4 col-form-label" id="poplabel">
+                                                Ciq :</label>
+                                            <div class="col-lg-8">
+                                                <a href="#" id="Ciq" class="down fa fa-download ms-3 "></a>
+
+                                            </div>
+
+
+                                        </div>
+                                        <div class="row mb-2 row-with-shadow" style="margin-top: 0px;">
+                                            <label for="inputPassword" class="col-lg-4 col-form-label" id="poplabel">
+                                                Call test info :</label>
+                                            <div class="col-lg-8">
+
+                                                <a href="#" id="Call_test_info"
+                                                    class="down fa fa-download ms-3 "></a>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2 row-with-shadow" style="margin-top: 0px;">
+                                            <label for="inputPassword" class="col-lg-4 col-form-label" id="poplabel">
+                                                Call test files :</label>
+                                            <div class="col-lg-8">
+                                                <a href="#" id="all_test_files"
+                                                    class="down fa fa-download ms-3 "></a>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2 row-with-shadow" style="margin-top: 0px;">
+                                            <label for="inputPassword" class="col-lg-4 col-form-label" id="poplabel">
+                                                Site access :</label>
+                                            <div class="col-lg-8">
+                                                <a href="#" id="Site_access" class="down fa fa-download ms-3 "></a>
+                                            </div>
+                                        </div>
+
+                                        <div class="row mb-2 row-with-shadow" style="margin-top: 0px;">
+                                            <label for="inputPassword" class="col-lg-4 col-form-label" id="poplabel">
+                                                Guidelines :</label>
+                                            <div class="col-lg-8">
+                                                <a href="#" id="Guidelines" class="down fa fa-download ms-3 "></a>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2 row-with-shadow" style="margin-top: 0px;">
+                                            <label for="inputPassword" class="col-lg-4 col-form-label" id="poplabel">
+                                                Additional Guidelines :</label>
+                                            <div class="col-lg-8">
+                                                <a href="#" id="additional_Guidelines"
+                                                    class="down fa fa-download ms-3 "></a>
+                                            </div>
+                                        </div>
+
+                                        <div class="line"></div>
+                                        <div class="text-center">
+                                            <button type="button"
+                                                class="popup-close btn btn-danger mt-3 ms-5 ">Close</button>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+            <div class="col-lg-2">
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <script>
+
+        function generate(element) {
+            var firstNameCell = element.parentNode.querySelector('.firstName');
+            var firstName = firstNameCell.textContent.trim();
+            var initials = firstName.charAt(0);
+
+            var initialsSpan = document.getElementById('initials');
+            initialsSpan.textContent = initials;
+        }
+        /* ------------------pop up---------------*/
+        $(document).ready(function () {
+            // Add click event listener to table rows
+            $('tr').click(function () {
+                // Get the data cells of the clicked row
+                var cells = $(this).find('td');
+
+                // Extract the data from the cells and store in variables
+                var clientName1 = cells.eq(0).text();
+                var clientName = cells.eq(0).text();
+                var operator = cells.eq(1).text();
+                var oem = cells.eq(2).text();
+                var marketName = cells.eq(3).text();
+                var marketTime = cells.eq(4).text();
+                var Specific_Market_Guidline = cells.eq(5).text();
+                var Ciq = cells.eq(6).find('a').attr('href');
+                var Call_test_info = cells.eq(7).find('a').attr('href');
+                var Call_test_files = cells.eq(8).find('a').attr('href');
+                var Site_access = cells.eq(9).find('a').attr('href');
+                var Guidelines = cells.eq(10).find('a').attr('href');
+                var additional_Guidelines = cells.eq(11).find('a').attr('href');
+
+
+
+
+                // Populate the input fields in the pop-up with the retrieved data
+                $('#client-name1').html(clientName1);
+                $('#client-name').html(clientName);
+                $('#operator').html(operator);
+                $('#oem').html(oem);
+                $('#market-name').html(marketName);
+                $('#market-time').html(marketTime);
+                $('#Specific_Market_Guidline').html(Specific_Market_Guidline);
+                $('#Ciq').attr('href', Ciq);
+                $('#Call_test_info').attr('href', Call_test_info);
+                $('#all_test_files').attr('href', all_test_files);
+                $('#Site_access').attr('href', Site_access);
+                $('#Guidelines').attr('href', Guidelines);
+                $('#additional_Guidelines').attr('href', additional_Guidelines);
+
+
+            });
+        });
+        $(document).ready(function () {
+            $('.popup-trigger').click(function () {
+                $('.popup').toggle();
+            });
+        });
+        var $window = $(window);
+        var nav = $('.fixed-button');
+        $window.scroll(function () {
+            if ($window.scrollTop() >= 200) {
+                nav.addClass('active');
+            }
+            else {
+                nav.removeClass('active');
+            }
+        });
+        var closeButton = document.querySelector('.popup-close');
+
+        // Get the popup container element
+        var popup = document.querySelector('.popup');
+
+        // Add a click event listener to the close button
+        closeButton.addEventListener('click', function () {
+            // Hide the popup by setting its display property to none
+            popup.style.display = 'none';
+        });
+
+        /*-------------------pop-end-----------------*/
+
+        function ExportToExcel(type, fn, dl) {
+            var elt = document.getElementById('example1');
+            var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
+            return dl ?
+                XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) :
+                XLSX.writeFile(wb, fn || ('MySheetName.' + (type || 'xlsx')));
+        }
+
+
+        $(document).ready(function () {
+            // Add click event listener to table rows
+            $('tr').click(function () {
+                // Get the data cells of the clicked row
+                var cells = $(this).find('td');
+
+                // Extract the data from the cells and store in variables
+
+
+
+                // Populate the input fields in the pop-up with the retrieved data
+
+
+                // Show the pop-up
+                $('#popup').show();
+            });
+        });
+
+
+
+
+    </script>
+    <script>
+        function showOrHide() {
+            var x = document.getElementById("div1");
+            var myDiv = document.getElementById("myDiv");
+            if (x.style.display === "inline" || myDiv.style.width === "92.3%") {
+                x.style.display = "none";
+                myDiv.style.width = "100%";
+            }
+            else {
+                x.style.display = "inline";
+                myDiv.style.width = "91.3%";
+            }
+        }
+        /*<!-- ---------------------pop--------------------- */
+
+
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+            var actions = $("table td:last-child").html();
+            // Append table with add row form on add new button click
+
+            // Delete row on delete button click
+            $(document).on("click", ".delete", function () {
+                $(this).parents("tr").remove();
+                $(".add-new").removeAttr("disabled");
+            });
+        });
+        $(document).ready(function () {
+            $('#table').DataTable({
+                dom: '<"top"iflp<"clear">>rt<"bottom"iflp<"clear">>',
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

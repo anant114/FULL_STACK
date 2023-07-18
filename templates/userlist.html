@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>UserList</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+
+	<!-- Google font-->
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
+
+	<!-- simple line icon -->
+	<link rel="stylesheet" type="text/css" href="assets/icon/simple-line-icons/css/simple-line-icons.css">
+	<!-- Required Fremwork -->
+	<link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+	<!-- Style.css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	<!-- Responsive.css-->
+	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+
+	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js'></script>
+	<!-- /*-------edit delete-------------*/ -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Alkatra:wght@500;700&family=Braah+One&family=Kaushan+Script&family=Lilita+One&display=swap"
+		rel="stylesheet">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.3/xlsx.full.min.js"></script>
+
+
+
+
+
+	<style>
+		.row{
+			color: rgb(20, 20, 20);
+			font-size: 16px;
+			font-weight: 700;
+			font-family: 'Alfa Slab One', cursive;
+				font-family: 'Alkatra', cursive;
+		}
+		.midbox {
+			height: 350px !important;
+		}
+
+		.navbar {
+
+			background-color: white;
+
+
+		}
+
+
+
+
+
+		.nav-link.active {
+
+            background-color: #51E2F5;
+
+        }
+
+		.nav-link:hover {
+
+			background-color: #51E2F5;
+
+
+		}
+
+		body {
+			background-color: #f9f9fa
+		}
+		.tog {
+            /* overflow: hidden; */
+            height: inherit;
+            margin: 10px 877px 15px -890px;
+        }
+		#myDiv {
+			width: 91%;
+			padding: 0px 0px 0px 10px !important;
+		}
+
+
+		@media (max-width:991.98px) {
+			.padding {
+				padding: 1.5rem
+			}
+
+
+		}
+
+		@media (max-width:767.98px) {
+			.padding {
+				padding: 1rem
+			}
+		}
+
+		@media (min-width: 992px) {}
+
+		@media only screen and (max-width: 1300px) {
+
+			.col-lg-1 {
+				/* padding-top: 82px; */
+				display: none !important;
+			}
+
+			.btn2 {
+				/* margin: 10px 364px 15px -890px; */
+				visibility: visible !important;
+			}
+
+			.col-10 {
+				width: 130px !important;
+			}
+
+			.tog {
+				display: none;
+			}
+
+		}
+
+		@media only screen and (max-width: 1600px) {
+			.nav-link.active {
+				width: 120px;
+			}
+
+			.nav-link:hover {
+				width: 120px;
+			}
+
+
+
+		}
+
+		.btn2 {
+			visibility: hidden;
+		}
+
+		.padding {
+			padding: 5rem
+		}
+
+		.card {
+			background: #fff;
+			border-width: 0;
+			border-radius: .25rem;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+			margin-bottom: 1.5rem
+		}
+
+		.card {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			min-width: 0;
+			word-wrap: break-word;
+			background-color: #fff;
+			background-clip: border-box;
+			border: 1px solid rgba(19, 24, 44, .125);
+			border-radius: .25rem
+		}
+
+		.card-header {
+			padding: .75rem 1.25rem;
+			margin-bottom: 0;
+			background-color: rgba(19, 24, 44, .03);
+			border-bottom: 1px solid rgba(19, 24, 44, .125)
+		}
+
+		.card-header:first-child {
+			border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0
+		}
+
+		card-footer,
+		.card-header {
+			background-color: transparent;
+			border-color: rgba(160, 175, 185, .15);
+			background-clip: padding-box
+		}
+
+		.log {
+			font-size: 25px;
+			font-weight: 800;
+
+		}
+
+		.logo {
+			text-decoration: none;
+
+		}
+
+
+		.a3 {
+			color: rgb(11, 131, 230);
+		}
+
+		.a1 {
+			color: black;
+
+		}
+
+		.a1:hover {
+			color: rgb(11, 131, 230);
+		}
+
+
+		.a2 {
+			height: 500px;
+		}
+
+		.menu {
+			background-color: #51E2F5;
+
+		}
+
+
+
+
+		.bb {
+			width: 100px;
+		}
+
+		.ix {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.option {
+			text-decoration: none;
+		}
+
+		.mid {
+			height: 300px;
+		}
+
+		.task {
+			text-decoration: none;
+		}
+
+		.dash {
+			text-align: center;
+			margin-bottom: -10px;
+
+		}
+
+		.dash h4 {
+			font-family: 'Alfa Slab One', cursive;
+			font-family: 'Alkatra', cursive;
+			padding-top: 10px;
+			font-size: 40px;
+		}
+
+		@media screen and (max-width: 767px) {
+			#chart-line {
+				width: 100%;
+				height: 300px;
+			}
+
+			.fixed .content-wrapper {
+				margin-left: -8px;
+			}
+		}
+
+		@media screen and (max-width: 1300px) {
+
+			.fixed .content-wrapper {
+				margin-left: -8px;
+				width: 100vw !important;
+			}
+
+			.btn1 {
+				margin-left: 30px !important;
+			}
+		}
+
+		/* ------------MARKET LIST-----------*/
+		.btn1 {
+			background-color: rgb(101, 175, 101);
+			color: #fff;
+			height: 40px;
+			border-radius: 10px;
+			width: 160px !important;
+			margin-top: 15px !important;
+		}
+
+		.btn1:hover {
+			background-color: green;
+		}
+
+		.head {
+			background-color: #51E2F5;
+			margin-left: 2px;
+
+
+
+		}
+
+
+		.col-lg-11 {
+			padding: 0px 0px 0px 20px !important;
+		}
+
+		/*-----------------------pop up--------------------------*/
+		.row {
+			margin-right: 0px !important;
+		}
+
+		.popup {
+			background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcSRePYvdYJmn2xI8xLrRKNViQltZ17O5-L49ph2syiPoq7-UxoiZutiI80WoXh6vfWqD2g16lAdo&usqp=CAU&ec=48665699);
+			height: 92vh !important;
+			display: none;
+			position: fixed;
+			top: 55.4%;
+			right: 0;
+			transform: translate(0, -50%);
+			padding: 20px;
+			/* background-color: #d2ebe7;*/
+			border: 1px solid #ccc;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			z-index: 999;
+			animation-name: bounce;
+			width: 480px;
+		}
+
+		.market {
+			border: none !important;
+			font-family: Arial, Helvetica, sans-serif;
+			background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcSRePYvdYJmn2xI8xLrRKNViQltZ17O5-L49ph2syiPoq7-UxoiZutiI80WoXh6vfWqD2g16lAdo&usqp=CAU&ec=48665699);
+			/* background-color: #d2ebe7;*/
+		}
+
+		#poplabel {
+
+
+			color: black;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		.block {
+			display: inline-block !important;
+		}
+
+		.editmk {
+			margin-top: 32px;
+			width: 140px;
+			height: 42px;
+			text-align: center;
+
+			cursor: pointer;
+		}
+
+		.popup-close {
+			margin-top: 15px;
+			width: 140px;
+			height: 42px;
+			text-align: center;
+			background-color: rgb(185, 16, 16) !important;
+			cursor: pointer;
+		}
+
+		.popup-close:hover {
+			background-color: rgb(228, 12, 12) !important;
+		}
+
+		@media only screen and (max-width: 1000px) {
+			.popup {
+				width: 400px;
+				overflow-y: scroll !important;
+			}
+
+		}
+
+		@media only screen and (max-width: 700px) {
+			.popup {
+				width: 300px;
+				overflow-y: scroll !important;
+			}
+		}
+
+		@media only screen and (max-width: 400px) {
+			.popup {
+				width: 300px;
+				overflow-y: scroll !important;
+				top: 62%;
+			}
+		}
+
+
+
+
+
+
+		@keyframes bounce {
+			0% {
+				transform: translateY(0);
+			}
+
+			50% {
+				transform: translateY(-10px);
+			}
+
+			100% {
+				transform: translateY(0);
+			}
+		}
+
+		#contactEmailLabel,
+		#contactpersonLabel {
+			display: inline-block;
+			width: 100%;
+			height: 40px;
+			padding: 10px;
+			box-sizing: border-box;
+			font-size: 16px;
+			line-height: 1.5;
+			text-align: center;
+
+			background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcSRePYvdYJmn2xI8xLrRKNViQltZ17O5-L49ph2syiPoq7-UxoiZutiI80WoXh6vfWqD2g16lAdo&usqp=CAU&ec=48665699);
+			background-size: cover;
+			background-position: center center;
+			color: black;
+		}
+
+		.line {
+			height: 4px;
+			background: linear-gradient(to right, transparent, #732a81, transparent);
+		}
+
+		.conp {
+			margin-left: 10px !important;
+		}
+
+		.profile-picture {
+			width: 80px;
+			height: 80px;
+
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 40px;
+			color: white;
+		}
+
+
+		#poplabel1 {
+			font-weight: 700;
+			color: black;
+			font-size: 20px;
+		}
+
+		.market1 {
+			border: none !important;
+			font-family: Arial, Helvetica, sans-serif;
+			background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcSRePYvdYJmn2xI8xLrRKNViQltZ17O5-L49ph2syiPoq7-UxoiZutiI80WoXh6vfWqD2g16lAdo&usqp=CAU&ec=48665699);
+			font-size: 25px;
+			font-weight: 600;
+			margin-top: 20px;
+		}
+
+		.close1-btn1 {
+			background-color: #ff0000;
+			color: #ffffff;
+			border: none;
+			border-radius: 4px;
+			padding: 6px 10px;
+			cursor: pointer;
+			border: 1px solid black;
+
+		}
+
+		.close1-btn1:hover {
+			background-color: #eb1919;
+		}
+
+		.popup1-card1 {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 90%;
+			max-width: 600px;
+			background-color: #ffffff;
+			box-shadow: 10px 10px 12px 10px rgba(2, 2, 1, 0.15);
+			padding: 20px;
+			display: none;
+			overflow: auto;
+			z-index: 9999;
+
+		}
+
+		#label1 {
+			font-size: 20px;
+			font-weight: 700 !important;
+		}
+		.close2{
+			font-size: 26px !important;
+			padding-bottom: 20px !important;
+			color: black;
+		   
+		  }
+		  .close2{
+			font-size: 26px !important;
+			padding-bottom: 20px !important;
+		   
+		  }
+		  .me-5 {
+			margin-right: 1rem !important;}
+			.close{
+			  position: relative;
+			  left: 25 px;
+			  bottom: 10px;
+			}
+			.message{
+				margin-top: 2px !important ;
+			}
+			.table{
+				border-color: black !important;
+			}
+
+			.bb1{
+				background-color: rgb(11, 165, 226);
+				color: white;
+				border-radius: 5px;
+				text-align: center;
+				width: 100px;
+				padding: 1px 15px 2px 15px !important;
+				font-size: 13px;
+				
+			
+			}
+			.bb2{
+				background-color: rgb(8, 206, 156);
+				color: white;
+				border-radius: 5px;
+				text-align: center;
+				width: 100px;
+				padding: 1px 15px 2px 15px !important;
+				font-size: 13px;
+				
+			}
+			.bb3{
+				background-color: orangered;
+				color: white;
+				border-radius: 5px;
+				text-align: center;
+				width: 100px;
+				padding: 1px 15px 2px 15px !important;
+				font-size: 13px;
+			}
+			.bb4{
+				background-color: rgb(10, 208, 235);
+				color: white;
+				border-radius: 5px;
+				text-align: center;
+				width: 100px;
+				padding: 1px 15px 2px 15px !important;
+				font-size: 13px;
+			}
+			.cardd-body{
+				border: 1px solid rgba(19, 24, 44, .125);
+			  }
+	</style>
+
+</head>
+
+<body class="sidebar-mini fixed">
+
+	{% load static %}
+	<!-- <div class="message me-5">
+		{% for message in messages %}
+		<div class="container-fluid p-0" id="gg">
+		  <div class="alert {{ message.tags }} alert-dismissible me-5 " role="alert">
+			<button type="button" class="close float-end" style="background-color: #d1e7dd; border:none; "  id="close" data-dismiss="alert" aria-label="Close">
+			  <span class="close2" style="font-size: larger;" aria-hidden="false">&times;</span>
+			</button>
+			{{ message }}
+		  </div>
+		</div>
+		{% endfor %}
+	  </div> -->
+
+	<div class="wrapper">
+		<!-- Navbar-->
+		<header class="main-header-top hidden-print ">
+			<div class="container-fluid border border rounded" style="padding: 0px 0px 0px 0px;">
+
+				<nav class="navbar navbar-static-top">
+					<img src='{% static "images/int.png" %}' class="img ps-2 " width="130" height="50"
+						alt="integer logo">
+					<button class="btn2 float-start bg-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+						role="button">
+						<i class="text-light " data-bs-toggle="offcanvas" data-bs-target="#offcanvas"><i
+								class="fa fa-bars"></i></i>
+
+						<button onclick="showOrHide()" class="tog float-end bg-" role="button" style="height: 30px;">
+							<i class="text-dark "><i class="fa fa-bars"></i></i>
+						</button>
+
+
+						<ul class="top-nav">
+							<!--Notification Menu-->
+
+
+							<div class="btn-group">
+								<button type="button" class="btn btn dropdown-toggle dropdown-toggle-split"
+									data-bs-toggle="dropdown" aria-expanded="false"><span><img class="img-circle "
+											src='{% static "images/B.png" %}'
+											style="width:40px; border: 1px solid wheat; border-radius: 80px;"
+											alt="User Image"></span>
+								</button>
+
+								<ul class="dropdown-menu px-2 ">
+
+									<li><a href="#!"><i class="icon-settings px-2"></i> Settings</a></li>
+									<li> <a href="account_settings.html"><i class="icon-user px-2"></i> Profile</a></li>
+									<li><a href="#"><i class="icon-envelope-open px-2 "></i> My Messages</a></li>
+									<li><a href="login.html"><i class="icon-logout px-2"></i> Logout</a></li>
+									<li>
+										<hr class="dropdown-divider">
+									</li>
+									<li><a class="dropdown-item" href="#">Lock Screen</a></li>
+
+								</ul>
+							</div>
+
+							<div class="btn-group">
+
+								<button type="button" class="btn btn-light dropdown-toggle " data-bs-toggle="dropdown"
+									aria-expanded="false">Pushpendra
+
+
+
+
+
+
+
+
+								</button>
+								<ul class="dropdown-menu pe-5 ps-1 ">
+									<li class="not-head pt-2">You have <b class="text-secondary ">9</b> new
+										notifications.
+									</li>
+									<li><a class="dropdown-item" href="#">Email recieved</a></li>
+									<li><a class="dropdown-item" href="#">Profile Updated</a></li>
+									<li>
+										<hr class="dropdown-divider">
+									</li>
+									<li><a class="dropdown-item" href="#">See all notifications</a></li>
+
+								</ul>
+							</div>
+
+
+
+
+						</ul>
+			</div>
+			</nav>
+
+		</header>
+
+		<!-- Side-Nav-->
+		<div class="col-10 offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvas" data-bs-keyboard="false"
+			data-bs-backdrop="false">
+			<div class="menu offcanvas-header">
+				<h6 class="offcanvas-title d-none d-sm-block text-dark" id="offcanvas">Menu</h6>
+				<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+					aria-label="Close"></button>
+			</div>
+			<div class="offcanvas-body px-0 " style="background-color:white">
+				<ul class="nav nav-pills flex-column  align-items-start  ps-3 " id="menu"
+					style="text-decoration: black ;  ">
+
+
+					<li class="nav-item">
+
+                        <a class="nav-link " style="margin-left: -13px;" href="/dashboard">Dashboard</a>
+
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link "  style="margin-left: -13px;" href="/activitylist">Activity List</a>
+                    </li>
+                    <li class="nav-item " style="width:140px ;">
+                        <a class="nav-link active "  style="margin-left: -13px;"  href="/userlist">Userlist</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link"  style="margin-left: -13px;" href="/createactivity">Activity</a>
+                    </li>
+                    
+                
+
+                
+                    <li class="nav-item">
+                        <a class="nav-link "  style="margin-left: -13px;" href="/adduser">Add
+                            User</a>
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link "  style="margin-left: -13px;" href="/alarm">Alarm</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link "  style="margin-left: -13px;" href="/market2">Market List</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link "  style="margin-left: -13px;" href="/add_market">Add
+                            Market</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link "  style="margin-left: -13px;" href="/rolelist">Rolelist</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link  "  style="margin-left: -13px;" href="/companylist">Companylist</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link "  style="margin-left: -13px;" href="/account_settings">Account</a>
+                    </li>
+                    
+                    
+                    <li class="nav-item" style="width:140px ;">
+                        <a class="nav-link "  style="margin-left: -13px;" href="/login_page">Login</a>
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link "  style="margin-left: -13px;" href="/login_page">Logout</a>
+                    </li>
+				</ul>
+
+			</div>
+		</div>
+
+		<div class="row">
+
+			<div class="col-lg-1" id="div1">
+				<nav class="navbar navbar-expand navbar-light bg-light">
+					<div class="container" style="padding: 0px 0px 0px 0px ;">
+						<!-- <div class="container-fluid"> -->
+
+						<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+							<!-- <div class="container-fluid"> -->
+							<div class="col">
+								<div id="sidebar" class="col col-2 ">
+									<ul class="navbar-nav float-start flex-column ms-0" id="sidemenu">
+										<li class="nav-item ms-2">
+
+										</li>
+										<li class="nav-item">
+
+											<a class="nav-link" href="/dashboard"><i
+													class="fa fa-bars me-1 pe-2"></i>Dashboard</a>
+
+										</li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link " href="/activitylist"><i
+                                                    class="fa fa-list me-1 pe-2"></i>Activity List</a>
+                                        </li>
+										<li class="nav-item " style="width:140px ;">
+											<a class="nav-link active " href="/userlist"><i
+													class="fa fa-table me-1 pe-1"></i>&nbspUserlist</a>
+										</li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link" href="/createactivity"><i
+                                                    class="fa fa-road me-1 pe-2"></i>Activity</a>
+                                        </li>
+										
+									
+
+										
+
+										<li class="nav-item">
+											<a class="nav-link " href="/adduser"><i
+													class="fa fa-plus  "></i>&nbsp&nbsp&nbspAdd
+												User</a>
+										</li>
+
+										<li class="nav-item">
+
+											<a class="nav-link " href="/alarm"><i
+													class="fa fa-bell me-1 pe-1 "></i>&nbsp&nbspAlarm</a>
+										</li>
+										<li class="nav-item">
+
+											<a class="nav-link " href="/market2"><i
+													class="fa fa-laptop me-1 pe-1"></i>Market List</a>
+										</li>
+										<li class="nav-item">
+
+											<a class="nav-link " href="/add_market"><i
+													class="fa fa-file me-1 pe-2"></i>Add
+												Market</a>
+										</li>
+										<li class="nav-item">
+
+											<a class="nav-link " href="/rolelist"><i
+													class="fa fa-rocket me-1 pe-2"></i>Rolelist</a>
+										</li>
+										<li class="nav-item">
+
+											<a class="nav-link  " href="/companylist"><i
+													class="fa fa-rocket me-1 pe-2"></i>Companylist</a>
+										</li>
+										<li class="nav-item">
+
+											<a class="nav-link " href="/account_settings"><i
+													class="fa fa-tools me-1 pe-1"></i>Account</a>
+										</li>
+										<li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                               data-bs-toggle="dropdown" aria-expanded="false" style="color: gray;">
+                                                <i class="fa fa-tools me-1 pe-2"></i>TOOL
+                                            </a>
+                                           
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li><a class="dropdown-item" href="/lgfile" style="color: gray;">LOG FILE</a></li>
+                                                <li><a class="dropdown-item" href="/process" style="color: gray;">EDP FILE</a></li>
+                                                <li><a class="dropdown-item" href="/process_excel" style="color: gray;">CELL NODE FILE</a></li>
+                                            </ul>
+
+                                        </li>
+									
+										
+										<li class="nav-item" style="width:140px ;">
+											<a class="nav-link " href="/login_page"><i
+													class="fa fa-user me-1 pe-1"></i>&nbspLogin</a>
+										</li>
+										
+										<li class="nav-item">
+
+											<a class="nav-link " href="/login_page"><i
+													class="fa fa-rocket me-1 pe-2"></i>Logout</a>
+										</li>
+
+
+									</ul>
+
+
+
+
+
+				</nav>
+			</div>
+			<div class="col-lg-8 " id="myDiv">
+
+
+				<div class="content-wrapper">
+					<div class="head row">
+						<div class="dash main-header">
+
+							<h4>USER LIST</h4>
+						</div>
+					</div>
+
+					<div class="row dashboard-header mt-4 ">
+                        
+						<div class="col-lg-3 col-md-6">
+							<div class="card dashboard-product p-3">
+								<h2 class="dashboard-total-products">Project Manager</h2>
+								{% if program_manager %}
+								Total Member<span class="bb1 label label-primary" id="filter"   data-role="Project Manager" >{{ program_manager }}</span>
+								{% endif %}
+								<div class="side-box">
+									<i class="ti-signal text-warning-color"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="card dashboard-product p-3">
+								
+								<h2 class="dashboard-total-products">Program Manager</h2>
+								{% if program_manager %}
+								Total Member<span class="bb2 label label-success" id="filter" data-role="Program Manager" >{{ program_manager }}</span>
+								{% endif %}
+								<div class="side-box ">
+									<i class="ti-gift text-primary-color"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="card dashboard-product p-3">
+								
+								<h2 class="dashboard-total-products">Database Experts</h2>
+								{% if database_expert %}
+								Total Member<span class="bb3 label label-warning" id="filter" data-role="Database Experts">{{ database_expert }} </span>
+								{% endif %}
+								<div class="side-box">
+									<i class="ti-direction-alt text-success-color"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="card dashboard-product p-3">
+								<h2 class="dashboard-total-products">GET</h2>
+								{% if get %}
+								Total Member<span class="bb4 label label-primary"id="filter"  data-role="GET">{{ get }}</span>
+								{% endif %}
+								<div class="side-box">
+									<i class="ti-signal text-warning-color"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="card dashboard-product p-3">
+								<h2 class="dashboard-total-products">Integration</h2>
+								{% if integration %}
+								Total Member<span class="bb1 label label-primary" id="filter" data-role="Integration">{{ integration }}</span>
+								{% endif %}
+								<div class="side-box">
+									<i class="ti-signal text-warning-color"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="card dashboard-product p-3">
+						
+								<h2 class="dashboard-total-products">Construction</h2>
+								{% if Construction %}
+								Total Member<span class="bb2 label label-success" id="filter" data-role="Construction">{{ Construction }}</span>
+								{% endif %}
+								<div class="side-box ">
+									<i class="ti-gift text-primary-color"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="card dashboard-product p-3">
+								
+								<h2 class="dashboard-total-products">Scripting</h2>
+								{% if Scripting %}
+								Total Member<span class="bb3 label label-warning" id="filter" data-role="Scripting">{{ Scripting }} </span>
+								{% endif %}
+								<div class="side-box">
+									<i class="ti-direction-alt text-success-color"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="card dashboard-product p-3">
+								<h2 class="dashboard-total-products">Troubleshooting</h2>
+								{% if Troubleshooting %}
+								Total Member<span class="bb4 label label-primary" id="filter" data-role="Troubleshooting">{{ Troubleshooting }}</span>
+								{% endif %}
+								<div class="side-box">
+									<i class="ti-signal text-warning-color"></i>
+								</div>
+							</div>
+						</div>
+                      
+                    </div>
+					
+					<div class="row mb-3" style=" overflow-x:auto;">
+						<table id="table" style="width: 100%;"
+							class="table table-responsive dataTable cell-border table-bordered table-hover no-footer ms-2"
+							aria-describedby="table_info">
+							<thead class="container " >
+								<tr class="table table-hover" style="background-color: rgba(115, 199, 233, 0.842);">
+
+									<th scope="col">First Name</th>
+									<th scope="col">Last Name</th>
+									<th scope="col">Company Name</th>
+									<th scope="col">Role</th>
+
+									<th scope="col">Phone No</th>
+									<th scope="col ">Email ID</th>
+									<th scope="col" style="display: none;"> image</th>
+									<th scope="col">Action</th>
+									<th scope="col">Profile</th>
+
+
+
+								</tr>
+							</thead>
+							<tbody>
+								{% for info in datatable %}
+								<tr>
+									<td>{{ info.firstname }}</td>
+									<td>{{ info.secondname }}</td>
+									<td> {% if info.companyid %}
+										{{ info.companyid.company }}
+										{% else %}
+										N/A
+										{% endif %}</td>
+
+									<td>
+										{% if info.role %}
+										{{ info.role.role }}
+										{% else %}
+										N/A
+										{% endif %}
+									</td>
+									<td>{{ info.phone }}</td>
+									<td>{{ info.email }}</td>
+
+
+
+
+
+									<td style="display: none;"> <img src="{{ info.image.url }}" alt="User Image"></td>
+
+
+
+
+
+
+
+
+									<td>
+
+
+										<a href="#" class="edit" title="Edit" data-toggle="tooltip"><i
+												class="material-icons" style="cursor: pointer;">&#xE254;</i></a>
+										<a class="" title="Delete" data-toggle="tooltip" style="cursor: pointer;"><i
+												class="material-icons" onclick="showPopup()">&#xE872;</i></a>
+
+									</td>
+									<td class="popup-trigger" onclick="generate()" style="cursor: pointer;" id="rd"><i
+											class="fa fa-link ms-3 " id="rdata"></i></td>
+								</tr>
+								{% endfor %}
+
+
+								<div class="btnlist1 col-lg-6" style="float: right;">
+									<button type="button" class="btn1 btn-success ms-2 mt-3"  style="text-decoration: none; color:#fff"
+								onclick="ExportToExcel('xlsx')">Export</button>
+							</div>     
+			
+							</tbody>
+						</table>
+
+						<div class="d-flex justify-content-end">
+							<div class="popup col-md-2" style="height: 81%;" style="height: 81%; animation: bounce 6s;">
+								<div class="row" style="margin-top: 18px;" style="width: 110%;">
+									<div class="col-md-12 mb-3" id="popup_head">
+
+										<h2
+											style="text-align: center; background-color: #51E2F5; width: 100%; box-shadow: grey 2px 2px 0px 0px;">
+											User Info</h2>
+									</div>
+									<div class="row mb-12 row-with-shadow  mb-1 mt-2" style="margin-top: 10px;   ">
+
+
+
+
+										<div class="row col-md-12" id="profile-Picture">
+											<div class="col-lg-3 col-md-6 col-sm-6">
+												<div id="initials" class="profile-picture"></div>
+											</div>
+											<div class="col-lg-9 col-md-6 col-sm-6">
+
+
+												<span type="text" class="market1 form-control " id="firstname1"></span>
+											</div>
+										</div>
+
+
+
+
+
+
+									</div>
+
+
+									<div class="line mt-2"></div>
+									<div class="row mb-2 row-with-shadow" style="margin-top: 0px;">
+										<label for="detail" class="col-lg-4 col-form-label" id="poplabel1">About
+										</label>
+
+										<div class="row mb-1 row-with-shadow" style="margin-top: 0px;">
+											<label for="firstname" class="col-lg-4  col-sm-12 col-form-label"
+												id="poplabel">First
+												Name:</label>
+											<div class="col-lg-8  col-sm-12  width-50">
+
+												<span type="text" class="market form-control " id="firstname"></span>
+											</div>
+										</div>
+										<div class="row mb-1 row-with-shadow" style="margin-top: 0px;">
+											<label for="inputPassword" class="col-lg-4 col-form-label"
+												id="poplabel">Last
+												Name:</label>
+											<div class="col-lg-8">
+												<span type="text" class="market form-control " id="lastname"></span>
+											</div>
+										</div>
+										<!-- <div class="row mb-1 row-with-shadow" style="margin-top: 0px;">
+                                        <label for="inputPassword" class="col-lg-4 col-form-label"
+                                            id="poplabel">Emp ID:</label>
+                                        <div class="col-lg-8">
+                                            <span type="text" class="market form-control "
+											id="empid"></span>
+                                        </div>
+                                    </div> -->
+										<div class="row mb-1 row-with-shadow" style="margin-top: 0px;">
+											<label for="inputPassword" class="col-lg-4 col-form-label"
+												id="poplabel">Company :</label>
+											<div class="col-lg-8">
+												<span type="text" class="market form-control " id="companyname"></span>
+											</div>
+										</div>
+
+
+										<div class="row mb-1 row-with-shadow" style="margin-top: 0px; ">
+											<label for="inputPassword" class="col-lg-4 col-form-label"
+												id="poplabel">Role:</label>
+											<div class="col-lg-8">
+												<span type="text" class="market form-control " id="role"></span>
+											</div>
+										</div>
+
+
+
+
+										<div class="row mb-1 row-with-shadow" style="margin-top:0px;">
+											<label for="inputPassword" class="col-lg-4 col-form-label"
+												id="poplabel">Email:</label>
+											<div class="col-lg-8">
+												<span type="text" class="market form-control " id="email"></span>
+											</div>
+										</div>
+										<div class="row mb-1 row-with-shadow" style="margin-top: 0px;">
+											<label for="inputPassword" class="col-lg-4 col-form-label"
+												id="poplabel">Phone:</label>
+											<div class="col-lg-8">
+												<span type="text" class="market form-control " id="phone"></span>
+											</div>
+										</div>
+
+										<div class="line"></div>
+
+										<div class="text-center">
+											<button type="button" class="popup-close btn btn-danger mt-3 ms-5 "
+												onclick="generate()">Close</button>
+										</div>
+
+
+
+									</div>
+								</div>
+
+
+							</div>
+						</div>
+
+						<div class="popup1-card1" id="popup1-card1">
+							<form method="post" enctype="multipart/form-data">
+								{% csrf_token %}
+								<!-- <button class="close-btn1">Close</button>
+								<div class="row" style="margin-top: 18px;"> -->
+
+
+									<form>
+										
+
+										
+
+										<div class="form-group " style="text-align: center;">
+											<label for="role-name" id="label1" class="form-control-label mt-1 mb-2">Are you sure you want to delete this user?</label>
+										</div>
+										<div class="text-center">
+											<button type="" onclick="deleteRow(this)"
+												class="btn btn-success  mt-4 mb-2 ps-4 pe-4" id="emailInput" name ="search_name" >Delete</button>
+											&nbsp &nbsp &nbsp &nbsp
+											<button type="" onclick="hidePopup()"
+												class="btn btn-danger  mt-4 mb-2">Cancel</button>
+										</div>
+									</form>
+
+							
+							</form>
+						</div>
+
+
+
+
+					</div>
+
+				</div>
+				<div class="col-lg-2">
+
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+		<script>
+
+			function ExportToExcel(type, fn, dl) {
+                var elt = document.getElementById('table');
+                var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
+                return dl ?
+                    XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) :
+                    XLSX.writeFile(wb, fn || ('Userlist.' + (type || 'xlsx')));
+            }
+
+
+
+			function generatePopup(element) {
+				var firstNameCell = element.parentNode.querySelector('.firstName');
+				var firstName = firstNameCell.textContent.trim();
+				var initials = firstName.charAt(0);
+
+				var initialsSpan = document.getElementById('initials');
+				initialsSpan.textContent = initials;
+			}
+			function generate() {
+				// Get the popup card element
+				var popupCard = document.getElementById("popup-card");
+
+				// Toggle the visibility of the popup card
+				if (popupCard.style.display === "none") {
+					popupCard.style.display = "block";
+				} else {
+					popupCard.style.display = "none";
+				}
+			}
+
+
+
+			var $window = $(window);
+			var nav = $('.fixed-button');
+			$window.scroll(function () {
+				if ($window.scrollTop() >= 200) {
+					nav.addClass('active');
+				}
+				else {
+					nav.removeClass('active');
+				}
+			});
+			var closeButton = document.querySelector('.popup-close');
+
+			// Get the popup container element
+			var popup = document.querySelector('.popup');
+
+			// Add a click event listener to the close button
+			closeButton.addEventListener('click', function () {
+				// Hide the popup by setting its display property to none
+				popup.style.display = 'none';
+			});
+
+
+
+
+
+			$(document).ready(function () {
+				$('tr').click(function () {
+					var cells = $(this).find('td');
+					var nameCell = $(this).find('td').eq(0);
+					var firstname1 = cells.eq(0).text();
+					var firstname = cells.eq(0).text();
+					var lastname = cells.eq(1).text();
+					var companyname = cells.eq(2).text();
+					var role = cells.eq(3).text();
+					var email = cells.eq(5).text();
+					var phone = cells.eq(4).text();
+
+
+					$('#firstname1').html(firstname1);
+					$('#firstname').html(firstname);
+					$('#lastname').html(lastname);
+					$('#companyname').html(companyname);
+					$('#role').html(role);
+					$('#email').html(email);
+					$('#phone').html(phone);
+
+					// Display images
+					var imageCell = $(this).find('td').eq(6); // Assuming the image cell is the 7th column (index 6)
+					var imageSrc = imageCell.find('img').attr('src');
+					var imageHtml = '<img src="' + imageSrc + '" alt="User Image" style="border-radius:120px; border:1px solid black; width: 100px; height: 100px;">';
+					$('#initials').html(imageHtml);
+				});
+			});
+			$(document).ready(function () {
+				$('.popup-trigger').click(function () {
+					$('.popup').toggle();
+				});
+			});
+			var $window = $(window);
+			var nav = $('.fixed-button');
+			$window.scroll(function () {
+				if ($window.scrollTop() >= 200) {
+					nav.addClass('active');
+				}
+				else {
+					nav.removeClass('active');
+				}
+			});
+			var closeButton = document.querySelector('.popup-close');
+
+			// Get the popup container element
+			var popup = document.querySelector('.popup');
+
+			// Add a click event listener to the close button
+			closeButton.addEventListener('click', function () {
+				// Hide the popup by setting its display property to none
+				popup.style.display = 'none';
+			});
+
+			/*-------------------pop-end-----------------*/
+
+		
+
+
+
+
+		</script>
+		<script>
+			function generate(element) {
+				var myDiv = document.getElementById("myDiv");
+				if (myDiv.style.width === "" || myDiv.style.width === "91%") {
+					myDiv.style.width = "66.5%";
+				}
+
+				else if (myDiv.style.width === "99%") {
+					myDiv.style.width = "75%";
+
+				} else {
+					myDiv.style.width = "91%";
+				}
+			}
+
+			function showOrHide() {
+				var x = document.getElementById("div1");
+				var myDiv = document.getElementById("myDiv");
+				if (x.style.display === "inline" || myDiv.style.width === "91%") {
+					x.style.display = "none";
+					myDiv.style.width = "99%";
+				}
+				else {
+					x.style.display = "inline";
+					myDiv.style.width = "91%";
+				}
+			}
+			$(document).ready(function () {
+				$('[data-toggle="tooltip"]').tooltip();
+				var actions = $("table td:last-child").html();
+				// Append table with add row form on add new button click
+
+				// Delete row on delete button click
+				$(document).on("click", ".delete", function () {
+					$(this).parents("tr").remove();
+					$(".add-new").removeAttr("disabled");
+				});
+			});
+			$(document).ready(function () {
+				$('#table').DataTable({
+					dom: '<"top"iflp<"clear">>rt<"bottom"iflp<"clear">>',
+				});
+			});
+
+		</script>
+		<script>
+			function showPopup() {
+				var popup1 = document.getElementById("popup1-card1");
+				popup1.style.display = "block";
+			  }
+			  
+			  function hidePopup() {
+				var popup1 = document.getElementById("popup1-card1");
+				popup1.style.display = "none";
+			  }
+			  
+			  document.getElementById("close-btn1").addEventListener("click", hidePopup);
+
+			  function deleteRow() {
+				var emailSpan = document.getElementById("email");
+				var emailInput = document.getElementById("emailInput");
+				var emailAssigned = document.getElementById("emailAssigned");
+
+				emailInput.value = emailSpan.innerText;
+				emailAssigned.innerText = "Email assigned: " + emailInput.value;
+				
+
+
+			
+			}
+			document.getElementById('close').addEventListener('click', function() {
+				document.getElementById('gg').style.display = 'none';
+			  });
+
+		</script>
+
+		
+		<script>
+			// Add click event listeners to the filter buttons
+             var filterButtons = document.getElementsByClassName("bb1");		
+             for (var i = 0; i < filterButtons.length; i++) {
+             filterButtons[i].addEventListener("click", filterTable);
+              }
+
+// Define the function to filter the table
+             function filterTable() {
+             var selectedRole = this.getAttribute("data-role"); // Get the selected role from the button's data-role attribute
+
+  // Get all table rows
+             var rows = document.getElementById("table").getElementsByTagName("tr");
+
+  // Loop through the rows, starting from index 1 to skip the table header
+             for (var i = 1; i < rows.length; i++) {
+             var row = rows[i];
+             var cells = row.getElementsByTagName("td");
+
+             var found = false;
+             for (var j = 0; j < cells.length; j++) {
+             if (cells[j].textContent.includes(selectedRole)) {
+             found = true;
+             break;
+             }
+               }
+
+             if (found) {
+      // Show the row if the role is found in any cell
+               row.style.display = "";
+             } else {
+      // Hide the row if the role is not found
+             row.style.display = "none";
+           }
+          }
+         }
+
+		/* --------------------------------------------------------*/
+	// Add click event listeners to the filter buttons
+	var filterButtons = document.getElementsByClassName("bb2");		
+	for (var i = 0; i < filterButtons.length; i++) {
+	filterButtons[i].addEventListener("click", filterTable);
+	 }
+
+// Define the function to filter the table
+	function filterTable() {
+	var selectedRole = this.getAttribute("data-role"); // Get the selected role from the button's data-role attribute
+
+// Get all table rows
+	var rows = document.getElementById("table").getElementsByTagName("tr");
+
+// Loop through the rows, starting from index 1 to skip the table header
+	for (var i = 1; i < rows.length; i++) {
+	var row = rows[i];
+	var cells = row.getElementsByTagName("td");
+
+	var found = false;
+	for (var j = 0; j < cells.length; j++) {
+	if (cells[j].textContent.includes(selectedRole)) {
+	found = true;
+	break;
+	}
+	  }
+
+	if (found) {
+// Show the row if the role is found in any cell
+	  row.style.display = "";
+	} else {
+// Hide the row if the role is not found
+	row.style.display = "none";
+  }
+ }
+}
+var filterButtons = document.getElementsByClassName("bb3");		
+	for (var i = 0; i < filterButtons.length; i++) {
+	filterButtons[i].addEventListener("click", filterTable);
+	 }
+
+// Define the function to filter the table
+	function filterTable() {
+	var selectedRole = this.getAttribute("data-role"); // Get the selected role from the button's data-role attribute
+
+// Get all table rows
+	var rows = document.getElementById("table").getElementsByTagName("tr");
+
+// Loop through the rows, starting from index 1 to skip the table header
+	for (var i = 1; i < rows.length; i++) {
+	var row = rows[i];
+	var cells = row.getElementsByTagName("td");
+
+	var found = false;
+	for (var j = 0; j < cells.length; j++) {
+	if (cells[j].textContent.includes(selectedRole)) {
+	found = true;
+	break;
+	}
+	  }
+
+	if (found) {
+// Show the row if the role is found in any cell
+	  row.style.display = "";
+	} else {
+// Hide the row if the role is not found
+	row.style.display = "none";
+  }
+ }
+}
+var filterButtons = document.getElementsByClassName("bb4");		
+	for (var i = 0; i < filterButtons.length; i++) {
+	filterButtons[i].addEventListener("click", filterTable);
+	 }
+
+// Define the function to filter the table
+	function filterTable() {
+	var selectedRole = this.getAttribute("data-role"); // Get the selected role from the button's data-role attribute
+
+// Get all table rows
+	var rows = document.getElementById("table").getElementsByTagName("tr");
+
+// Loop through the rows, starting from index 1 to skip the table header
+	for (var i = 1; i < rows.length; i++) {
+	var row = rows[i];
+	var cells = row.getElementsByTagName("td");
+
+	var found = false;
+	for (var j = 0; j < cells.length; j++) {
+	if (cells[j].textContent.includes(selectedRole)) {
+	found = true;
+	break;
+	}
+	  }
+
+	if (found) {
+// Show the row if the role is found in any cell
+	  row.style.display = "";
+	} else {
+// Hide the row if the role is not found
+	row.style.display = "none";
+  }
+ }
+}
+
+		</script>
+		
+
+</body>
+
+</html>

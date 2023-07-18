@@ -1,0 +1,1738 @@
+<!-- ------------------------------------------------------------------------------------- -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Create Activity</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
+
+    <!-- simple line icon -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/simple-line-icons/css/simple-line-icons.css">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!-- Responsive.css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js'></script>
+    <!-- /*-------edit delete-------------*/ -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Alkatra:wght@500;700&family=Braah+One&family=Kaushan+Script&family=Lilita+One&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+        .row{
+            color: rgb(20, 20, 20);
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Alfa Slab One', cursive;
+                font-family: 'Alkatra', cursive;
+        }
+        .navbar {
+
+            background-color: white;
+
+
+        }
+
+
+
+
+
+        .nav-link.active {
+
+            background-color:  #51E2F5;
+
+        }
+
+        .nav-link:hover {
+
+            background-color: #51E2F5;
+
+
+        }
+
+        #myDiv {
+            width: 91%;
+            padding: 0px 0px 0px 10px !important;
+        }
+
+
+
+
+        body {
+            background-color: #f9f9fa
+        }
+
+        .tog {
+            /* overflow: hidden; */
+            height: inherit;
+            margin: 10px 877px 15px -890px;
+        }
+        @media (max-width:991.98px) {
+            .padding {
+                padding: 1.5rem
+            }
+
+
+        }
+
+        @media (max-width:900.98px) {
+            .padding {
+                padding: 1rem
+            }
+        }
+
+
+
+        @media only screen and (max-width: 1300px) {
+
+            .col-lg-1 {
+                padding-top: 82px;
+                display: none !important;
+            }
+
+            .btn2 {
+                /* margin: 10px 364px 15px -890px; */
+                visibility: visible !important;
+            }
+
+            .col-10 {
+                width: 130px !important;
+            }
+
+            .tog {
+                display: none;
+            }
+
+        }
+
+        @media only screen and (max-width: 1600px) {
+            .nav-link.active {
+                width: 120px;
+            }
+
+            .nav-link:hover {
+                width: 120px;
+            }
+
+
+
+        }
+
+        .btn2 {
+            visibility: hidden;
+        }
+
+        .padding {
+            padding: 5rem
+        }
+
+        .card {
+            background: #fff;
+            border-width: 0;
+            border-radius: .25rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+            margin-bottom: 1.5rem
+        }
+
+        .card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(19, 24, 44, .125);
+            border-radius: .25rem
+        }
+
+        .card-header {
+            padding: .75rem 1.25rem;
+            margin-bottom: 0;
+            background-color: rgba(19, 24, 44, .03);
+            border-bottom: 1px solid rgba(19, 24, 44, .125)
+        }
+
+        .card-header:first-child {
+            border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0
+        }
+
+        card-footer,
+        .card-header {
+            background-color: transparent;
+            border-color: rgba(160, 175, 185, .15);
+            background-clip: padding-box
+        }
+
+        .log {
+            font-size: 25px;
+            font-weight: 800;
+
+        }
+
+        .logo {
+            text-decoration: none;
+
+        }
+
+
+        .a3 {
+            color: rgb(11, 131, 230);
+        }
+
+        .a1 {
+            color: black;
+
+        }
+
+        .a1:hover {
+            color: rgb(11, 131, 230);
+        }
+
+
+        .a2 {
+            height: 500px;
+        }
+
+        .menu {
+            background-color:  #51E2F5;
+
+        }
+
+
+
+
+        .bb {
+            width: 100px;
+        }
+
+        .ix {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        label{
+            font-weight: 500;
+        }
+
+        .option {
+            text-decoration: none;
+        }
+
+        .mid {
+            height: 300px;
+        }
+
+        .task {
+            text-decoration: none;
+        }
+
+        .dash {
+
+            text-align: center;
+            margin-bottom: -10px;
+
+        }
+
+        .dash h4 {
+            font-family: 'Alfa Slab One', cursive;
+            font-family: 'Alkatra', cursive;
+            padding-top: 10px;
+            font-size: 40px;
+        }
+
+        @media screen and (max-width: 900px) {
+            #chart-line {
+                width: 100%;
+                height: 300px;
+            }
+
+            .fixed .content-wrapper {
+                margin-left: -8px;
+            }
+        }
+
+        @media screen and (max-width: 1300px) {
+
+            .fixed .content-wrapper {
+                margin-left: -8px;
+                width: 100vw !important;
+            }
+        }
+
+        /* ------------MARKET LIST-----------*/
+        .btn1 {
+            background-color: rgb(101, 175, 101);
+            color: #fff;
+            height: 40px;
+            border-radius: 10px;
+            width: 160px !important;
+            margin-top: 15px !important;
+        }
+
+        .btn1:hover {
+            background-color: green;
+        }
+
+        .head {
+            background-color:  #51E2F5;
+            margin-left: 2px;
+
+
+
+        }
+
+
+
+        .col-lg-8 {
+            padding: 0px 0px 0px 20px !important;
+
+        }
+
+        /*-----------------------pop up--------------------------*/
+  
+
+        #rdata1:hover {
+            color: blue !important;
+        }
+
+        .popup {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcSRePYvdYJmn2xI8xLrRKNViQltZ17O5-L49ph2syiPoq7-UxoiZutiI80WoXh6vfWqD2g16lAdo&usqp=CAU&ec=48665699);
+
+            display: none;
+            position: fixed;
+            top: 55.2%;
+            right: 0;
+            transform: translate(0, -50%);
+            padding: 20px;
+            /* background-color: #d2ebe7;*/
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            animation-name: bounce;
+            width: 480px;
+        }
+
+        .market {
+            border: none !important;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcSRePYvdYJmn2xI8xLrRKNViQltZ17O5-L49ph2syiPoq7-UxoiZutiI80WoXh6vfWqD2g16lAdo&usqp=CAU&ec=48665699);
+            /* background-color: #d2ebe7;*/
+        }
+
+        #poplabel {
+
+
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .block {
+            display: inline-block !important;
+        }
+
+        .editmk {
+            margin-top: 32px;
+            width: 140px;
+            height: 42px;
+            text-align: center;
+
+            cursor: pointer;
+        }
+
+        .popup-close {
+            margin-top: 15px;
+            width: 140px;
+            height: 42px;
+            text-align: center;
+            background-color: rgb(185, 16, 16) !important;
+            cursor: pointer;
+        }
+
+        .popup-close:hover {
+            background-color: rgb(228, 12, 12) !important;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            .popup {
+                width: 400px;
+                overflow-y: scroll !important;
+            }
+
+            .form-group {
+                margin-inline: 0px !important; 
+               margin-bottom: 0rem !important; 
+           }
+        
+   
+        .ap{
+            padding: 0px 0px 0px 0px !important;
+            margin: 0px 0px 0px 0px !important;
+           }
+
+        }
+
+        @media only screen and (max-width: 700px) {
+            .popup {
+                width: 300px;
+                overflow-y: scroll !important;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            .popup {
+                width: 300px;
+                overflow-y: scroll !important;
+                top: 62%;
+            }
+        }
+
+
+
+
+
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        #contactEmailLabel,
+        #contactpersonLabel {
+            display: inline-block;
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: center;
+
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcSRePYvdYJmn2xI8xLrRKNViQltZ17O5-L49ph2syiPoq7-UxoiZutiI80WoXh6vfWqD2g16lAdo&usqp=CAU&ec=48665699);
+            background-size: cover;
+            background-position: center center;
+            color: black;
+        }
+
+        .line {
+            height: 4px;
+            background: linear-gradient(to right, transparent, #732a81, transparent);
+        }
+
+        .conp {
+            margin-left: 10px !important;
+        }
+
+        .profile-picture {
+            width: 80px;
+            height: 80px;
+            background-color: maroon;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            color: white;
+        }
+
+
+        #poplabel1 {
+            font-weight: 700;
+            color: black;
+            font-size: 20px;
+        }
+
+        .market1 {
+            border: none !important;
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcSRePYvdYJmn2xI8xLrRKNViQltZ17O5-L49ph2syiPoq7-UxoiZutiI80WoXh6vfWqD2g16lAdo&usqp=CAU&ec=48665699);
+            font-size: 25px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .down {
+            color: black !important;
+            margin-top: 13px !important;
+        }
+
+        .down:hover {
+            color: rgb(0, 162, 255) !important;
+
+        }
+
+        .close1-btn1 {
+            background-color: #ff0000;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            padding: 6px 10px;
+            cursor: pointer;
+            border: 1px solid black;
+
+        }
+
+        .close1-btn1:hover {
+            background-color: #eb1919;
+        }
+
+        .popup1-card1 {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 600px;
+            background-color: #ffffff;
+            box-shadow: 10px 10px 12px 10px rgba(2, 2, 1, 0.15);
+            padding: 20px;
+            display: none;
+            overflow: auto;
+            z-index: 9999;
+
+        }
+
+        #label1 {
+            font-size: 20px;
+            font-weight: 700 !important;
+        }
+
+        .close2 {
+            font-size: 26px !important;
+            padding-bottom: 20px !important;
+            color: black;
+
+        }
+
+        .close2 {
+            font-size: 26px !important;
+            padding-bottom: 20px !important;
+
+        }
+
+        .me-5 {
+            margin-right: 1rem !important;
+        }
+
+        .close {
+            position: relative;
+            left: 25 px;
+            bottom: 10px;
+        }
+
+        .message {
+            margin-top: 2px !important;
+        }
+
+        .form-group {
+            margin-inline: 30px;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-check-inline label {
+            font-size: 1.1rem;
+            margin-right: 1rem;
+        }
+
+        .form-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-row .col {
+            flex-basis: 0;
+            flex-grow: 1;
+            max-width: 100%;
+        }
+
+        .card-header {
+            background-color: #28a745;
+            /* Green */
+        }
+
+        .card-body {
+            background-color: #f8f9fa;
+            /* Light Gray */
+        }
+
+        .form-group label {
+            color: #333;
+            /* Dark Gray */
+        }
+
+        input[type="text"],
+        input[type="date"] {
+            margin-right: 50px;
+        }
+
+        .row>* {
+            padding-right: calc(var(--bs-gutter-x) * .0) !important;
+            margin-bottom: 8px !important;
+        }
+        .small{
+            font-weight: 700;
+            margin-left: 30px;
+        }
+        .btn{
+            display: flex;
+            margin: auto;
+            padding: 6px 25px 6px 25px;
+        }
+
+        #oem{
+            margin-top: 0px !important;
+        }
+        @media (max-width: 700px) {
+            .form-row {
+                flex-wrap: wrap;
+            }
+            .form-row > div {
+                flex-basis: 100%;
+            }
+            .form-group.radio-group {
+                flex-basis: 100%;
+            }
+        }
+        .form-group.radio-group label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .cardd {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            }
+        #radio{
+            margin-top:28px;
+        }
+        .yes{
+            margin-left: -22px;
+        }
+        .close {
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            font-size: 40px;
+            background-color: transparent;
+            border: none;
+            color: rgb(0, 0, 0);
+          }
+    </style>
+
+</head>
+
+<body class="sidebar-mini fixed">
+    {% load static %}
+
+    <div class="wrapper">
+        <!-- Navbar-->
+        <header class="main-header-top hidden-print ">
+            <div class="container-fluid border border rounded" style="padding: 0px 0px 0px 0px;">
+
+                <nav class="navbar navbar-static-top">
+                    <img src='{% static "images/int.png" %}' class="img ps-2 " width="130" height="50"
+                        alt="integer logo">
+
+                    <button class="btn2 float-start bg-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+                        role="button">
+                        <i class="text-light " data-bs-toggle="offcanvas" data-bs-target="#offcanvas"><i
+                                class="fa fa-bars"></i></i>
+
+                        <button onclick="showOrHide()" class="tog float-end bg-" role="button" style="height: 30px;">
+                            <i class="text-dark "><i class="fa fa-bars"></i></i>
+                        </button>
+
+
+                        <ul class="top-nav">
+                            <!--Notification Menu-->
+
+
+                            <div class="btn-group">
+                                <button type="button" class="btn btn dropdown-toggle dropdown-toggle-split"
+                                    data-bs-toggle="dropdown" aria-expanded="false"><span><img class="img-circle "
+                                        src='{% static "images/B.png" %}'
+                                        style="width:40px; border: 1px solid black; border-radius: 80px;"
+                                        alt="User Image"></span>
+                                </button>
+
+                                <ul class="dropdown-menu px-2 ">
+
+                                    <li><a href="#!"><i class="icon-settings px-2"></i> Settings</a></li>
+                                    <li> <a href="account_settings.html"><i class="icon-user px-2"></i> Profile</a></li>
+                                    <li><a href="#"><i class="icon-envelope-open px-2 "></i> My Messages</a></li>
+                                    <li><a href="login.html"><i class="icon-logout px-2"></i> Logout</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Lock Screen</a></li>
+
+                                </ul>
+                            </div>
+
+                            <div class="btn-group">
+
+                                <button type="button" class="btn btn-light dropdown-toggle " data-bs-toggle="dropdown"
+                                    aria-expanded="false">Pushpendra
+
+
+
+
+
+
+
+
+                                </button>
+                                <ul class="dropdown-menu pe-5 ps-1 ">
+                                    <li class="not-head pt-2">You have <b class="text-secondary ">9</b> new
+                                        notifications.
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Email recieved</a></li>
+                                    <li><a class="dropdown-item" href="#">Profile Updated</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">See all notifications</a></li>
+
+                                </ul>
+                            </div>
+
+
+
+
+                        </ul>
+            </div>
+            </nav>
+
+        </header>
+
+        <!-- Side-Nav-->
+        <div class="col-10 offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvas" data-bs-keyboard="false"
+            data-bs-backdrop="false">
+            <div class="menu offcanvas-header">
+                <h6 class="offcanvas-title d-none d-sm-block text-dark" id="offcanvas">Menu</h6>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body px-0 " style="background-color:white">
+                <ul class="nav nav-pills flex-column  align-items-start  ps-3 " id="menu"
+                    style="text-decoration: black ;  ">
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link  " style="margin-left: -13px;" href="/dashboard">Dashboard</a>
+
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link "  style="margin-left: -13px;" href="/activitylist">Activity List</a>
+                    </li>
+                    <li class="nav-item " style="width:140px ;">
+                        <a class="nav-link  "  style="margin-left: -13px;"  href="/userlist">Userlist</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link active"  style="margin-left: -13px;" href="/createactivity">Activity</a>
+                    </li>
+                    
+                
+
+                
+                    <li class="nav-item">
+                        <a class="nav-link "  style="margin-left: -13px;" href="/adduser">Add
+                            User</a>
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link "  style="margin-left: -13px;" href="/alarm">Alarm</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link "  style="margin-left: -13px;" href="/market2">Market List</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link "  style="margin-left: -13px;" href="/add_market">Add
+                            Market</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link "  style="margin-left: -13px;" href="/rolelist">Rolelist</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link  "  style="margin-left: -13px;" href="/companylist">Companylist</a>
+                    </li>
+                  
+                    <li class="nav-item">
+
+                        <a class="nav-link "  style="margin-left: -13px;" href="#">Setting</a>
+                    </li>
+                    
+                    <li class="nav-item" style="width:140px ;">
+                        <a class="nav-link "  style="margin-left: -13px;" href="/login_page">Login</a>
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link "  style="margin-left: -13px;" href="/login_page">Logout</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-1" id="div1">
+                <nav class="navbar navbar-expand navbar-light bg-light">
+                    <div class="container" style="padding: 0px 0px 0px 0px ;">
+                        <!-- <div class="container-fluid"> -->
+
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                            <!-- <div class="container-fluid"> -->
+                            <div class="col">
+                                <div id="sidebar" class="col col-2 ">
+                                    <ul class="navbar-nav float-start flex-column ms-0" id="sidemenu">
+                                        <li class="nav-item ms-2">
+
+										</li>
+										<li class="nav-item">
+
+											<a class="nav-link" href="/dashboard"><i
+													class="fa fa-bars me-1 pe-2"></i>Dashboard</a>
+
+										</li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link " href="/activitylist"><i
+                                                    class="fa fa-list me-1 pe-2"></i>Activity List</a>
+                                        </li>
+                                        <li class="nav-item " style="width:140px ;">
+											<a class="nav-link  " href="/userlist"><i
+													class="fa fa-table me-1 pe-1"></i>&nbspUserlist</a>
+										</li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link active" href="/createactivity"><i
+                                                    class="fa fa-road me-1 pe-2"></i>Activity</a>
+                                        </li>
+										
+										
+
+										
+
+										<li class="nav-item">
+											<a class="nav-link " href="/adduser"><i
+													class="fa fa-plus  "></i>&nbsp&nbsp&nbspAdd
+												User</a>
+										</li>
+
+										<li class="nav-item">
+
+											<a class="nav-link " href="/alarm"><i
+													class="fa fa-bell me-1 pe-1 "></i>&nbsp&nbspAlarm</a>
+										</li>
+										<li class="nav-item">
+
+											<a class="nav-link " href="/market2"><i
+													class="fa fa-laptop me-1 pe-1"></i>Market List</a>
+										</li>
+										<li class="nav-item">
+
+											<a class="nav-link " href="/add_market"><i
+													class="fa fa-file me-1 pe-2"></i>Add
+												Market</a>
+										</li>
+                                        <li class="nav-item">
+
+											<a class="nav-link " href="/rolelist"><i
+													class="fa fa-rocket me-1 pe-2"></i>Rolelist</a>
+										</li>
+										<li class="nav-item">
+
+											<a class="nav-link  " href="/companylist"><i
+													class="fa fa-rocket me-1 pe-2"></i>Companylist</a>
+										</li>
+										<li class="nav-item">
+
+											<a class="nav-link " href="/account_settings"><i
+													class="fa fa-tools me-1 pe-1"></i>Account</a>
+										</li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                               data-bs-toggle="dropdown" aria-expanded="false" style="color: gray;">
+                                                <i class="fa fa-tools me-1 pe-2"></i>TOOL
+                                            </a>
+                                           
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li><a class="dropdown-item" href="/lgfile" style="color: gray;">LOG FILE</a></li>
+                                                <li><a class="dropdown-item" href="/process" style="color: gray;">EDP FILE</a></li>
+                                                <li><a class="dropdown-item" href="/process_excel" style="color: gray;">CELL NODE FILE</a></li>
+                                            </ul>
+
+                                        </li>
+										
+										
+                                        <li class="nav-item" style="width:140px ;">
+											<a class="nav-link " href="/login_page"><i
+													class="fa fa-user me-1 pe-1"></i>&nbspLogin</a>
+										</li>
+										
+										<li class="nav-item">
+
+											<a class="nav-link " href="/login_page"><i
+													class="fa fa-rocket me-1 pe-2"></i>Logout</a>
+										</li>
+
+
+                                      
+                                    </ul>
+
+
+
+
+
+
+
+                </nav>
+            </div>
+            <div class="col-lg-8 " id="myDiv">
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="card h-100">
+                                        <div class="card-header text-dark" style="background-color:  #51E2F5;">
+                                            <h5 class="card-title">Project Details</h5>
+                                        </div>
+
+                                       
+
+
+                                  
+                                        <div class="card-body">
+                                            <form>
+                                                <div class="form-row">
+                                                    <div class="col-md-4 ">
+                                                        <div class="form-group">
+                                                            <label for="client">Client:</label>
+                                                            <select name="client " id="client"
+                                                                class="form-select form-select-lg mb-3"  style="height: 38px;font-size: 16px;"
+                                                                aria-label=".form-select-lg example">
+                                                                {% for item in client %}
+                                                                <option value="{{ item.clientid }}">{{ item.cname}}</option>
+                                                                {% endfor %}
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ap col-md-4 ps-5">
+                                                        <div class="form-group" >
+                                                            <label for="operator">Operator:</label>
+                                                            <select class="form-select form-select-lg mb-3 "  style="height: 38px;font-size: 16px;"
+                                                                id="operatorid" name="operatorid"
+                                                                aria-label=".form-select-lg example">
+                                                                {% for item in operatorid %}
+                                                                <option value="{{ item.operatorid }}">{{ item.operatorname }}</option>
+                                                                {% endfor %}
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ap col ps-5 ms-5 mt-4" id="oem">
+                                                        <div class="form-group" id="radio">
+                                                            <label>OEM:</label>
+                                                            <div class="form-check-inline">
+                                                                <label class="form-check-label">
+                                                                    <input type="radio" class="form-check-input ms-4 "
+                                                                        name="oem" value="option1">
+                                                                    Nokia
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check-inline">
+                                                                <label class="form-check-label">
+                                                                    <input type="radio" class="form-check-input ms-4"
+                                                                        name="oem" value="option2">
+                                                                    Ericsson
+                                                                </label>
+                                                            </div>
+                                                            <!-- Add more radio options as needed -->
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-12">
+                            <div class="card h-100">
+                                <div class="card-header text-dark" style="background-color: #6ad382;">
+                                    <h5 class="card-title">Create Activity</h5>
+                                </div>
+                                    
+                                <div class="alert alert-danger" id="error-messages" role="alert" style="display:none">
+                                </div>
+                                          
+                                <div class="card-body">
+                                    <form>
+                                       
+                                            <div class="row col-lg-12 ">
+                                                <div class="col-lg-3 form-group">
+                                                    <label for="faLocation">FA Location:</label>
+                                                    <input required type="text" class="form-control" id="faLocation"
+                                                        name="faLocation" >
+                                                        
+                                                </div>
+                                                <div class="col-lg-3 form-group ">
+                                                    <label for="siteIds">Site IDs:</label>
+                                                    <input type="text" class="form-control" id="siteIds" name="siteIds" required>
+                                                </div>
+                                                <div class="col-lg-3 form-group ">
+                                                    <label for="siteIds">Lite Site ID:</label>
+                                                    <input type="text" class="form-control" id="ltesiteIds" name="ltesiteIds" required>
+                                                </div>
+                                               
+                                            </div>
+                                            <div class="row col-lg-12">
+                                                <div class="col-lg-3 form-group ">
+                                                    <label for="siteId5G">3G Site ID:</label>
+                                                    <input type="text" class="form-control" id="3G_Site_ID"
+                                                        name="3G_Site_ID" required>
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <label for="faLocation">5G Site ID:</label>
+                                                    <input type="text" class="form-control" id="5g_site_id"
+                                                        name="5g_site_id" required>
+                                                </div>
+                                                <div class="col-lg-3 form-group ">
+                                                    <label for="siteIds">Site Name:</label>
+                                                    <input type="text" class="form-control" id="site_name" name="site_name" required>
+                                                </div>
+                                              
+                                            </div>
+                                            <div class="row col-lg-12">
+                                                <div class="col-lg-3 form-group ">
+                                                    <label for="siteId5G">Market*:</label>
+                                                    <select class="form-select form-select-lg" style="height: 38px;"
+                                                aria-label=".form-select-lg example" >
+                                                {% for value in client_values %}
+                                                <option value="{{ value.0 }}" {% if marketdata.clientid_id == value.0 %}selected{% endif %}>{{ value.1 }}</option>
+                                            {% endfor %}
+
+                                            </select>
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <label for="faLocation">Address/City/State:</label>
+                                                    <input type="text" class="form-control" id="Address_City_State"
+                                                        name="faLoAddress_City_Statecation" required>
+                                                </div>
+                                                <div class="col-lg-3 form-group ">
+                                                    <label for="siteIds">Zip Code:</label>
+                                                    <input type="text" class="form-control" id="Zip" name="Zip" required>
+                                                </div>
+                                              
+                                            </div>
+                                            
+                                            <div class="row col-lg-12">
+                                                <div class="col-lg-3 form-group ">
+                                                    <label for="siteId5G">Latitude:</label>
+                                                    <input type="text" class="form-control" id="Latitude"
+                                                        name="Latitude" required>
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <label for="faLocation">Longitude:</label>
+                                                    <input type="text" class="form-control" id="Longitude"
+                                                        name="Longitude" required>
+                                                </div>
+                                                
+                                              
+                                            </div>
+                                            <div class="row col-lg-12">
+                                                <div class="col-lg-2 form-group ">
+                                                    <label for="siteId5G"> Mon Hrs.</label>
+                                                    <input type="text" class="form-control" id="Mon"
+                                                        name="Mon" >
+                                                </div>
+                                                <div class="col-lg-2 form-group ms-3">
+                                                    <label for="faLocation">Tue Hrs.</label>
+                                                    <input type="text" class="form-control" id="faLocation"
+                                                        name="faLocation" >
+                                                </div>
+                                                <div class="col-lg-2 form-group ms-3">
+                                                    <label for="faLocation">Wed Hrs.</label>
+                                                    <input type="text" class="form-control" id="faLocation"
+                                                        name="faLocation" >
+                                                </div>
+                                                <div class="col-lg-2 form-group ms-3">
+                                                    <label for="faLocation">Thur Hrs.</label>
+                                                    <input type="text" class="form-control" id="faLocation"
+                                                        name="faLocation" >
+                                                </div>
+                                            </div>
+                                                <div class="row col-lg-12">
+                                                <div class="col-lg-2 form-group ">
+                                                    <label for="faLocation">Fri Hrs.</label>
+                                                    <input type="text" class="form-control" id="faLocation"
+                                                        name="faLocation" >
+                                                </div>
+                                                <div class="col-lg-2 form-group ms-3">
+                                                    <label for="faLocation">Sat Hrs.</label>
+                                                    <input type="text" class="form-control" id="faLocation"
+                                                        name="faLocation" >
+                                                </div>
+                                                <div class="col-lg-2 form-group ms-3">
+                                                    <label for="faLocation">Sun Hrs.</label>
+                                                    <input type="text" class="form-control" id="faLocation"
+                                                        name="faLocation" >
+                                                </div>
+                                       
+                                              
+                                            </div>
+                                            <div class="row col-lg-12">
+                                                <div class="col-lg-3 form-group ">
+                                                    <label for="siteId5G">Key Comments:</label>
+                                                    <input type="text" class="form-control" id="key_cmt"
+                                                        name="key_cmt" required>
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <label for="faLocation">Notice Needed:</label>
+                                                    <input type="text" class="form-control" id="Notice_needed"
+                                                        name="Notice_needed" required>
+                                                </div>
+                                                <div class="col-lg-3 form-group ">
+                                                    <label for="siteIds">Notice Comments:</label>
+                                                    <input type="text" class="form-control" id="notice_cmt" name="notice_cmt" required>
+                                                </div>
+                                              
+                                            </div>
+                                            <div class="row col-lg-12">
+                                                <div class="col-lg-3 form-group ">
+                                                    <label for="siteId5G">No. of Carrier:</label>
+                                                    <select class="form-select form-select-lg" style="height: 38px;"
+                                                    aria-label=".form-select-lg example" required id="Carrier" name="Carrier">
+                                                   <option value="1">1</option>
+                                                   <option value="2">2</option>
+                                                   <option value="3">3</option>
+                                                   <option value="4">4</option>
+                                                   <option value="5">5</option>
+                                                   <option value="6">6</option>
+    
+                                                </select>
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <label for="faLocation">Pace:</label>
+                                                    <input type="text" class="form-control" id="Pace"
+                                                        name="Pace" required>
+                                                </div>
+                                                <div class="col-lg-3 form-group ">
+                                                    <label for="siteIds">PTN:</label>
+                                                    <input type="text" class="form-control" id="PTN" name="PTN" required>
+                                                </div>
+                                              
+                                            </div>
+                                            <div class="row col-lg-12">
+                                                <div class="col-lg-3 form-group ">
+                                                    <label for="siteId5G">SOW Type:</label>
+                                                    <select class="form-select form-select-lg" style="height: 38px;font-size: 16px;"
+                                                    aria-label=".form-select-lg example"  >
+                                                   <option value="1">Select</option>
+                                                
+    
+                                                </select>
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <label for="faLocation">WO#/CR Id:</label>
+                                                    <input type="text" class="form-control" id="WO_CR"
+                                                        name="WO_CR" required>
+                                                </div>
+                                             
+                                              
+                                            </div>
+                                            <div class="row col-lg-12">
+                                                <div class="col-lg-3 form-group ">
+                                                    <label for="siteId5G">SOW:</label>
+                                                    <textarea class="form-control" id="sow" name="sow" rows="3" cols="50" required></textarea>
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <label for="faLocation">Ix Schedule Date*:</label>
+                                                    <input type="date" class="form-control" id="Ix_Schedule_Date"
+                                                        name="Ix_Schedule_Date" required>
+                                                </div>
+                                                <div class="col-lg-3 form-group ">
+                                                    <label for="siteIds"></label>
+                                                    <select class="form-select form-select-lg"style="height: 38px;font-size: 16px;"
+                                                    aria-label=".form-select-lg example">
+                                                   <option value="1">DT (DAY Time)</option>
+                                                   <option value="2">MW (Maintenance Window)</option>
+                                                 
+    
+                                                </select>
+                                                </div>
+                                              
+                                            </div>
+                                            <div class="row col-lg-12">
+                                                <div class="col-lg-3 form-group ">
+                                                    <label for="siteId5G">NEST:</label>
+                                                    <select class="form-select form-select-lg"style="height: 38px;font-size: 16px;"
+                                                    aria-label=".form-select-lg example" required id="NEST" name="NEST">
+                                                   <option value="1">Select</option>
+                                                   <option value="2">YES</option>
+                                                   <option value="2">NO</option>
+                                                 
+    
+                                                </select>
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <label for="faLocation">MOP Start Time:</label>
+                                                    <input type="time" class="form-control" id="mopstartTime" name="mopstartTime" required>
+                                                </div>
+                                                <div class="col-lg-3 form-group ">
+                                                    <label for="siteIds">MOP End Time:</label>
+                                                    <input type="time" class="form-control" id="mopEndTime" name="mopEndTime" required>
+                                                </div>
+                                              
+                                            </div>
+                                            <div class="row col-lg-12">
+                                                <div class="col-lg-3 form-group ">
+                                                    <label for="siteId5G">Assign FE*:</label>
+                                                    <select class="form-select form-select-lg" style="height: 38px;font-size: 16px;"
+                                                    aria-label=".form-select-lg example" required id="Assign_fe" name="Assign_fe">
+                                                   <option value="1">Select</option>
+                                                   <option value="2">Admin FE</option>
+                                                   <option value="2">Bryan Blue</option>
+                                                   <option value="2">Devid Kennedy</option>                                             
+                                                </select>
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <label for="faLocation">Ix Date Comment:</label>
+                                                    <textarea class="form-control" id="Ix_Date_Comment" name="Ix_Date_Comment" rows="3" cols="20"></textarea>
+                                                </div>
+                                                <div class="col-lg-3 form-group ">
+                                                   
+                                                    <div class="form-check-inline">
+                                                        <label class="form-check-label" style="margin-top: 31px;"> </label>
+                                                        <div class="form-group" id="radio">
+                                                            <label class="yes">Equipment Pickup:</label>
+                                                            <div class="form-check-inline">
+                                                                <label class="form-check-label">
+                                                                    <input type="radio" class="form-check-input ms-2 "
+                                                                        name="oem" value="option1">
+                                                                    YES
+                                                                </label>
+                                                            </div>
+                                                            <div class="form-check-inline">
+                                                                <label class="form-check-label">
+                                                                    <input type="radio" class="form-check-input ms-2"
+                                                                        name="oem" value="option2">
+                                                                    NO
+                                                                </label>
+                                                            </div>
+                                                            <!-- Add more radio options as needed -->
+                                                        </div>
+                                                           
+                                                       
+                                                    </div>
+                                                </div>
+                                              
+                                            </div>
+                                            <div class="row col-lg-12">
+                                                <div class="col-lg-3 form-group ">
+                                                    <div class="form-group" id="radio">
+                                                        <label class="yes">5G Ix Standalone ?:</label>
+                                                        <div class="form-check-inline">
+                                                            <label class="form-check-label">
+                                                                <input type="radio" class="form-check-input ms-3 "
+                                                                    name="oem1" value="option1">
+                                                                YES
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check-inline">
+                                                            <label class="form-check-label">
+                                                                <input type="radio" class="form-check-input ms-3"
+                                                                    name="oem1" value="option2">
+                                                                NO
+                                                            </label>
+                                                        </div>
+                                                        <!-- Add more radio options as needed -->
+                                                    </div>
+                                                   
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <label for="faLocation">5G Ix Schedule Date:</label>
+                                                    <input type="date" class="form-control" id="5G_Ix_Schedule_Date"
+                                                        name="5G_Ix_Schedule_Date" required>
+                                                </div>
+                                                <div class="col-lg-3 form-group ">
+                                                    <label for="siteIds"></label>
+                                                    <select class="form-select form-select-lg"style="height: 38px;font-size: 16px;"
+                                                    aria-label=".form-select-lg example" >
+                                                   <option value="1">DT (DAY Time)</option>
+                                                   <option value="2">MW (Maintenance Window)</option>
+                                                 
+    
+                                                </select>
+                                                </div>
+                                              
+                                            </div>
+                                            <div class="row col-lg-12">
+                                                <div class="col-lg-3 form-group ">
+                                                    <label for="siteId5G">Assign 5G FE :</label>
+                                                    <select class="form-select form-select-lg"style="height: 38px;font-size: 16px;"
+                                                    aria-label=".form-select-lg example" required id="Assign_5G_FE" name="Assign_5G_FE">
+                                                   <option value="1">Admin FE</option>
+                                                   <option value="2">Anwar Jacobs</option>
+                                                   <option value="2">Charles Clerk</option>
+                                                 
+    
+                                                </select>
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <label for="faLocation">Call Test Date* :</label>
+                                                    <input type="text" class="form-control" id="Call_Test_Date"
+                                                        name="Call_Test_Date" required>
+                                                </div>
+                                                <div class="col-lg-3 form-group ">
+                                                    <label for="faLocation"></label>
+                                                    <select class="form-select form-select-lg"style="height: 38px;font-size: 16px;"
+                                                    aria-label=".form-select-lg example" >
+                                                   <option value="1">DT (DAY Time)</option>
+                                                   <option value="2">MW (Maintenance Window)</option>
+                                                 
+    
+                                                </select>
+                                                </div>
+                                            </div>
+                                            <div class="row col-lg-12">
+                                                <div class="col-lg-3 form-group ">
+                                                    <label for="siteId5G">Construction Manager:</label>
+                                                    <select class="form-select form-select-lg"style="height: 38px;font-size: 16px;"
+                                                    aria-label=".form-select-lg example" required id="Construction_Manager" name="Construction_Manager">
+                                                   <option value="1">Admin FE</option>
+                                                   <option value="2">Anwar Jacobs</option>
+                                                   <option value="3">Charles Clerk</option>
+                                                 
+    
+                                                </select>
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <label for="faLocation">Market State* :</label>
+                                                    <select class="form-select form-select-lg"style="height: 38px;font-size: 16px;"
+                                                    aria-label=".form-select-lg example" required id="Market_State" name="Market_State">
+                                                   <option value="1">AL </option>
+                                                   <option value="2">AK </option>
+                                                   <option value="3">AZ </option>
+                                                   <option value="4">AR </option>
+                                                </select>
+                                                </div>
+                                                <div class="col-lg-3 form-group ">
+                                                    <label for="faLocation">Assign GC :</label>
+                                                    <select class="form-select form-select-lg"style="height: 38px;font-size: 16px;"
+                                                    aria-label=".form-select-lg example"required name="Assign_GC" id="Assign_GC">
+
+                                                   <option value="1">Anwar Jacobs</option>
+                                                   <option value="2">Charles Clerk</option>
+                                                </select>
+                                                </div>
+                                              
+                                            </div>
+                                           
+                                            
+                                            <div class="row col-lg-12">
+                                                <div class="col-lg-3 form-group ">
+                                                    <label class="form-check-label" >Crew Dispatch Date:</label>
+                                                    <input type="date" class="form-control" 
+                                                    name="faLocation" required id="crew_Dispatch_Date" name="crew_Dispatch_Date">
+                                                </div>
+                                                <div class="col-lg-3 form-group">
+                                                    <label for="faLocation">Crew Dispatch Date:</label>
+                                                    <select class="form-select form-select-lg"style="height: 38px;font-size: 16px;"
+                                                    aria-label=".form-select-lg example" required id="Distribution List" name="Distribution List">
+                                                   <option value="1">Select List</option>
+                                                   <option value="2">MW (Maintenance Window)</option>
+                                                 
+    
+                                                </select>
+                                                </div>
+                                          
+                                              
+                                            </div>
+                                            <div class="cardd mt-4 ">
+                        <div class="form-row">
+                            <div class="col-md-12">
+                                <p class="small">ACTIVITIES:</p>
+                            </div>
+                        </div>
+                        <div class="form">
+                           
+                                <div class="form-group">
+                                    <div class="form-check">
+                                    
+                                        <input type="radio" class="form-check-input" name="activities1" id="activity1"
+                                            value="activity1">
+                                        <label class="form-check-label" for="activity1">IX Support (Integer OSS
+                                            Support)</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="activities2" id="activity2"
+                                            value="activity2">
+                                        <label class="form-check-label" for="activity2">CX Support</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="activities3" id="activity3"
+                                            value="activity3">
+                                        <label class="form-check-label" for="activity3">Field Integration (Integer Field
+                                            Support)</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="activities4" id="activity4"
+                                            value="activity4">
+                                        <label class="form-check-label" for="activity4">Field Installation
+                                            (Integer/Empire Field Support)</label>
+                                    </div>
+                               
+                          
+                               
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="activities5" id="activity5"
+                                            value="activity5">
+                                        <label class="form-check-label" for="activity5">Remote Integration (Integer OSS
+                                            Support, No Field work needed on site)</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" class="form-check-input" name="activities6" id="activity6"
+                                            value="activity6">
+                                        <label class="form-check-label" for="activity6">Special Request</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <select class="form-select form-select-lg" style="height: 38px;font-size: 14px; margin-top:8px; margin-left:-24px; width:500px"
+                                        aria-label=".form-select-lg example">
+                                       <option value="1">TroubleShooting</option>
+                                                                             
+                                    </select>
+                                    </div>
+
+                                   
+                                </div>
+                           
+                        </div>
+                    </div>
+                        <div class="col-md-12">
+
+                          
+                            <button type="submit" class="btn btn-success mt-5" onclick="return validateForm()" id="btn2" value="Submit">Success</button>
+                            
+                            
+                    </div>
+                        </form>
+                    </div>
+
+                    </div>
+
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+    </div>
+
+    </div>
+
+
+    </div>
+
+
+    <script>
+
+        var closeButton = document.querySelector('.popup-close');
+
+        // Get the popup container element
+        var popup = document.querySelector('.popup');
+
+        // Add a click event listener to the close button
+        closeButton.addEventListener('click', function () {
+            // Hide the popup by setting its display property to none
+            popup.style.display = 'none';
+        });
+
+        /*-------------------pop-end-----------------*/
+
+        // function ExportToExcel(type, fn, dl) {
+        //     var elt = document.getElementById('example1');
+        //     var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
+        //     return dl ?
+        //         XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) :
+        //         XLSX.writeFile(wb, fn || ('MySheetName.' + (type || 'xlsx')));
+        // }
+
+
+        // $(document).ready(function () {
+        //     // Add click event listener to table rows
+        //     $('tr').click(function () {
+        //         // Get the data cells of the clicked row
+        //         var cells = $(this).find('td');
+
+        //         // Extract the data from the cells and store in variables
+
+
+
+        //         // Populate the input fields in the pop-up with the retrieved data
+
+
+        //         // Show the pop-up
+        //         $('#popup').show();
+        //     });
+        // });
+
+
+
+
+
+
+        function showOrHide() {
+            var x = document.getElementById("div1");
+            var myDiv = document.getElementById("myDiv");
+            if (x.style.display === "inline" || myDiv.style.width === "91%") {
+                x.style.display = "none";
+                myDiv.style.width = "99%";
+            }
+            else {
+                x.style.display = "inline";
+                myDiv.style.width = "91%";
+            }
+        }
+
+        function showPopup(button) {
+            var row = button.parentNode.parentNode; // Get the parent row of the clicked button
+            var firstCell = row.querySelector('td:first-child');
+            var value = firstCell.textContent;
+
+            var inputField = document.getElementById('inputval');
+            inputField.value = value;
+
+            var popupCard = document.getElementById('popup1-card1');
+            popupCard.style.display = 'block';
+        }
+
+        document.getElementById('close').addEventListener('click', function () {
+            var popupCard = document.getElementById('popup1-card1');
+            popupCard.style.display = 'none';
+        });
+
+    </script>
+    <script>
+        function validateForm() {
+          // Check if all required fields are filled in
+          var isFormValid = true;
+          var errorMessages = [];
+          
+          // Check FA Location field
+          if (document.getElementById("faLocation").value === "") {
+            errorMessages.push("FA Location is required.");
+            isFormValid = false;
+          }
+        
+          // Check Site IDs field
+          if (document.getElementById("siteIds").value === "") {
+            errorMessages.push("Site IDs is required.");
+            isFormValid = false;
+          }
+        
+          // Check Lite Site ID field
+          if (document.getElementById("ltesiteIds").value === "") {
+            errorMessages.push("Lite Site ID is required.");
+            isFormValid = false;
+          }
+        
+         if (document.getElementById("3G_Site_ID").value === "") {
+            errorMessages.push("3G Site ID is required.");
+            isFormValid = false;
+          }
+           if (document.getElementById("5g_site_id").value === "") {
+            errorMessages.push("5G Site ID is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("site_name").value === "") {
+            errorMessages.push("Site Name is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("Address_City_State").value === "") {
+            errorMessages.push("Address/City/State is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("Zip").value === "") {
+            errorMessages.push("Zip Code is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("Latitude").value === "") {
+            errorMessages.push("Latitude is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("Longitude").value === "") {
+            errorMessages.push("Longitude is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("key_cmt").value === "") {
+            errorMessages.push("Key Comments is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("Notice_needed").value === "") {
+            errorMessages.push("Notice Needed is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("notice_cmt").value === "") {
+            errorMessages.push("Notice Comments is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("Carrier").value === "") {
+            errorMessages.push("No of Carrier is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("Pace").value === "") {
+            errorMessages.push("Pace is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("PTN").value === "") {
+            errorMessages.push("PTN is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("WO_CR").value === "") {
+            errorMessages.push("WO#/CR Id is required.");
+            isFormValid = false;
+          }
+            if (document.getElementById("sow").value === "") {
+            errorMessages.push("SOW Comments is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("Ix_Schedule_Date").value === "") {
+            errorMessages.push("IX Schedule Date is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("NEST").value === "") {
+            errorMessages.push("NEST is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("mopstartTime").value === "") {
+            errorMessages.push("MOP Start Time is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("mopEndTime").value === "") {
+            errorMessages.push("MOP End Time is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("Assign_fe").value === "") {
+            errorMessages.push("Assign FE is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("Ix_Date_Comment").value === "") {
+            errorMessages.push("Ix Date Comment is required.");
+            isFormValid = false;
+          }
+          
+          if (document.getElementById("5G_Ix_Schedule_Date").value === "") {
+            errorMessages.push("5G Ix Schedule Date is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("Assign_5G_FE").value === "") {
+            errorMessages.push("Assign 5G FE  is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("Call_Test_Date").value === "") {
+            errorMessages.push("Call Test Date is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("Construction_Manager").value === "") {
+            errorMessages.push("Construction Manager is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("Market_State").value === "") {
+            errorMessages.push("Market State is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("Assign_GC").value === "") {
+            errorMessages.push("Assign GC is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("crew_Dispatch_Date").value === "") {
+            errorMessages.push("Crew Dispatch Date is required.");
+            isFormValid = false;
+          }
+          if (document.getElementById("Distribution List").value === "") {
+            errorMessages.push("Crew Dispatch Date is required.");
+            isFormValid = false;
+          }
+          
+          // If the form is not valid, show the first error message
+          if (!isFormValid) {
+            var errorDiv = document.getElementById("error-messages");
+            errorDiv.style.display = "block";
+        
+            if (errorMessages.length > 0) {
+              var errorMessage = errorMessages[0];
+              errorDiv.innerHTML = errorMessage + "<br>";
+        
+              var closeButton = document.createElement("button");
+              closeButton.className = "close";
+              closeButton.innerHTML = "&times;";
+              closeButton.addEventListener("click", function() {
+                errorDiv.style.display = "none";
+              });
+        
+              errorDiv.appendChild(closeButton);
+            }
+        
+            return false;
+          }
+        
+          // If the form is valid, submit it
+          return true;
+        }
+          
+        </script>
+</body>
+
+</html>

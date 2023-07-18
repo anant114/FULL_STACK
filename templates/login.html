@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Login Page</title>
+	<link href="login.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+<style>
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	
+	body {
+		background-image: url(https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg); 
+		 background-size: cover;
+	}
+	.logo{
+		margin-left :  40px ;
+		color: rgb(81, 114, 158);
+		margin-top: -20px;
+		padding-bottom: 50px; 
+		padding-top: 50px;
+	}
+	.logo h1{
+		font-size: 30px;
+		font-weight: 500;
+		margin-top: -50px;
+		margin-left: 120px;
+	
+		
+	}
+	.h1{
+		font-size: large;
+		font-weight: 400;
+	}
+			.head {
+			
+			color: rgb(5, 158, 247);
+			
+			font-size: 30px;
+			
+			
+			
+			
+			}
+	.check{
+		margin-left: 50px;
+	}
+	
+	.col-8 {
+		
+		background: white;
+		width: 500px;
+		height: 475px;
+		padding-bottom: 25px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin: auto;
+		padding:70px 55px -1px 30px;
+		border-radius: 20px;
+		box-shadow: 4px 4px 4px 4px rgb(141, 141, 141);
+		border :  .5px solid rgba(8, 8, 8, 0.164);
+		padding-left: 40px;
+	}
+	
+	
+	 .img{
+		height: 70px;
+		width: 50;
+		
+		margin-left: 67px;
+	} 
+	.fontLabel {
+		color: black;
+		
+	}
+	
+	.fr {
+		/* float: right; */
+		margin-top: -40px;
+		margin-left: 100px;
+		
+	}
+	#chose{
+		height: 38px;
+		width: 248px;
+		border: 1px solid black;
+		border-radius: 5px;
+		padding-left: 11px;
+		color: #2d3e3f;
+		margin-top: 11px; 
+		margin-left: 50px;
+	}
+	#companyname {
+		height: 38px;
+		width: 248px;
+		border: 1px solid black;
+		border-radius: 5px;
+		padding-left: 11px;
+		color: black;
+		margin-top: 11px; 
+		margin-left: 50px;
+	}
+	
+	.clr {
+		clear: both;
+	}
+	
+	.box {
+		width: 360px;
+		height: 35px;
+		
+		font-family: verdana;
+		font-size: 12px;
+		color: black;
+		margin-top: 30px;
+	
+	
+	}
+	.box1 {
+		width: 360px;
+		height: 35px;
+		
+		font-family: verdana;
+		font-size: 12px;
+		color: black;
+		margin-top: -20px;
+	
+	
+	}
+	
+	
+	.textBox {
+		height: 30px;
+		width: 300px;
+		border: none;
+		padding-left: 10px;
+		border: 1px solid black;
+		border-radius: 5px;
+		margin-top: 11px;
+		/* float: right; */
+		/* margin-left: 16px; */
+	}
+	
+	.new {
+		float: left;
+	}
+	
+	
+	.terms {
+		line-height: 35px;
+		text-align: center;
+		background: #2d3e3f;
+		color: white;
+	}
+	
+	.submit {
+		border-radius: 5px;
+		margin-left: 135px;
+		border: 1px solid black;
+		border: none;
+		color: white;
+		width: 420px;
+		height: 35px;
+		background: rgb(81, 114, 158);
+		text-transform: uppercase;
+		cursor: pointer;
+		border: 1px solid black;
+		float: right;
+		margin: 0px -57px 25px 0px;
+	}
+	
+	.submit:hover {
+		background: rgb(91, 131, 218);
+	}
+	.login:hover{
+		background: rgb(91, 131, 218);
+	
+	}
+	.back {
+		position: relative;
+		bottom: 20px;
+		font-size: 13px;
+		color:#337ab7;
+		margin-left: 310px ;
+		text-decoration: none;
+		margin-bottom: 100px;
+		
+	}
+	.back1{
+		font-size: 13px;
+		color:#337ab7;
+		/* text-decoration: none; */
+	
+	}
+	.sign{
+		position: relative;
+		bottom: 40px;
+	}
+	.back1:hover{
+		text-decoration: #337ab7;
+	}
+	.bg{
+		margin-top: -23px;
+		cursor: pointer;
+	}
+	
+	  #error{
+		color: red;
+		  margin-left: 18px;
+	  }
+	  #exception{
+		color: red;
+		margin-left: 18px;
+		margin-top: -9px;
+	  }
+	 
+	  /* input:invalid {
+		border: 2px solid red;
+	  } */
+	  
+	  input.invalid:focus {
+		outline: none;
+		border-color: red;
+		box-shadow: none;
+	}
+	  input:valid {
+		border: 2px solid green;
+	  }
+	  input:invalid:not(:placeholder-shown):focus {
+		border: 2px solid red;
+	}
+	
+	  
+	 @media only screen and (max-width: 1100px)
+	{
+		body {
+			background-image: url(https://images.unsplash.com/photo-1628029799784-50d803e64ea0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=659&q=80);
+			/* background-position: center top; */
+			background-size: 100% auto;
+			
+		}
+	
+			
+			.container {
+				height: 700px;
+				width: 500px;
+		}
+	
+	
+	
+	}
+	.error-message {
+  color: red;
+  display: none;
+  margin-right: 20px;
+}
+
+.error-message.active {
+  display: block;
+}
+.forgot{
+	border: none;
+	background-color: white;
+}
+.close2{
+	font-size: 26px !important;
+	padding-bottom: 20px !important;
+	color: black;
+   
+  }
+  .close2{
+	font-size: 26px !important;
+	padding-bottom: 20px !important;
+   
+  }
+  .me-5 {
+	margin-right: 1rem !important;}
+	.close{
+	  position: relative;
+	  left: 25 px;
+	  bottom: 10px;
+	}
+	.message{
+		margin-top: 2px !important ;
+	}
+
+
+
+</style>
+
+<body>
+	{% load static %}
+	<div class="message me-5">
+		{% for message in messages %}
+		<div class="container-fluid p-0" id="gg">
+		  <div class="alert {{ message.tags }} alert-dismissible me-5 " role="alert">
+			<button type="button" class="close float-end" style="background-color: #d1e7dd; border:none; "  id="close" data-dismiss="alert" aria-label="Close">
+			  <span class="close2" style="font-size: larger;" aria-hidden="false">&times;</span>
+			</button>
+			{{ message }}
+		  </div>
+		</div>
+		{% endfor %}
+	  </div>
+
+	
+ 
+	<div class="col-2 col-sm-1"></div>
+
+	</div>
+
+
+	<div class="container d-flex p-2 ">
+
+		<div class="col-8 ">
+	
+
+			<div class="logo"><img class="img" src='{% static "images/int.png" %}'> </div>
+
+
+			<div class="logo" style="font-family:courier;">
+				<h1 class="h1"><b>Login</b></h1>
+			</div>
+			<form name="form" class="requires-validation" action="/login_page" method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+
+
+              
+			<!-- ------------email------------- -->
+			<div class="box1">
+
+				<label for="email" name="email" class="fl fontLabel">Email: </label>
+				<div class="fr">
+
+				 <input type="email" required name="email" autocomplete="off" required minlength="4" placeholder="Email" class="textBox"
+						id="email"  >  
+						
+						<div id="email-error" class="error-message">
+							
+				</div>
+				
+
+			</div>
+			<div class="clr"></div>
+		</div>
+		<!--Email ID----->
+
+
+
+		<!---Password------>
+		<div class="box">
+			<label for="password" name="password" class="fl fontLabel">Password:</label>
+			<div class="fr ">
+				<input type="password" id="password" required name="password" placeholder="Password" minlength="6" class="textBox">
+				<div id="password-error" class="error-message">Please enter a password</div>
+
+				<!-- <span id="error">Password required</span> -->
+
+
+			</div>
+			<div class="clr"></div>
+		</div>
+
+		<!---Password -->
+		</lightning-input>
+
+
+		<!---Submit Button -->
+		<div class="box">
+			
+			<a href="#"><button class="submit" type="submit" value="submit">Login</button></a>
+		</div>
+
+		<!-- <div class="bb"><a class="back1" href="forgot.html">Forgot Password</a></div> -->
+		<div class="bg">
+			<button class="forgot"><a class="back1" href="/forgot">Forgot Password</a></button>
+			<button class="forgot" ><a class="back" href="/signup">Customer SignUp</a></button>
+		</div>
+	</form>
+		<!---Submit Button-->
+	</div>
+
+
+
+
+	
+
+
+
+
+</body>
+<script>
+	
+	const emailInput = document.getElementById('email');
+const emailError = document.getElementById('email-error');
+
+emailInput.addEventListener('input', function(event) {
+  if (emailInput.validity.valid) {
+    // If the email is valid, hide the error message
+    emailError.textContent = '';
+    emailError.className = 'error-message';
+    emailInput.classList.remove('invalid');
+  } else {
+    // If the email is invalid, display the error message
+    emailError.textContent = 'Please enter a valid email address';
+    emailError.className = 'error-message active';
+    emailInput.classList.add('invalid');
+  }
+});
+
+emailInput.addEventListener('invalid', function(event) {
+  // Prevent the browser from showing its default error message
+  event.preventDefault();
+});
+
+
+const passwordInput = document.getElementById('password');
+const passwordError = document.getElementById('password-error');
+
+passwordInput.addEventListener('input', function(event) {
+  if (passwordInput.validity.valid) {
+    // If the password is valid, hide the error message and remove the invalid class
+    passwordError.textContent = '';
+    passwordError.className = 'error-message';
+    passwordInput.classList.remove('invalid');
+  } else {
+    // If the password is invalid, display the error message and add the invalid class
+    passwordError.textContent = 'Password should be greater than 6';
+    passwordError.className = 'error-message active';
+    passwordInput.classList.add('invalid');
+  }
+});
+
+passwordInput.addEventListener('invalid', function(event) {
+  // Prevent the browser from showing its default error message
+  event.preventDefault();
+});
+
+document.getElementById('close').addEventListener('click', function() {
+	document.getElementById('gg').style.display = 'none';
+  });
+
+</script>
+
+</html>

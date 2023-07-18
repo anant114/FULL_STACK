@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Alkatra:wght@500;700&family=Braah+One&family=Kaushan+Script&family=Lilita+One&display=swap"
+    rel="stylesheet">
+  </head>
+    <style>
+      .row{
+        color: rgb(20, 20, 20);
+        font-size: 16px;
+        font-weight: 700;
+        font-family: 'Alfa Slab One', cursive;
+            font-family: 'Alkatra', cursive;
+    }
+      body {
+        text-align: center;
+        padding: 40px 0;
+        background: #EBF0F5;
+      }
+        h1 {
+          color: #88B04B;
+          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+          font-weight: 900;
+          font-size: 40px;
+          margin-bottom: 10px;
+          margin-top: -7px;
+        }
+        p {
+          color: #404F5E;
+          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+          font-size:20px;
+          margin: 0;
+          font-weight: 300;
+        }
+      i {
+        color: #9ABC66;
+        font-size: 100px;
+        line-height: 200px;
+        margin-left:-15px;
+      }
+      .card {
+        background: white;
+        padding: 60px;
+        border-radius: 4px;
+        box-shadow: 0 2px 3px #C8D0D8;
+        display: inline-block;
+        margin: 220px auto auto 0;
+     
+      }
+      .checkmark{
+        font-size: 60px;
+        position: relative;
+        bottom: 45px;
+      
+      }
+      .btn1{
+       
+        font-size: 25px;
+        background-color: #9ABC66;
+        border: #92cc3b;
+        padding:5px 30px 5px 30px ;
+        border-radius: 10px;
+        margin-bottom: -70px;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        
+      }
+      .btn1 a{
+        color: white;
+        text-decoration: none;
+      }
+    </style>
+    <body>
+      {% load static %}
+      <div class="card">
+      <div style="border-radius:200px; height:100px; width:100px; background: #F8FAF5; margin:0 auto;">
+        <i class="checkmark">✓</i>
+      </div>
+        <h1>Success</h1> 
+        <p>We have sent an email to you for reset your password<br/> Thank you!</p>
+        <div class="box">
+            <button type="button" class="btn1 btn btn-outline-danger"><a href="/login_page">Go to Login Page</a></button>
+        </div>
+      </div>
+   
+    </body>
+</html>

@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Alarms</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" rel="stylesheet">
+
+    <!-- simple line icon -->
+    <link rel="stylesheet" type="text/css" href="assets/icon/simple-line-icons/css/simple-line-icons.css">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!-- Responsive.css-->
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.bundle.min.js'></script>
+    <!-- /*-------edit delete-------------*/ -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round|Open+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Alkatra:wght@500;700&family=Braah+One&family=Kaushan+Script&family=Lilita+One&display=swap"
+    rel="stylesheet">
+
+
+
+
+
+
+
+
+
+    <style>
+        .row{
+            color: rgb(20, 20, 20);
+            font-size: 16px;
+            font-weight: 700;
+            font-family: 'Alfa Slab One', cursive;
+                font-family: 'Alkatra', cursive;
+        }
+        .midbox {
+            height: 350px !important;
+        }
+
+        .navbar {
+
+            background-color: white;
+
+
+        }
+
+        .col-lg-1 {
+            padding-top: 0px;
+
+        }
+
+
+
+        .nav-link.active {
+
+            background-color: #51E2F5;
+
+        }
+
+        .nav-link:hover {
+
+            background-color: #51E2F5;
+
+
+        }
+
+        body {
+            background-color: #f9f9fa
+        }
+
+        .tog {
+            /* overflow: hidden; */
+            height: inherit;
+            margin: 10px 877px 15px -890px;
+        }
+
+
+        @media (max-width:991.98px) {
+            .padding {
+                padding: 1.5rem
+            }
+
+
+        }
+
+        @media (max-width:767.98px) {
+            .padding {
+                padding: 1rem
+            }
+        }
+
+        @media (min-width: 992px) {}
+
+        @media only screen and (max-width: 1300px) {
+
+            .col-lg-1 {
+               
+                display: none !important;
+            }
+
+            .btn2 {
+                /* margin: 10px 364px 15px -890px; */
+                visibility: visible !important;
+            }
+
+            .col-10 {
+                width: 130px !important;
+            }
+
+            .tog {
+                display: none;
+            }
+
+        }
+
+        @media only screen and (max-width: 1600px) {
+            .nav-link.active {
+                width: 120px;
+            }
+
+            .nav-link:hover {
+                width: 120px;
+            }
+
+
+
+        }
+
+        .btn2 {
+            visibility: hidden;
+        }
+
+        .padding {
+            padding: 5rem
+        }
+
+        .card {
+            background: #fff;
+            border-width: 0;
+            border-radius: .25rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+            margin-bottom: 1.5rem
+        }
+
+        .card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            word-wrap: break-word;
+            background-color: #fff;
+            background-clip: border-box;
+            border: 1px solid rgba(19, 24, 44, .125);
+            border-radius: .25rem
+        }
+
+        .card-header {
+            padding: .75rem 1.25rem;
+            margin-bottom: 0;
+            background-color: rgba(19, 24, 44, .03);
+            border-bottom: 1px solid rgba(19, 24, 44, .125)
+        }
+
+        .card-header:first-child {
+            border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0
+        }
+
+        card-footer,
+        .card-header {
+            background-color: transparent;
+            border-color: rgba(160, 175, 185, .15);
+            background-clip: padding-box
+        }
+
+        .log {
+            font-size: 25px;
+            font-weight: 800;
+
+        }
+
+        .logo {
+            text-decoration: none;
+
+        }
+
+
+        .a3 {
+            color: rgb(11, 131, 230);
+        }
+
+        .a1 {
+            color: black;
+
+        }
+
+        .a1:hover {
+            color: rgb(11, 131, 230);
+        }
+
+
+        .a2 {
+            height: 500px;
+        }
+
+        .menu {
+            background-color: #51E2F5;
+
+        }
+
+
+
+
+        .bb {
+            width: 100px;
+        }
+
+        .ix {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .option {
+            text-decoration: none;
+        }
+
+        .mid {
+            height: 300px;
+        }
+
+        .task {
+            text-decoration: none;
+        }
+
+        .dash {
+          
+            text-align: center;
+            margin-bottom: -10px;
+
+        }
+
+        .dash h4 {
+            font-family: 'Alfa Slab One', cursive;
+			font-family: 'Alkatra', cursive;
+            padding-top: 10px;
+            font-size: 40px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        @media screen and (max-width: 767px) {
+            #chart-line {
+                width: 100%;
+                height: 300px;
+            }
+
+            .fixed .content-wrapper {
+                margin-left: -8px;
+            }
+        }
+
+        @media screen and (max-width: 1300px) {
+
+            .fixed .content-wrapper {
+                margin-left: -8px;
+                width: 100vw !important;
+            }
+
+            .btn1 {
+                margin-left: 30px !important;
+            }
+        }
+
+        /* ------------MARKET LIST-----------*/
+        .btn1 {
+            background-color: rgb(101, 175, 101);
+            color: #fff;
+            height: 40px;
+            border-radius: 10px;
+            width: 160px !important;
+            margin-top: 15px !important;
+        }
+
+        .btn1:hover {
+            background-color: green;
+        }
+
+        .head {
+            background-color: #51E2F5;
+            margin-left: 2px;
+
+
+
+        }
+
+
+        .col-lg-11 {
+            padding: 0px 0px 0px 0px !important;
+        }
+
+        /*  ----------------------------------alarm-----------------*/
+        #id {
+            width: 100vw !important;
+        }
+
+        .sub {
+            height: 40px;
+            width: 100px;
+
+
+
+        }
+
+        #table {
+            font-size: 11px !important;
+        }
+
+        .blank {
+            padding: 10px 5px 10px 10px !important;
+        }
+        .table{
+            border-color: black !important;
+        }
+        .bb1{
+            background-color: rgb(11, 165, 226);
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            width: 100px;
+            padding: 1px 15px 2px 15px !important;
+            font-size: 13px;
+            
+        
+        }
+        .bb2{
+            background-color: rgb(8, 206, 156);
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            width: 100px;
+            padding: 1px 15px 2px 15px !important;
+            font-size: 13px;
+            
+        }
+        .bb3{
+            background-color: orangered;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            width: 100px;
+            padding: 1px 15px 2px 15px !important;
+            font-size: 13px;
+        }
+        .bb4{
+            background-color: rgb(10, 208, 235);
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+            width: 100px;
+            padding: 1px 15px 2px 15px !important;
+            font-size: 13px;
+        }
+        .cardd-body{
+            border: 1px solid rgba(19, 24, 44, .125);
+          }
+      
+    </style>
+
+</head>
+
+<body class="sidebar-mini fixed">
+    {% load static %}
+
+    <div class="wrapper">
+        <!-- Navbar-->
+        <header class="main-header-top hidden-print ">
+            <div class="container-fluid border border rounded" style="padding: 0px 0px 0px 0px;">
+
+                <nav class="navbar navbar-static-top">
+                    <img src='{% static "images/int.png" %}'
+                    class="img ps-2 " width="130" height="50" alt="integer logo">
+                    <button class="btn2 float-start bg-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
+                        role="button">
+                        <i class="text-light " data-bs-toggle="offcanvas" data-bs-target="#offcanvas"><i
+                                class="fa fa-bars"></i></i>
+
+                        <button onclick="showOrHide()" class="tog float-end bg-" role="button" style="height: 30px;">
+                            <i class="text-dark "><i class="fa fa-bars"></i></i>
+                        </button>
+
+
+                        <ul class="top-nav">
+                            <!--Notification Menu-->
+
+
+                            <div class="btn-group">
+                                <button type="button" class="btn btn dropdown-toggle dropdown-toggle-split"
+                                    data-bs-toggle="dropdown" aria-expanded="false"><span><img class="img-circle "
+                                        src='{% static "images/B.png" %}'
+                                        style="width:40px; border: 1px solid black; border-radius: 80px;"
+                                        alt="User Image"></span>
+                                </button>
+
+                                <ul class="dropdown-menu px-2 ">
+
+                                    <li><a href="#!"><i class="icon-settings px-2"></i> Settings</a></li>
+                                    <li> <a href="account_settings.html"><i class="icon-user px-2"></i> Profile</a></li>
+                                    <li><a href="#"><i class="icon-envelope-open px-2 "></i> My Messages</a></li>
+                                    <li><a href="login.html"><i class="icon-logout px-2"></i> Logout</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Lock Screen</a></li>
+
+                                </ul>
+                            </div>
+
+                            <div class="btn-group">
+
+                                <button type="button" class="btn btn-light dropdown-toggle " data-bs-toggle="dropdown"
+                                    aria-expanded="false">Pushpendra
+
+
+
+
+
+
+
+
+                                </button>
+                                <ul class="dropdown-menu pe-5 ps-1 ">
+                                    <li class="not-head pt-2">You have <b class="text-secondary ">9</b> new
+                                        notifications.
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Email recieved</a></li>
+                                    <li><a class="dropdown-item" href="#">Profile Updated</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">See all notifications</a></li>
+
+                                </ul>
+                            </div>
+
+
+
+
+                        </ul>
+            </div>
+            </nav>
+
+        </header>
+
+        <!-- Side-Nav-->
+        <div class="col-10 offcanvas offcanvas-start w-25" tabindex="-1" id="offcanvas" data-bs-keyboard="false"
+            data-bs-backdrop="false">
+            <div class="menu offcanvas-header">
+                <h6 class="offcanvas-title d-none d-sm-block text-dark" id="offcanvas">Menu</h6>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body px-0 " style="background-color:white">
+                <ul class="nav nav-pills flex-column  align-items-start  ps-3 " id="menu"
+                    style="text-decoration: black ;  ">
+
+
+                    <li class="nav-item">
+
+                        <a class="nav-link  " style="margin-left: -13px;" href="/dashboard">Dashboard</a>
+
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link "  style="margin-left: -13px;" href="/activitylist">Activity List</a>
+                    </li>
+                    <li class="nav-item " style="width:140px ;">
+                        <a class="nav-link  "  style="margin-left: -13px;"  href="/userlist">Userlist</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link"  style="margin-left: -13px;" href="/createactivity">Activity</a>
+                    </li>
+                    
+                
+
+                
+                    <li class="nav-item">
+                        <a class="nav-link "  style="margin-left: -13px;" href="/adduser">Add
+                            User</a>
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link active"  style="margin-left: -13px;" href="/alarm">Alarm</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link "  style="margin-left: -13px;" href="/market2">Market List</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link "  style="margin-left: -13px;" href="/add_market">Add
+                            Market</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link "  style="margin-left: -13px;" href="/rolelist">Rolelist</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link  "  style="margin-left: -13px;" href="/companylist">Companylist</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link "  style="margin-left: -13px;" href="/account_settings">Account</a>
+                    </li>
+                  
+                    
+                    <li class="nav-item" style="width:140px ;">
+                        <a class="nav-link "  style="margin-left: -13px;" href="/login_page">Login</a>
+                    </li>
+
+                    <li class="nav-item">
+
+                        <a class="nav-link "  style="margin-left: -13px;" href="/login_page">Logout</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-1" id="div1">
+                <nav class="navbar navbar-expand navbar-light bg-light">
+                    <div class="container" style="padding: 0px 0px 0px 0px ;">
+                        <!-- <div class="container-fluid"> -->
+
+                        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                            <!-- <div class="container-fluid"> -->
+                            <div class="col">
+                                <div id="sidebar" class="col col-2 ">
+                                    <ul class="navbar-nav float-start flex-column ms-0" id="sidemenu">
+                                        <li class="nav-item ms-2">
+
+										</li>
+										<li class="nav-item">
+
+											<a class="nav-link" href="/dashboard"><i
+													class="fa fa-bars me-1 pe-2"></i>Dashboard</a>
+
+										</li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link " href="/activitylist"><i
+                                                    class="fa fa-list me-1 pe-2"></i>Activity List</a>
+                                        </li>
+                                        <li class="nav-item " style="width:140px ;">
+											<a class="nav-link  " href="/userlist"><i
+													class="fa fa-table me-1 pe-1"></i>&nbspUserlist</a>
+										</li>
+                                        <li class="nav-item">
+
+                                            <a class="nav-link" href="/createactivity"><i
+                                                    class="fa fa-road me-1 pe-2"></i>Activity</a>
+                                        </li>
+										
+									
+
+										
+										<li class="nav-item">
+											<a class="nav-link " href="/adduser"><i
+													class="fa fa-plus  "></i>&nbsp&nbsp&nbspAdd
+												User</a>
+										</li>
+
+										<li class="nav-item">
+
+											<a class="nav-link active" href="/alarm"><i
+													class="fa fa-bell me-1 pe-1 "></i>&nbsp&nbspAlarm</a>
+										</li>
+										<li class="nav-item">
+
+											<a class="nav-link " href="/market2"><i
+													class="fa fa-laptop me-1 pe-1"></i>Market List</a>
+										</li>
+										<li class="nav-item">
+
+											<a class="nav-link " href="/add_market"><i
+													class="fa fa-file me-1 pe-2"></i>Add
+												Market</a>
+										</li>
+                                        <li class="nav-item">
+
+											<a class="nav-link " href="/rolelist"><i
+													class="fa fa-rocket me-1 pe-2"></i>Rolelist</a>
+										</li>
+										<li class="nav-item">
+
+											<a class="nav-link  " href="/companylist"><i
+													class="fa fa-rocket me-1 pe-2"></i>Companylist</a>
+										</li>
+										<li class="nav-item">
+
+											<a class="nav-link " href="/account_settings"><i
+													class="fa fa-tools me-1 pe-1"></i>Account</a>
+										</li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                               data-bs-toggle="dropdown" aria-expanded="false" style="color: gray;">
+                                                <i class="fa fa-tools me-1 pe-2"></i>TOOL
+                                            </a>
+                                           
+                                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                <li><a class="dropdown-item" href="/lgfile" style="color: gray;">LOG FILE</a></li>
+                                                <li><a class="dropdown-item" href="/process" style="color: gray;">EDP FILE</a></li>
+                                                <li><a class="dropdown-item" href="/process_excel" style="color: gray;">CELL NODE FILE</a></li>
+                                            </ul>
+
+                                        </li>
+										
+										
+                                        <li class="nav-item" style="width:140px ;">
+											<a class="nav-link " href="/login_page"><i
+													class="fa fa-user me-1 pe-1"></i>&nbspLogin</a>
+										</li>
+
+										
+										<li class="nav-item">
+
+											<a class="nav-link " href="/login_page"><i
+													class="fa fa-rocket me-1 pe-2"></i>Logout</a>
+										</li>
+
+                                    </ul>
+
+
+
+
+
+                </nav>
+            </div>
+            <div class="col-lg-11 " id="myDiv">
+
+
+                <div class="content-wrapper">
+                    <div class="head row">
+                        <div class="dash main-header">
+
+                            <h4>ALARMS</h4>
+                        </div>
+                    </div>
+
+                    <div class="row dashboard-header mt-4 ">						
+						<div class="col-lg-3 col-md-6">
+							<div class="card dashboard-product p-3">
+								<h2 class="dashboard-total-products">Integration</h2>
+								Total Sites<span class="bb1 label label-primary">40 Sites</span>
+								<div class="side-box">
+									<i class="ti-signal text-warning-color"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="card dashboard-product p-3">
+						
+								<h2 class="dashboard-total-products">Construction</h2>
+								Total Sites<span class="bb2 label label-success">6 Sites</span>
+								<div class="side-box ">
+									<i class="ti-gift text-primary-color"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="card dashboard-product p-3">
+								
+								<h2 class="dashboard-total-products">Scripting</h2>
+								Total Sites<span class="bb3 label label-warning">14 Sites </span>
+								<div class="side-box">
+									<i class="ti-direction-alt text-success-color"></i>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<div class="card dashboard-product p-3">
+								<h2 class="dashboard-total-products">Troubleshooting</h2>
+								Total Sites<span class="bb4 label label-primary">40 Sites</span>
+								<div class="side-box">
+									<i class="ti-signal text-warning-color"></i>
+								</div>
+							</div>
+						</div>
+                      
+                    </div>
+                    <div class="row mb-3" style="padding: 0px 15px 0px 15px; overflow-x:auto;">
+                        <table id="table"
+                            class="tabletable-responsive dataTable cell-border table-bordered table-hover no-footer"
+                            aria-describedby="table_info">
+                            <thead class="container ">
+                                <tr class="table table-hover" style="background-color: rgba(115, 199, 233, 0.842);">
+                                    <th class="col1 pb-0 ps-2 pt-2 pe-2" scope="col">Sn.No</th>
+                                    <th scope="col">Activity Date</th>
+                                    <th scope="col">Market</th>
+                                    <th scope="col ">FA Location</th>
+                                    <th scope="col">Site Name</th>
+                                    <th scope="col">Site IDs</th>
+                                    <th scope="col">Support Type</th>
+                                    <th scope="col">GC Name</th>
+                                    <th scope="col">GC Contact No.</th>
+                                    <th class="col10 pb-0 ps-5 " scope="col">GC Email Id</th>
+                                    <th class="blank ps-1 pe-1 pt-2" scope="col">CX Day Support </th>
+                                    <th class="blank ps-5" scope="col ">NFSD#</th>
+                                    <th class="blank ps-5" scope="col">EIM</th>
+                                    <th class="blank ps-5" scope="col">Activity Sow</th>
+                                    <th class="blank p-0 ps-1 pt-2" scope="col">IX Status</th>
+                                    <th class="blank p-0 ps-1 pt-2" scope="col">Support ProvideD by Integer</th>
+                                    <th class="blank p-0 ps-1 pt-2" scope="col">Pre-Launch Carrier Status</th>
+                                    <th class="blank p-0 ps-1 pt-2" scope="col">Call TEST/NEA TEST Status</th>
+                                    <th class="blank p-0 ps-1 pt-2" scope="col">EOD Alaram Status</th>
+                                    <th class="blank p-0 ps-1 pt-2" scope="col">Upcoming Plan</th>
+
+
+
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <th class="col1  pb-0 ps-2 pt-2 pe-2" scope="row">1</th>
+                                    <td>05/15/2023</td>
+                                    <td>Upstate NY</td>
+                                    <td>10130935</td>
+                                    <td>UNL02063</td>
+                                    <td>UNL02063</td>
+                                    <td>Cx Support</td>
+                                    <td>Sergei Petukhov</td>
+                                    <td>5083734922</td>
+                                    <td class="col10 p-1 pe-1">sergei.p@triple-connect.com</td>
+                                    <td class="blank p-0"></td>
+                                    <td>MRNYJ033448</td>
+                                    <td>NA0000008386790</td>
+                                    <td>Replacing power jumpers. Support cables.</td>
+                                    <td class="blank p-0 ps-1">Ix Support are Done</td>
+                                    <td class="blank p-0 ps-1">Troubleshooting, Integration,</td>
+                                    <td class="blank p-0 ps-1">Successfully Complete</td>
+                                    <td class="blank p-0 ps-1">All are Done</td>
+                                    <td class="blank p-0 ps-1">All Alarm are off!</td>
+                                    <td class="blank p-0 ps-1">In Process</td>
+
+
+
+                                </tr>
+                                <tr>
+
+                                    <th class="col1 pb-0 ps-2 pt-2 pe-2" scope="row">2</th>
+                                    <td>05/15/2023</td>
+                                    <td>NEW ENGLAND</td>
+                                    <td>10071607</td>
+                                    <td>MAL03454</td>
+                                    <td>MAL03454</td>
+                                    <td>Cx Support</td>
+                                    <td>Ashley Meredith</td>
+                                    <td>4133297783</td>
+                                    <td class="col10 p-1 pe-1">Wanderlust1893@gmail.com</td>
+                                    <td class="blank p-0"></td>
+                                    <td>Wanderlust1893@gmail.com</td>
+                                    <td>8389399</td>
+                                    <td>Support the lines in shelter and put weatherproofing on ports and prep for steel
+                                        work </td>
+                                    <td class="blank p-0 ps-1">Ix Support are Done</td>
+                                    <td class="blank p-0 ps-1">Troubleshooting, Integration,</td>
+                                    <td class="blank p-0 ps-1">Successfully Complete</td>
+                                    <td class="blank p-0 ps-1">All are Done</td>
+                                    <td class="blank p-0 ps-1">All Alarm are off!</td>
+                                    <td class="blank p-0 ps-1">In Process</td>
+
+
+
+                                </tr>
+                                <tr>
+
+                                    <th class="col1  pb-0 ps-2 pt-2 pe-2" scope="row">3</th>
+                                    <td>05/15/2023</td>
+                                    <td>Upstate NY </td>
+                                    <td>10032311</td>
+                                    <td>UNL16089R<br>UNL06089</td>
+                                    <td>UNL16089R<br>UNL06089</td>
+                                    <td>Cx Support</td>
+                                    <td>Vadim Krivosheev</td>
+                                    <td>9412749539</td>
+                                    <td class="col10 p-1 pe-1">Vadim.r@triple-connect.com</td>
+                                    <td class="blank p-0"></td>
+                                    <td>MRNYJ032975</td>
+                                    <td>NA0000008388740</td>
+                                    <td>Relocate existing and install new antennas and radios on Alpha sector. Relocate
+                                        existing DC6 and install new DC 9 on Alpha</td>
+                                    <td class="blank p-0 ps-1">Ix Support are Done</td>
+                                    <td class="blank p-0 ps-1">Troubleshooting, Integration,</td>
+                                    <td class="blank p-0 ps-1">Successfully Complete</td>
+                                    <td class="blank p-0 ps-1">All are Done</td>
+                                    <td class="blank p-0 ps-1">All Alarm are off!</td>
+                                    <td class="blank p-0 ps-1">In Process</td>
+
+                                </tr>
+
+                                <tr>
+                                    <th class="col1 pb-0 ps-2 pt-2 pe-2" scope="row">4</th>
+                                    <td>05/15/2023</td>
+                                    <td>NEW ENGLAND</td>
+                                    <td>10071607</td>
+                                    <td>MAL03454</td>
+                                    <td>MAL03454</td>
+                                    <td>Cx Support</td>
+                                    <td>Ashley Meredith</td>
+                                    <td>4133297783</td>
+                                    <td class="col10 p-1 pe-1">Wanderlust1893@gmail.com</td>
+                                    <td class="blank p-0"></td>
+                                    <td>Wanderlust1893@gmail.com</td>
+                                    <td>4133297783</td>
+                                    <td>Troubleshooting</td>
+                                    <td class="blank p-0 ps-1">Ix Support are Done</td>
+                                    <td class="blank p-0 ps-1">Troubleshooting, Integration,</td>
+                                    <td class="blank p-0 ps-1">Successfully Complete</td>
+                                    <td class="blank p-0 ps-1">All are Done</td>
+                                    <td class="blank p-0 ps-1">All Alarm are off!</td>
+                                    <td class="blank p-0 ps-1">In Process</td>
+
+
+
+
+                                </tr>
+
+
+
+                                <tr>
+                                    <th class="col1  pb-0 ps-2 pt-2 pe-2" scope="row">5</th>
+                                    <td>05/15/2023</td>
+                                    <td>Upstate NY</td>
+                                    <td>10063702</td>
+                                    <td>UNL05658</td>
+                                    <td>MAL03454</td>
+                                    <td>Cx Support</td>
+                                    <td>Aleksandr Charkov</td>
+                                    <td>9295215491</td>
+                                    <td class="col10 p-1 pe-1">a.charkov@sluniversal.com</td>
+                                    <td class="blank p-0"></td>
+                                    <td>MRNYJ015656</td>
+                                    <td>NA0000008389366</td>
+                                    <td>Preparations work for VQA, post photos.</td>
+                                    <td class="blank p-0 ps-1">Ix Support are Done</td>
+                                    <td class="blank p-0 ps-1">Troubleshooting, Integration,</td>
+                                    <td class="blank p-0 ps-1">Successfully Complete</td>
+                                    <td class="blank p-0 ps-1">All are Done</td>
+                                    <td class="blank p-0 ps-1">All Alarm are off!</td>
+                                    <td class="blank p-0 ps-1">In Process</td>
+
+
+
+                                </tr>
+
+                                <tr>
+                                    <th class="col1  pb-0 ps-2 pt-2 pe-2" scope="row">6</th>
+                                    <td>05/05/2023</td>
+                                    <td>NEW ENGLAND </td>
+                                    <td>10071721</td>
+                                    <td>MAL03129</td>
+                                    <td>MAL03129</td>
+                                    <td>Cx Support</td>
+                                    <td>Jazmanny Ramirez</td>
+                                    <td>8176735893</td>
+                                    <td class="col10 p-1 pe-1">jazmannysrr@ramtowertech.com </td>
+                                    <td class="blank p-0"></td>
+                                    <td>Jazmannysrr@ramtowertech.com</td>
+                                    <td>NA0000008370619</td>
+                                    <td>Troubleshooting</td>
+                                    <td class="blank p-0 ps-1">Ix Support are Done</td>
+                                    <td class="blank p-0 ps-1">Troubleshooting, Integration,</td>
+                                    <td class="blank p-0 ps-1">Successfully Complete</td>
+                                    <td class="blank p-0 ps-1">All are Done</td>
+                                    <td class="blank p-0 ps-1">All Alarm are off!</td>
+                                    <td class="blank p-0 ps-1">In Process</td>
+
+
+                                </tr>
+
+                                <tr>
+
+                                    <th class="col1  pb-0 ps-2 pt-2 pe-2" scope="row">7</th>
+                                    <td>05/15/2023</td>
+                                    <td>NEW ENGLAND</td>
+                                    <td>10071607</td>
+                                    <td>MAL03454</td>
+                                    <td>MAL03454</td>
+                                    <td>Cx Support</td>
+                                    <td>Ashley Meredith</td>
+                                    <td>4133297783</td>
+                                    <td class="col10 p-1 pe-1">Wanderlust1893@gmail.com</td>
+                                    <td class="blank p-0"></td>
+                                    <td>Wanderlust1893@gmail.com</td>
+                                    <td>8389399</td>
+                                    <td>Support the lines in shelter and put weatherproofing on ports and prep for steel
+                                        work </td>
+                                    <td class="blank p-0 ps-1">Ix Support are Done</td>
+                                    <td class="blank p-0 ps-1">Troubleshooting, Integration,</td>
+                                    <td class="blank p-0 ps-1">Successfully Complete</td>
+                                    <td class="blank p-0 ps-1">All are Done</td>
+                                    <td class="blank p-0 ps-1">All Alarm are off!</td>
+                                    <td class="blank p-0 ps-1">In Process</td>
+
+                                </tr>
+                                <tr>
+
+                                    <th class="col1  pb-0 ps-2 pt-2 pe-2" scope="row">8</th>
+                                    <td>05/15/2023</td>
+                                    <td>Upstate NY </td>
+                                    <td>10032311</td>
+                                    <td>UNL16089R<br>UNL06089</td>
+                                    <td>UNL16089R<br>UNL06089</td>
+                                    <td>Cx Support</td>
+                                    <td>Vadim Krivosheev</td>
+                                    <td>9412749539</td>
+                                    <td class="col10 p-1 pe-1">Vadim.r@triple-connect.com</td>
+                                    <td class="blank p-0"></td>
+                                    <td>MRNYJ032975</td>
+                                    <td>NA0000008388740</td>
+                                    <td>Relocate existing and install new antennas and radios on Alpha sector. Relocate
+                                        existing DC6 and install new DC 9 on Alpha</td>
+                                    <td class="blank p-0 ps-1">Ix Support are Done</td>
+                                    <td class="blank p-0 ps-1">Troubleshooting, Integration,</td>
+                                    <td class="blank p-0 ps-1">Successfully Complete</td>
+                                    <td class="blank p-0 ps-1">All are Done</td>
+                                    <td class="blank p-0 ps-1">All Alarm are off!</td>
+                                    <td class="blank p-0 ps-1">In Process</td>
+
+
+                                </tr>
+
+                                <tr>
+                                    <th class="col1  pb-0 ps-2 pt-2 pe-2" scope="row">9</th>
+                                    <td>05/15/2023</td>
+                                    <td>NEW ENGLAND</td>
+                                    <td>10071607</td>
+                                    <td>MAL03454</td>
+                                    <td>MAL03454</td>
+                                    <td>Cx Support</td>
+                                    <td>Ashley Meredith</td>
+                                    <td>4133297783</td>
+                                    <td class="col10 p-1 pe-1">Wanderlust1893@gmail.com</td>
+                                    <td class="blank p-0"></td>
+                                    <td>Wanderlust1893@gmail.com</td>
+                                    <td>4133297783</td>
+                                    <td>Troubleshooting</td>
+                                    <td class="blank p-0 ps-1">Ix Support are Done</td>
+                                    <td class="blank p-0 ps-1">Troubleshooting, Integration,</td>
+                                    <td class="blank p-0 ps-1">Successfully Complete</td>
+                                    <td class="blank p-0 ps-1">All are Done</td>
+                                    <td class="blank p-0 ps-1">All Alarm are off!</td>
+                                    <td class="blank p-0 ps-1">In Process</td>
+
+
+
+
+                                </tr>
+
+
+
+                                <tr>
+                                    <th class="col1  pb-0 ps-2 pt-2 pe-2" scope="row">10</th>
+                                    <td>05/15/2023</td>
+                                    <td>Upstate NY</td>
+                                    <td>10063702</td>
+                                    <td>UNL05658</td>
+                                    <td>MAL03454</td>
+                                    <td>Cx Support</td>
+                                    <td>Aleksandr Charkov</td>
+                                    <td>9295215491</td>
+                                    <td class="col10 p-1 pe-1">a.charkov@sluniversal.com</td>
+                                    <td class="blank p-0"></td>
+                                    <td>MRNYJ015656</td>
+                                    <td>NA0000008389366</td>
+                                    <td>Preparations work for VQA, post photos.</td>
+                                    <td class="blank p-0 ps-1">Ix Support are Done</td>
+                                    <td class="blank p-0 ps-1">Troubleshooting, Integration,</td>
+                                    <td class="blank p-0 ps-1">Successfully Complete</td>
+                                    <td class="blank p-0 ps-1">All are Done</td>
+                                    <td class="blank p-0 ps-1">All Alarm are off!</td>
+                                    <td class="blank p-0 ps-1">In Process</td>
+
+
+                                </tr>
+
+                                <tr>
+                                    <th class="col1  pb-0 ps-2 pt-2 pe-2" scope="row">11</th>
+                                    <td>05/05/2023</td>
+                                    <td>NEW ENGLAND </td>
+                                    <td>10071721</td>
+                                    <td>MAL03129</td>
+                                    <td>MAL03129</td>
+                                    <td>Cx Support</td>
+                                    <td>Jazmanny Ramirez</td>
+                                    <td>8176735893</td>
+                                    <td class="col10 p-1 pe-1">jazmannysrr@ramtowertech.com </td>
+                                    <td class="blank p-0"></td>
+                                    <td>Jazmannysrr@ramtowertech.com</td>
+                                    <td>NA0000008370619</td>
+                                    <td>Troubleshooting</td>
+                                    <td class="blank p-0 ps-1">Ix Support are Done</td>
+                                    <td class="blank p-0 ps-1">Troubleshooting, Integration,</td>
+                                    <td class="blank p-0 ps-1">Successfully Complete</td>
+                                    <td class="blank p-0 ps-1">All are Done</td>
+                                    <td class="blank p-0 ps-1">All Alarm are off!</td>
+                                    <td class="blank p-0 ps-1">In Process</td>
+
+
+                                </tr>
+                                <tr>
+                                    <th class="col1  pb-0 ps-2 pt-2 pe-2" scope="row">12</th>
+                                    <td>05/15/2023</td>
+                                    <td>Upstate NY</td>
+                                    <td>10130935</td>
+                                    <td>UNL02063</td>
+                                    <td>UNL02063</td>
+                                    <td>Cx Support</td>
+                                    <td>Sergei Petukhov</td>
+                                    <td>5083734922</td>
+                                    <td class="col10 p-1 pe-1">sergei.p@triple-connect.com</td>
+                                    <td class="blank p-0"></td>
+                                    <td>MRNYJ033448</td>
+                                    <td>NA0000008386790</td>
+                                    <td>Replacing power jumpers. Support cables.</td>
+                                    <td class="blank p-0 ps-1">Ix Support are Done</td>
+                                    <td class="blank p-0 ps-1">Troubleshooting, Integration,</td>
+                                    <td class="blank p-0 ps-1">Successfully Complete</td>
+                                    <td class="blank p-0 ps-1">All are Done</td>
+                                    <td class="blank p-0 ps-1">All Alarm are off!</td>
+                                    <td class="blank p-0 ps-1">In Process</td>
+
+
+                                </tr>
+                                <tr>
+
+                                    <th class="col1  pb-0 ps-2 pt-2 pe-2" scope="row">13</th>
+                                    <td>05/15/2023</td>
+                                    <td>NEW ENGLAND</td>
+                                    <td>10071607</td>
+                                    <td>MAL03454</td>
+                                    <td>MAL03454</td>
+                                    <td>Cx Support</td>
+                                    <td>Ashley Meredith</td>
+                                    <td>4133297783</td>
+                                    <td class="col10 p-1 pe-1">Wanderlust1893@gmail.com</td>
+                                    <td class="blank p-0"></td>
+                                    <td>Wanderlust1893@gmail.com</td>
+                                    <td>8389399</td>
+                                    <td>Support the lines in shelter and put weatherproofing on ports and prep for steel
+                                        work </td>
+                                    <td class="blank p-0"></td>
+                                    <td class="blank p-0"></td>
+                                    <td class="blank p-0"></td>
+                                    <td class="blank p-0"></td>
+                                    <td class="blank p-0"></td>
+                                    <td class="blank p-0"></td>
+
+
+                                </tr>
+                                <tr>
+
+                                    <th class="col1  pb-0 ps-2 pt-2 pe-2" scope="row">14</th>
+                                    <td>05/15/2023</td>
+                                    <td>Upstate NY </td>
+                                    <td>10032311</td>
+                                    <td>UNL16089R<br>UNL06089</td>
+                                    <td>UNL16089R<br>UNL06089 </td>
+                                    <td>Cx Support</td>
+                                    <td>Vadim Krivosheev</td>
+                                    <td>9412749539</td>
+                                    <td class="col10 p-1 pe-1">Vadim.r@triple-connect.com</td>
+                                    <td class="blank p-0"></td>
+                                    <td>MRNYJ032975</td>
+                                    <td>NA0000008388740</td>
+                                    <td>Relocate existing and install new antennas and radios on Alpha sector. Relocate
+                                        existing DC6 and install new DC 9 on Alpha</td>
+                                    <td class="blank p-0"></td>
+                                    <td class="blank p-0"></td>
+                                    <td class="blank p-0"></td>
+                                    <td class="blank p-0"></td>
+                                    <td class="blank p-0"></td>
+                                    <td class="blank p-0"></td>
+
+
+                                </tr>
+
+                                <tr>
+                                    <th class="col1  pb-0 ps-2 pt-2 pe-2" scope="row">15</th>
+                                    <td>05/15/2023</td>
+                                    <td>NEW ENGLAND</td>
+                                    <td>10071607</td>
+                                    <td>MAL03454</td>
+                                    <td>MAL03454</td>
+                                    <td>Cx Support</td>
+                                    <td>Ashley Meredith</td>
+                                    <td>4133297783</td>
+                                    <td class="col10 p-1 pe-1">Wanderlust1893@gmail.com</td>
+                                    <td class="blank p-0"></td>
+                                    <td>Wanderlust1893@gmail.com</td>
+                                    <td>4133297783</td>
+                                    <td>Troubleshooting</td>
+                                    <td class="blank p-0"></td>
+                                    <td class="blank p-0"></td>
+                                    <td class="blank p-0"></td>
+                                    <td class="blank p-0"></td>
+                                    <td class="blank p-0"></td>
+                                    <td class="blank p-0"></td>
+
+
+                                </tr>
+
+
+
+                                <tr>
+                                    <th class="col1 pb-0 ps-2 pt-2 pe-2" scope="row">16</th>
+                                    <td>05/15/2023</td>
+                                    <td>Upstate NY</td>
+                                    <td>10063702</td>
+                                    <td>UNL05658</td>
+                                    <td>MAL03454</td>
+                                    <td>Cx Support</td>
+                                    <td>Aleksandr Charkov</td>
+                                    <td>9295215491</td>
+                                    <td>a.charkov@sluniversal.com</td>
+                                    <td></td>
+                                    <td>MRNYJ015656</td>
+                                    <td>NA0000008389366</td>
+                                    <td>Preparations work for VQA, post photos.</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+
+
+
+                                </tr>
+
+
+
+
+                                <button type="button" class="btn1 btn-success  mt-3 ms-2"
+                                    onclick="ExportToExcel('xlsx')">Export</button>
+
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+        <div class="col-lg-2">
+
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+    <script>
+
+
+
+
+
+
+
+
+        // ------------------------------------------------------------------
+
+
+      
+
+
+
+
+
+
+            /*-------------------pop-end-----------------*/
+            function ExportToExcel(type, fn, dl) {
+                var elt = document.getElementById('table');
+                var wb = XLSX.utils.table_to_book(elt, { sheet: "sheet1" });
+                return dl ?
+                    XLSX.write(wb, { bookType: type, bookSST: true, type: 'base64' }) :
+                    XLSX.writeFile(wb, fn || ('MySheetName.' + (type || 'xlsx')));
+            }
+
+
+            $(document).ready(function () {
+                // Add click event listener to table rows
+                $('tr').click(function () {
+                    // Get the data cells of the clicked row
+                    var cells = $(this).find('td');
+
+                    // Extract the data from the cells and store in variables
+
+
+
+                    // Populate the input fields in the pop-up with the retrieved data
+
+
+                    // Show the pop-up
+                    $('#popup').show();
+                });
+            }); 
+
+
+
+
+    </script>
+    <script>
+            function showOrHide() {
+                var x = document.getElementById("div1");
+                var myDiv = document.getElementById("myDiv");
+                if (x.style.display === "inline" || myDiv.style.width === "91%") {
+                    x.style.display = "none";
+                    myDiv.style.width = "100%";
+                }
+                else {
+                    x.style.display = "inline";
+                    myDiv.style.width = "91%";
+                }
+            }
+            $(document).ready(function () {
+                $('[data-toggle="tooltip"]').tooltip();
+                var actions = $("table td:last-child").html();
+                // Append table with add row form on add new button click
+
+                // Delete row on delete button click
+                $(document).on("click", ".delete", function () {
+                    $(this).parents("tr").remove();
+                    $(".add-new").removeAttr("disabled");
+                });
+            });
+            $(document).ready(function () {
+                $('#table').DataTable({
+                    dom: '<"top"iflp<"clear">>rt<"bottom"iflp<"clear">>',
+                });
+           /*     { // Initialize the DataTable  
+                    var table = $('#table').DataTable(); // Add a custom search field 
+                    $('<input type="text" id="search-input" placeholder="Search...">').appendTo('body');
+                     // Handle search functionality
+                      $('#search-input').on('keyup', function() 
+                      { table.search(this.value).draw(); }); }*/
+            });
+
+    </script>
+
+</body>
+
+</html>

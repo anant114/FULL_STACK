@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Signup</title>
+	<link href="signup.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+</head>
+<style>
+	* {
+		padding: 0;
+		margin: 0;
+	}
+
+	body {
+		background-image: url(https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg);
+		background-size: cover;
+	}
+
+	.logo {
+		margin-left: 100px;
+		color: rgb(81, 114, 158);
+
+	}
+
+	.logo1 {
+		margin-left: 50px;
+		color: rgb(81, 114, 158);
+		margin-top: 0px;
+
+	}
+
+	.logo h1 {
+		margin-top: -40px;
+	}
+
+	.head {
+
+		color: rgb(5, 158, 247);
+
+		font-size: 30px;
+
+
+
+
+	}
+
+	.check {
+		margin-left: 50px;
+	}
+
+	.col-8 {
+
+		background: white;
+		width: 500px;
+		height: 840px;
+		padding-bottom: 25px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin: auto;
+		padding: 70px 55px -1px 30px;
+		border-radius: 20px;
+		box-shadow: 4px 4px 4px 4px rgb(141, 141, 141);
+		border: .5px solid rgba(8, 8, 8, 0.164);
+		padding-left: 40px;
+	}
+
+
+	.img {
+		height: 70px;
+		width: 50;
+		margin-top: 20px;
+
+		margin-left: 20px;
+
+	}
+
+	.fontLabel {
+		color: black;
+
+	}
+
+	.label {
+		display: inline-block;
+		max-width: 100%;
+		margin-bottom: 25px;
+		font-weight: 700;
+	}
+
+	.fr {
+		float: right;
+		margin-top: -30px;
+		margin-left: 100px;
+
+	}
+
+	#chose {
+		height: 35px;
+		width: 248px;
+		border: 1px solid black;
+		border-radius: 5px;
+		padding-left: 11px;
+		color: #2d3e3f;
+		margin-top: 11px;
+		margin-left: 50px;
+	}
+
+	#companyname {
+		height: 35px;
+		width: 248px;
+		border: 1px solid black;
+		border-radius: 5px;
+		padding-left: 11px;
+		color: black;
+		margin-top: 11px;
+		margin-left: 50px;
+	}
+
+	.clr {
+		clear: both;
+	}
+
+	.box {
+		width: 400px;
+		height: 45px;
+
+		font-family: verdana;
+		font-size: 12px;
+		color: black;
+		margin-top: 25px;
+		padding-top: 10px;
+
+	}
+
+	.box1 {
+		width: 400px;
+		height: 45px;
+
+		font-family: verdana;
+		font-size: 12px;
+		color: black;
+
+		padding-top: 10px;
+
+	}
+
+	.textBox {
+		height: 35px;
+		width: 250px;
+		border: none;
+		padding-left: 10px;
+		border: 1px solid black;
+		border-radius: 5px;
+		/* float: right; */
+		/* margin-left: 50px; */
+	}
+
+	.new {
+		float: left;
+	}
+
+
+	.terms {
+		line-height: 35px;
+		text-align: center;
+		background: #2d3e3f;
+		color: white;
+	}
+
+	.submit {
+		border-radius: 5px;
+		margin-left: 127px;
+		border: 1px solid black;
+		border: none;
+		color: white;
+		width: 405px;
+		height: 35px;
+		background: rgb(81, 114, 158);
+		text-transform: uppercase;
+		cursor: pointer;
+		border: 1px solid black;
+		/* float: right; */
+		margin: 0px 0px 20px 0px;
+	}
+
+
+	.submit:hover {
+		background: rgb(91, 131, 218);
+	}
+
+	.login:hover {
+		background: rgb(91, 131, 218);
+
+	}
+
+	.back {
+		color: #337ab7;
+		margin-left: 180px;
+		padding-top: 10px;
+		text-decoration: none;
+
+	}
+
+	#error {
+		color: red;
+		margin-left: 18px;
+	}
+
+	#exception {
+		color: red;
+		margin-left: 18px;
+		margin-top: -9px;
+	}
+
+	/* input:invalid {
+		border: 2px solid red;
+	  } */
+
+	input.invalid:focus {
+		outline: none;
+		border-color: red;
+		box-shadow: none;
+	}
+
+	input:valid {
+		border: 2px solid green;
+	}
+
+	/* input:invalid:not(:placeholder-shown):focus {
+		border: 2px solid red;
+	} */
+
+
+
+	@media only screen and (max-width: 1100px) {
+		body {
+			background-image: url(https://images.unsplash.com/photo-1628029799784-50d803e64ea0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=659&q=80/y.jpg);
+			background-position: center top;
+			background-size: 100% auto;
+
+		}
+
+
+		.container {
+			height: 700px;
+			width: 500px;
+
+		}
+
+
+
+	}
+
+	.error-message,
+	.name1error-message,
+	.name2error-message,
+	.pherror-message,
+	.pwderror-message,
+	.pwd2-error-message,
+	.proferror-message {
+		color: red;
+		display: none;
+		margin-right: 20px;
+	}
+
+	.error-message.active,
+	.name2error-message.active,
+	.name1error-message.active,
+	.pwderror-message.active,
+	.pwd2-error-message.active,
+	.pherror-message.active,
+	.proferror-message.active {
+		display: block;
+	}
+
+	.message {
+		height: 60px;
+		width: inherit;
+		margin-right: 40px;
+		margin-top: -7px;
+	}
+
+	.container-fluid {
+
+		padding-left: 0px !important;
+
+	}
+	#customFile{
+		width: 250px;
+	}
+</style>
+
+
+<body>
+	{% load static %}
+	<!-- {% for message in messages %}
+<div class="container-fluid p-0">
+  <div class="alert {{ message.tags }} alert-dismissible" role="alert" >
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="True">&times;</span>
+    </button>
+    {{ message }}
+  </div>
+</div>
+{% endfor %} -->
+
+
+	<div class="container d-flex p-2 ">
+
+		<div class="col-8 ">
+
+
+			<!-- Body of Form starts -->
+
+
+			<div class="logo"><img class="img"
+					src='{% static "images/int.png" %}'>
+			</div>
+
+
+			<div class="logo1" style="font-family:courier;">
+				<h1>Customer SignUp</h1>
+			</div>
+
+			<form name="form" class="requires-validation" action="/signup" method="POST" enctype="multipart/form-data">
+				{% csrf_token %}
+				{{ form.as_p }}
+				<div class="message me-5">
+					{% for message in messages %}
+					<div class="container-fluid p-0" id="gg">
+					  <div class="alert {{ message.tags }} alert-dismissible me-5 " role="alert">
+						<button type="button" class="close float-end" style="background-color: #d1e7dd; border:none; "  id="close" data-dismiss="alert" aria-label="Close">
+						  <span class="close2" style="font-size: larger;" aria-hidden="false">&times;</span>
+						</button>
+						{{ message }}
+					  </div>
+					</div>
+					{% endfor %}
+				  </div>
+			
+				<!--First name-->
+				<div class="box1">
+					<label for="username" name="text" class="fl fontLabel"> First Name: </label>
+					<div class="fr">
+						<input type="name1" required name="firstname" required minlength="3" placeholder="First Name"
+							class="textBox" id="name1" name="name1">
+						<div id="name1-error" class="name1error-message">
+						</div>
+					</div>
+					<div class="clr"></div>
+				</div>
+				<!--First name-->
+
+
+				<!--Second name-->
+				<div class="box">
+					<label for="secame" name="text" class="fl fontLabel"> Last Name: </label>
+					<div class="fr">
+						<input type="name2" required name="secondname" required minlength="3" placeholder="Last Name"
+							class="textBox" id="name2" name="name2" placeholder="name2">
+						<div id="name2-error" class="name2error-message">
+						</div>
+						<div class="clr"></div>
+					</div>
+					<!--Second name-->
+
+					<!---Company Name---->
+					<div class="box">
+						<label for="company name" class="fl fontLabel">Company Name:</label>
+						<div class="fr" required>
+							<select name="companyid" class="textbox" id="companyname">
+								{% for company in companies %}
+								<option value="{{ company.companyid }}">{{ company.company }}</option>
+								{% endfor %}
+							</select>
+
+
+						</div>
+						<div class="clr"></div>
+					</div>
+				<!--company name ----->
+				<!-- --------role------- -->
+				<div class="box">
+					<label for="role" class="fl fontLabel">Role :</label>
+					<div class="fr">
+						<select class="textBox" name="role" required id="chose">
+							{% for role in role %}
+							<option value="{{ role.roleid }}">{{ role.role }}</option>
+							{% endfor %}
+						</select>
+
+
+
+					</div>
+					<div class="clr"></div>
+				</div>
+				<!-- ---------------role ---end ------------- -->
+				<!-- ------------email------------- -->
+				<div class="box">
+
+					<label for="email" name="text" class="fl fontLabel"> Bussiness Email: </label>
+					<div class="fr">
+
+						<input type="email" required name="email" required minlength="4" placeholder="Bussiness Email"
+							class="textBox" id="email" name="email" placeholder="Email">
+						<div id="email-error" class="error-message">
+
+						</div>
+						<!-- {% if messages %}
+							<ul class="messages text-danger">
+								{% for message in messages %}
+								<li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+									{% endfor %}
+							</ul>
+							{% endif %} -->
+
+					</div>
+					<div class="clr"></div>
+				</div>
+				<!--Email ID----->
+
+
+				<!---Phone No.------>
+				<div class="box">
+					<label for="phone" name="text" class="fl fontLabel"> Phone No: </label>
+					<div class="fr ">
+						<input type="ph" required name="phone" required minlength="10" maxlength="12"
+							placeholder="Phone Number" class="textBox" id="ph" name="ph" placeholder="ph">
+						<div id="ph-error" class="pherror-message">
+
+
+						</div>
+						<!-- {% if messages %}
+							<ul class="messages text-danger">
+								{% for message in messages %}
+								<li {% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+									{% endfor %}
+							</ul>
+							{% endif %} -->
+						<!-- <span id="error">Password required</span> -->
+
+
+					</div>
+					<div class="clr"></div>
+				</div>
+
+				<!---Phone No.---->
+
+
+				<!---Password------>
+				<div class="box">
+					<label for="password" name="text" class="fl fontLabel"> Password:</label>
+					<div class="fr">
+						<input type="pwd" required name="password" required minlength="8" maxlength="20"
+							placeholder="Password" class="textBox" id="pwd" name="pwd" placeholder="pwd">
+						<div id="pwd-error" class="pwderror-message">
+						</div>
+						<div class="clr"></div>
+					</div>
+					<div class="box">
+						<label for="password" name="text" class="fl fontLabel">Confirm Password:</label>
+						<div class="fr">
+							<input type="pwd2" required name="pwd2" required minlength="8" maxlength="20"
+								placeholder="Password" class="textBox" id="pwd2" name="confrimpassword"
+								placeholder="pwd2">
+							<div id="pwd2-error" class="pwd2error-message">
+							</div>
+						</div>
+						<div class="clr"></div>
+					</div>
+					
+					{% comment %} <div class="box">
+						<label for="image" name="image" class="fl fontLabel">Profile Image:</label>
+						<div class="fr">
+							<input type="file" class="form-control" id="image" name="image" />
+
+							<div id="prof-error" class="proferror-message">
+							</div>
+						</div>
+						<div class="clr"></div>
+					</div> {% endcomment %}
+
+					<!---Password---->
+					</lightning-input>
+
+
+					<!---Submit Button-->
+					<div class="box">
+						<button class="submit" id="submit" type="submit" value="submit">Sign Up</button>
+					</div>
+					<div><a class="back" href="/login_page"> Login</div>
+
+
+
+			</form>
+
+			<!---Submit Button-->
+		</div>
+	</div>
+
+	<div class="col-2 col-sm-1"></div>
+
+
+	<!--Body of Form ends-->
+
+</body>
+<script>
+
+	const emailInput = document.getElementById('email');
+	const emailError = document.getElementById('email-error');
+
+
+	emailInput.addEventListener('input', function (event) {
+		if (emailInput.validity.valid) {
+			// If the email is valid, hide the error message
+			emailError.textContent = '';
+			emailError.className = 'error-message';
+			emailInput.classList.remove('invalid');
+		} else {
+			// If the email is invalid, display the error message
+			emailError.textContent = 'Please enter a valid email address';
+			emailError.className = 'error-message active';
+			emailInput.classList.add('invalid');
+		}
+	});
+
+	emailInput.addEventListener('invalid', function (event) {
+		// Prevent the browser from showing its default error message
+		event.preventDefault();
+	});
+
+	const profInput = document.getElementById('customFile');
+	const profError = document.getElementById('prof-error');
+
+
+	profInput.addEventListener('input', function (event) {
+		if (profInput.validity.valid) {
+			// If the email is valid, hide the error message
+			profError.textContent = '';
+			profError.className = 'proferror-message';
+			profInput.classList.remove('invalid');
+		} else {
+			// If the email is invalid, display the error message
+			profError.textContent = 'Please upload a image';
+			profError.className = 'proferror-message active';
+			profInput.classList.add('invalid');
+		}
+	});
+
+	emailInput.addEventListener('invalid', function (event) {
+		// Prevent the browser from showing its default error message
+		event.preventDefault();
+	});
+
+
+
+
+
+
+
+
+
+	const name1Input = document.getElementById('name1');
+	const name1Error = document.getElementById('name1-error');
+
+	name1Input.addEventListener('input', function (event) {
+		if (name1Input.validity.valid) {
+			// If the email is valid, hide the error message
+			name1Error.textContent = '';
+			name1Error.className = 'name1error-message';
+			name1Input.classList.remove('invalid');
+		} else {
+			// If the email is invalid, display the error message
+			name1Error.textContent = 'Please enter a valid name';
+			name1Error.className = 'name1error-message active';
+			name1Input.classList.add('invalid');
+		}
+	});
+
+	name1Input.addEventListener('invalid', function (event) {
+		// Prevent the browser from showing its default error message
+		event.preventDefault();
+	});
+
+
+
+
+
+
+
+	const name2Input = document.getElementById('name2');
+	const name2Error = document.getElementById('name2-error');
+
+	name2Input.addEventListener('input', function (event) {
+		if (name2Input.validity.valid) {
+			// If the email is valid, hide the error message
+			name2Error.textContent = '';
+			name2Error.className = 'name2error-message';
+			name2Input.classList.remove('invalid');
+		} else {
+			// If the email is invalid, display the error message
+			name2Error.textContent = 'Please enter a valid name';
+			name2Error.className = 'name1error-message active';
+			name2Input.classList.add('invalid');
+		}
+	});
+
+	name2Input.addEventListener('invalid', function (event) {
+		// Prevent the browser from showing its default error message
+		event.preventDefault();
+	});
+
+
+
+	const phInput = document.getElementById('ph');
+	const phError = document.getElementById('ph-error');
+
+	phInput.addEventListener('input', function (event) {
+		if (phInput.validity.valid) {
+			// If the email is valid, hide the error message
+			phError.textContent = '';
+			phError.className = 'pherror-message';
+			phInput.classList.remove('invalid');
+		} else {
+			// If the email is invalid, display the error message
+			phError.textContent = 'Please enter a valid phone number';
+			phError.className = 'pherror-message active';
+			phInput.classList.add('invalid');
+		}
+	});
+
+	phInput.addEventListener('invalid', function (event) {
+		// Prevent the browser from showing its default error message
+		event.preventDefault();
+	});
+
+
+
+	const pwdInput = document.getElementById('pwd');
+	const pwdError = document.getElementById('pwd-error');
+
+	pwdInput.addEventListener('input', function (event) {
+		if (pwdInput.validity.valid) {
+			// If the email is valid, hide the error message
+			pwdError.textContent = '';
+			pwdError.className = 'pwderror-message';
+			pwdInput.classList.remove('invalid');
+		} else {
+			// If the email is invalid, display the error message
+			pwdError.textContent = 'Please enter a valid passwprd';
+			pwdError.className = 'pwderror-message active';
+			pwdInput.classList.add('invalid');
+		}
+	});
+
+	pwdInput.addEventListener('invalid', function (event) {
+		// Prevent the browser from showing its default error message
+		event.preventDefault();
+	});
+	const pwd2Input = document.getElementById('pwd2');
+	const pwd2Error = document.getElementById('pwd2-error');
+
+	pwd2Input.addEventListener('input', function (event) {
+		if (pwdInput.value === pwd2Input.value) {
+			// If the passwords match, hide the error message
+			pwd2Error.textContent = '';
+			pwd2Error.className = 'pwd2-error-message';
+			pwd2Input.classList.remove('invalid');
+		} else {
+			// If the passwords don't match, display the error message
+			pwd2Error.textContent = 'Passwords do not match';
+			pwd2Error.className = 'pwd2-error-message active';
+			pwd2Input.classList.add('invalid');
+		}
+	});
+
+	pwd2Input.addEventListener('invalid', function (event) {
+		// Prevent the browser from showing its default error message
+		event.preventDefault();
+	});
+
+
+	document.getElementById('close').addEventListener('click', function () {
+		document.getElementById('gg').style.display = 'none';
+	});
+
+	/*--------------------  submit not wort without confirm-------------*/
+	const passwordInput = document.getElementById('pwd');
+	const confirmPasswordInput = document.getElementById('pwd2');
+	const submitButton = document.getElementById('submit');
+
+	// Disable the submit button by default
+	submitButton.disabled = false;
+
+	// Function to check if the passwords match
+	function checkPasswords() {
+		if (passwordInput.value !== confirmpasswordInput.value) {
+			submitButton.disabled = true;
+		} else {
+			submitButton.disabled = false;
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>
